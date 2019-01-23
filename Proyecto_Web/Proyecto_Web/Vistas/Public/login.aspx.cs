@@ -52,7 +52,7 @@ namespace Proyecto_Web.Vistas.Public
 
                 
 
-                switch (dat.ConsultarDatos(rol).Rows[0]["ID_ROL"])
+                switch (Int32.Parse(dat.ConsultarDatos(rol).Rows[0]["ID_ROL"].ToString()))
                 {
                     case 1:
                         Response.Redirect("../../Vistas/Private/index_gerente.aspx");
