@@ -279,6 +279,7 @@
     <Content Include="lib\zabuto_calendar.js" />
     <Content Include="Vistas\Private\abono_clientes.aspx" />
     <Content Include="Vistas\Private\abono_proveedores.aspx" />
+    <Content Include="Vistas\Private\editar_perfil.aspx" />
     <Content Include="Vistas\Private\gestionar_cliente.aspx" />
     <Content Include="Vistas\Private\gestionar_proveedor.aspx" />
     <Content Include="Vistas\Private\ingresar_cliente.aspx" />
@@ -324,6 +325,20 @@
     </Compile>
     <Compile Include="Vistas\Private\abono_proveedores.aspx.designer.cs">
       <DependentUpon>abono_proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\editar_perfil.aspx.cs">
+      <DependentUpon>editar_perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\editar_perfil.aspx.designer.cs">
+      <DependentUpon>editar_perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\gerente.Master.cs">
       <DependentUpon>gerente.Master</DependentUpon>
@@ -493,6 +508,7 @@
     <Content Include="Vistas\Public\master1.Master" />
     <Content Include="Vistas\Private\gerente.Master" />
     <Content Include="Vistas\Private\supervisor.Master" />
+    <Content Include="Vistas\Private\Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

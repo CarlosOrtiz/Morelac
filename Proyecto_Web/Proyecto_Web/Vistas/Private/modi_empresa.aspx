@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/gerente.Master" AutoEventWireup="true" CodeBehind="modi_empresa.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.modi_empresa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="modi_empresa.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.modi_empresa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

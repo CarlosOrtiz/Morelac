@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/gerente.Master" AutoEventWireup="true" CodeBehind="ingresar_supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ingresar_supervisor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="ingresar_supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ingresar_supervisor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

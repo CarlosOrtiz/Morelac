@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/supervisor.Master" AutoEventWireup="true" CodeBehind="surtirleche.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.surtirleche" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="surtirleche.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.surtirleche" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <h3>LECHE SUMINISTRADA POR PROVEEDORES</h3>
+    <%--<h3>LECHE SUMINISTRADA POR PROVEEDORES</h3>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <div class="row mt">

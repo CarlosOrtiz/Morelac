@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/supervisor.Master" AutoEventWireup="true" CodeBehind="ModificarCantidad.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ModificarCantidad" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="ModificarCantidad.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ModificarCantidad" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <h3><i class="fa fa-angle-right"></i>MODIFICAR LA CANTIDAD DE LA LECHE </h3>
+    <%--<h3><i class="fa fa-angle-right"></i>MODIFICAR LA CANTIDAD DE LA LECHE </h3>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
  <!--   <div class="row mb">

@@ -1,23 +1,16 @@
-﻿using Proyecto_Web.Conection;
-using Proyecto_Web.Interface;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Proyecto_Web.Vistas.Private
 {
-    public partial class gerente : System.Web.UI.MasterPage
+    public partial class Admin : System.Web.UI.MasterPage
     {
-        private IDatos dat = new Datos();
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
             //if (!Page.IsPostBack)
             //{
             //    String BD_Nombre = "Select NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2,FOTO From persona Inner join usuario on persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA Where usuario.CORREO_ELECTRONICO='" + Session["login"].ToString() + "';";
