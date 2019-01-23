@@ -267,12 +267,12 @@
                     <!-- sidebar menu start-->
                     <ul class="sidebar-menu" id="nav-accordion">
                         <p class="centered">
-                            <a href="editar_perfil.aspx">
-                                <asp:Image ID="FOTO" runat="server" Class="img-circle" Width="100" />
-                                <!--     <h5 id="hola" class="centered"> N1= </h5> -->
-                                <!--  <label style="font-family:'Agency FB'; color:red;" id="mostrar">USERR</label>-->
-                            </a>
-                            </p>
+                            <a href="profile.html"></a>
+
+                            <asp:Image ID="FOTO" runat="server" Class="img-circle" Width="100" />
+                            <!--     <h5 id="hola" class="centered"> N1= </h5> -->
+                            <!--  <label style="font-family:'Agency FB'; color:red;" id="mostrar">USERR</label>
+                -->
                             <div style="text-align: center; color: white; font-size: 15px;">
                                 <br>
                                 <asp:Label class="centered" BorderColor="Red" runat="server" ID="mostrar"></asp:Label>
@@ -452,7 +452,7 @@
         *********************************************************************************************************************************************************** -->
             <!--main content start-->
             <section id="main-content">
-                <section class="wrapper site-min-height">
+                <section class="wrapper">
                     <div class="">
                         <div>
                             <asp:ContentPlaceHolder ID="body" runat="server">
