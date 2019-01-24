@@ -19,7 +19,7 @@ namespace Proyecto_Web.Vistas.Private
             DataSet dts = new DataSet();
             DataTable da, em = new DataTable();
 
-            Reportes.CrystalReport_Persona rep = new Reportes.CrystalReport_Persona();
+            Reportes.Proveedores rep = new Proyecto_Web.Reportes.Proveedores();
             da = dat.ConsultarDatos("Select ID_PERSONA,NOMBRE1,NOMBRE2,APELLIDO1,APELLIDO2,DIRECCION From persona ;");
             rep.SetDataSource(da);
 
