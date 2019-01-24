@@ -353,6 +353,12 @@
                                     <span>HISTORIAL DE PRUEBAS</span>
                                 </a>
                             </li>
+                              <li>
+                                <a href="Reporte.aspx">
+                                    <i class="fa fa-book"></i>
+                                    <span>REPORTE</span>
+                                </a>
+                            </li>
                             <%--<li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-cogs"></i>
