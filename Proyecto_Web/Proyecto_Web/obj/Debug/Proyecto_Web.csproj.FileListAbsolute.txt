@@ -1095,3 +1095,10 @@ D:\USUARIO\Documents\GitHub\Proyecto_Web-1\Proyecto_Web\Proyecto_Web\obj\Debug\P
 D:\USUARIO\Documents\GitHub\Proyecto_Web-1\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csproj.CopyComplete
 D:\USUARIO\Documents\GitHub\Proyecto_Web-1\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web-1\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.pdb
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.ReportSource.dll
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.Shared.dll
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.Web.dll
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\log4net.dll
+D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\log4net.xml
