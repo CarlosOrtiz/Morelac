@@ -353,12 +353,19 @@
                                     <span>HISTORIAL DE PRUEBAS</span>
                                 </a>
                             </li>
-                              <li>
-                                <a href="Reporte.aspx">
+                            <li class="sub-menu dcjq-parent-li">
+                                <a href="javascript:;" class="dcjq-parent">
                                     <i class="fa fa-book"></i>
-                                    <span>REPORTE</span>
+                                    <span>REPORTES</span>
+                                    <span class="dcjq-icon"></span>
                                 </a>
+                                <ul class="sub">
+                                    <li><a href="REPORTEEE.aspx">LISTADO DE PROVEEDORES</a></li>
+                                    <li><a href="modificarresultados.aspx">MODIFICAR RESULTADOS</a></li>
+                                </ul>
                             </li>
+
+
                             <%--<li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-cogs"></i>

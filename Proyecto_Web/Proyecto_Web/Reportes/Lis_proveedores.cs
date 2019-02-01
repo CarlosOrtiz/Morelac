@@ -16,14 +16,14 @@ namespace Proyecto_Web.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Proveedores : ReportClass {
+    public class Lis_proveedores : ReportClass {
         
-        public Proveedores() {
+        public Lis_proveedores() {
         }
         
         public override string ResourceName {
             get {
-                return "Proveedores.rpt";
+                return "Lis_proveedores.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Proyecto_Web.Reportes {
         
         public override string FullResourceName {
             get {
-                return "Proyecto_Web.Reportes.Proveedores.rpt";
+                return "Proyecto_Web.Reportes.Lis_proveedores.rpt";
             }
             set {
                 // Do nothing
@@ -98,9 +98,9 @@ namespace Proyecto_Web.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedProveedores : Component, ICachedReport {
+    public class CachedLis_proveedores : Component, ICachedReport {
         
-        public CachedProveedores() {
+        public CachedLis_proveedores() {
         }
         
         [Browsable(false)]
@@ -137,7 +137,7 @@ namespace Proyecto_Web.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Proveedores rpt = new Proveedores();
+            Lis_proveedores rpt = new Lis_proveedores();
             rpt.Site = this.Site;
             return rpt;
         }
