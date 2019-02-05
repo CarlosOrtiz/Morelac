@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using Proyecto_Web.Modelos;
 namespace Proyecto_Web.Modelos
 {
     public class PERSONA
@@ -61,7 +62,7 @@ namespace Proyecto_Web.Modelos
             try{
                 return dat.ConsultarDatos("CALL CONS_PERSONA ('" + Cedula + "');");
             }catch (Exception io){
-                ESTRUCTURA2 err = new ESTRUCTURA2();
+                estructura err = new estructura();
                 return err.GetError(io.Message);
             }
         }
