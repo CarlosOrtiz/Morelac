@@ -141,32 +141,24 @@ USE `bd_morelac`;
 -- Volcando estructura para tabla bd_morelac.aux_prueba
 CREATE TABLE IF NOT EXISTS `aux_prueba` (
   `ID_AUX_PRUEBA` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `RESULTADOS_PRUEBAS_ID_RESULTADOS_PRUEBAS` int(11) NOT NULL,
+  `ID_RESULTADOS_PRUEBAS` int(11) unsigned NOT NULL DEFAULT '0',
   `DATOS_ID_DATOS` int(11) NOT NULL,
   PRIMARY KEY (`ID_AUX_PRUEBA`),
-  KEY `fk_AUX_PRUEBA_RESULTADOS_PRUEBAS_idx` (`RESULTADOS_PRUEBAS_ID_RESULTADOS_PRUEBAS`),
   KEY `fk_AUX_PRUEBA_DATOS1_idx` (`DATOS_ID_DATOS`),
-  CONSTRAINT `fk_AUX_PRUEBA_DATOS1` FOREIGN KEY (`DATOS_ID_DATOS`) REFERENCES `datos` (`ID_DATOS`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_AUX_PRUEBA_RESULTADOS_PRUEBAS` FOREIGN KEY (`RESULTADOS_PRUEBAS_ID_RESULTADOS_PRUEBAS`) REFERENCES `resultados_pruebas` (`ID_RESULTADOS_PRUEBAS`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `fk2_ID_RESULTADOS_PRUEBAS` (`ID_RESULTADOS_PRUEBAS`),
+  CONSTRAINT `fk2_ID_RESULTADOS_PRUEBAS` FOREIGN KEY (`ID_RESULTADOS_PRUEBAS`) REFERENCES `resultados_pruebas` (`ID_RESULTADOS_PRUEBAS`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_AUX_PRUEBA_DATOS1` FOREIGN KEY (`DATOS_ID_DATOS`) REFERENCES `datos` (`ID_DATOS`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.aux_prueba: ~14 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.aux_prueba: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `aux_prueba` DISABLE KEYS */;
-INSERT INTO `aux_prueba` (`ID_AUX_PRUEBA`, `RESULTADOS_PRUEBAS_ID_RESULTADOS_PRUEBAS`, `DATOS_ID_DATOS`) VALUES
-	(6, 2, 3),
-	(7, 2, 4),
-	(8, 2, 1),
-	(9, 2, 2),
-	(10, 2, 5),
-	(11, 1, 6),
-	(12, 4, 12),
-	(13, 4, 7),
-	(14, 4, 8),
-	(15, 4, 9),
-	(16, 4, 10),
-	(17, 4, 11),
-	(18, 4, 13),
-	(19, 4, 14);
+INSERT INTO `aux_prueba` (`ID_AUX_PRUEBA`, `ID_RESULTADOS_PRUEBAS`, `DATOS_ID_DATOS`) VALUES
+	(1, 2, 2),
+	(2, 2, 4),
+	(3, 2, 5),
+	(4, 2, 3),
+	(5, 3, 6),
+	(6, 1, 1);
 /*!40000 ALTER TABLE `aux_prueba` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.datos
@@ -178,23 +170,15 @@ CREATE TABLE IF NOT EXISTS `datos` (
   PRIMARY KEY (`ID_DATOS`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.datos: ~14 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.datos: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `datos` DISABLE KEYS */;
 INSERT INTO `datos` (`ID_DATOS`, `DAT_NOMBRE`, `VALOR`, `OBSERVACION`) VALUES
-	(1, 'Temperatura', '3', 'C'),
-	(2, 'Peso', '21', 'Gramos'),
-	(3, 'Acidez Titulable', '10', 'ml'),
-	(4, 'pH', '10', 'mL'),
-	(5, 'Prueba Alcohol', '10', 'ml'),
-	(6, 'Temperatura', '1', 'C'),
-	(7, 'TEMPERATURA', '4', 'c'),
-	(8, 'TIEMPO REDUCCION RESAZUINA', 'BUENA A EXELENTE', NULL),
-	(9, 'PRUEBA FÉCULAS', '1,6', NULL),
-	(10, 'PRUEBA DE ANTIBIÓTICOS', 'ALTO', NULL),
-	(11, 'TEXTURA', 'BUENA', NULL),
-	(12, 'COLOR', 'BLANCO', NULL),
-	(13, 'SABOR', 'EXCELENTE', NULL),
-	(14, 'OLOR', 'CARACTERISTICO', NULL);
+	(1, 'Minerales', '1', NULL),
+	(2, 'Color', '1', 'BLANCO'),
+	(3, 'Textura', '1', 'LIQUIDA'),
+	(4, 'OLOR', '3', 'CARACTERISTICA'),
+	(5, 'SABOR', '2', 'A LECHE'),
+	(6, 'TEMPERATURA', '5', '5 GRADOS');
 /*!40000 ALTER TABLE `datos` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.empresa
@@ -303,33 +287,32 @@ CREATE TABLE IF NOT EXISTS `permiso` (
 
 -- Volcando estructura para tabla bd_morelac.persona
 CREATE TABLE IF NOT EXISTS `persona` (
-  `ID_PERSONA` int(11) NOT NULL AUTO_INCREMENT,
-  `NOMBRE1` varchar(50) NOT NULL,
-  `NOMBRE2` varchar(45) DEFAULT NULL,
-  `APELLIDO1` varchar(45) NOT NULL,
-  `APELLIDO2` varchar(50) DEFAULT NULL,
-  `CELULAR` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `ID_PERSONA` int(20) NOT NULL AUTO_INCREMENT,
+  `NOMBRE1` varchar(20) NOT NULL,
+  `NOMBRE2` varchar(20) DEFAULT NULL,
+  `APELLIDO1` varchar(20) NOT NULL,
+  `APELLIDO2` varchar(20) DEFAULT NULL,
+  `CELULAR` varchar(10) NOT NULL DEFAULT '0',
   `NACIMIENTO` date DEFAULT NULL,
   `DIRECCION` varchar(45) DEFAULT NULL,
-  `ESTADO` varchar(45) NOT NULL,
+  `ESTADO` enum('ACTIVO','INACTIVO') NOT NULL DEFAULT 'INACTIVO',
   `DETALLES` varchar(255) DEFAULT NULL,
-  `SEXO_ID_SEXO` int(2) NOT NULL,
-  PRIMARY KEY (`ID_PERSONA`),
-  KEY `SEXO_ID_SEXO` (`SEXO_ID_SEXO`),
-  CONSTRAINT `FK_TIPO_PERSONA_SEXO1` FOREIGN KEY (`SEXO_ID_SEXO`) REFERENCES `sexo` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1117553550 DEFAULT CHARSET=utf8;
+  `SEXO` enum('M','F') NOT NULL,
+  PRIMARY KEY (`ID_PERSONA`)
+) ENGINE=InnoDB AUTO_INCREMENT=1117553551 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.persona: ~8 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.persona: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` (`ID_PERSONA`, `NOMBRE1`, `NOMBRE2`, `APELLIDO1`, `APELLIDO2`, `CELULAR`, `NACIMIENTO`, `DIRECCION`, `ESTADO`, `DETALLES`, `SEXO_ID_SEXO`) VALUES
-	(3, 'CARLOS', 'ALBERTO', 'ORTIZ', 'LOSADA', 3104823632, '1999-01-17', 'SEMIANRIO', 'ACTIVO ', 'CAOL', 1),
-	(4, 'LUNA', 'FERNANDA', 'ORTIZ', 'LOSADA', 36985214, '2003-10-16', 'PTO-LEGUIZAMO', 'ACTIVO', 'MIJO', 2),
-	(9901, 'Juan', 'Andres', 'Perez', 'Castro', 3120384213, '2018-11-07', 'caqueta', 'activo', 'casdsadasd', 1),
-	(17683560, 'LUIS', 'HERMANDO', 'ORTIZ', 'PALADINES', 0, '1976-02-02', 'FLORENCIA CAQUETA', 'ACTIVO', NULL, 1),
-	(17683600, 'JOSE', 'ANTONIO', 'ORTIZ', 'PALADINES', 3222012401, '1975-10-17', 'PTO-LEGUIZAMO', 'ACTIVO', 'JAOP', 1),
-	(40683530, 'SOFIA', NULL, 'CASTRO', 'MUÑOZ', 0, '1984-02-02', 'SAN VICENTE ', 'ACTIVO', NULL, 2),
-	(1117552597, 'CARLOS', 'ALBERTO', 'ORTIZ', 'LOSADA', 3104823632, '1999-01-17', 'FLORENCIA', 'ACTIVO', 'CAOL', 1),
-	(1117553549, 'JOHANT', NULL, 'VARGAS', NULL, 3105874988, '1999-06-06', 'FLORENCIA', 'ACTIVO', 'JJ', 1);
+INSERT INTO `persona` (`ID_PERSONA`, `NOMBRE1`, `NOMBRE2`, `APELLIDO1`, `APELLIDO2`, `CELULAR`, `NACIMIENTO`, `DIRECCION`, `ESTADO`, `DETALLES`, `SEXO`) VALUES
+	(3, 'CARLOS', 'ALBERTO', 'ORTIZ', 'LOSADA', '3104823632', '1999-01-17', 'SEMIANRIO', 'ACTIVO', 'CAOL', 'M'),
+	(4, 'LUNA', 'FERNANDA', 'ORTIZ', 'LOSADA', '36985214', '2003-10-16', 'PTO-LEGUIZAMO', 'ACTIVO', 'MIJO', 'F'),
+	(9901, 'Juan', 'Andres', 'Perez', 'Castro', '3120384213', '2018-11-07', 'caqueta', 'ACTIVO', 'casdsadasd', 'M'),
+	(17683560, 'LUIS', 'HERMANDO', 'ORTIZ', 'PALADINES', '0', '1976-02-02', 'FLORENCIA CAQUETA', 'ACTIVO', NULL, 'M'),
+	(17683600, 'JOSE', 'ANTONIO', 'ORTIZ', 'PALADINES', '3222012401', '1975-10-17', 'PTO-LEGUIZAMO', 'ACTIVO', 'JAOP', 'M'),
+	(40683530, 'SOFIA', NULL, 'CASTRO', 'MUÑOZ', '0', '1984-02-02', 'SAN VICENTE ', 'ACTIVO', NULL, 'F'),
+	(1117552597, 'CARLOS', 'ALBERTO', 'ORTIZ', 'LOSADA', '3104823632', '1999-01-17', 'FLORENCIA', 'ACTIVO', 'CAOL', 'M'),
+	(1117553549, 'JOHANT', NULL, 'VARGAS', NULL, '3105874988', '1999-06-06', 'FLORENCIA', 'ACTIVO', 'JJ', 'M'),
+	(1117553550, 'CRISTIAN', 'ANDRES', 'PEREZ', 'VARGAS', '0', '2000-02-03', 'MONTAÑOTA', 'ACTIVO', 'CAPV', 'M');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.productos
@@ -352,19 +335,23 @@ INSERT INTO `productos` (`ID_PRODUCTOS`, `NOMBRE`, `CANTIDAD`, `PRECIO`) VALUES
 
 -- Volcando estructura para tabla bd_morelac.resultados_pruebas
 CREATE TABLE IF NOT EXISTS `resultados_pruebas` (
-  `ID_RESULTADOS_PRUEBAS` int(11) NOT NULL AUTO_INCREMENT,
-  `NOMBRE` varchar(50) NOT NULL DEFAULT '0',
-  `VALOR` double NOT NULL DEFAULT '0',
-  `CANTIDAD` double NOT NULL DEFAULT '0',
-  `OBSERVACION` varchar(700) NOT NULL DEFAULT '0',
-  `persona_id_persona` int(11) NOT NULL DEFAULT '0',
+  `ID_RESULTADOS_PRUEBAS` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `NOMBRE_PRUEBA` varchar(50) NOT NULL,
+  `RES_TOTAL_PRUEBAS` double NOT NULL DEFAULT '0',
+  `CANTIDAD_PRUEBAS` float NOT NULL DEFAULT '0',
+  `OBSERVACION` varchar(700) DEFAULT NULL,
+  `PERSONA_ID_PERSONA` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID_RESULTADOS_PRUEBAS`),
-  KEY `persona_id_persona` (`persona_id_persona`),
-  CONSTRAINT `FK_resultados_pruebas_persona` FOREIGN KEY (`persona_id_persona`) REFERENCES `persona` (`ID_PERSONA`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `persona_id_persona` (`PERSONA_ID_PERSONA`),
+  CONSTRAINT `FK_PERSONA_ID_PERSONA` FOREIGN KEY (`PERSONA_ID_PERSONA`) REFERENCES `persona` (`ID_PERSONA`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.resultados_pruebas: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.resultados_pruebas: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `resultados_pruebas` DISABLE KEYS */;
+INSERT INTO `resultados_pruebas` (`ID_RESULTADOS_PRUEBAS`, `NOMBRE_PRUEBA`, `RES_TOTAL_PRUEBAS`, `CANTIDAD_PRUEBAS`, `OBSERVACION`, `PERSONA_ID_PERSONA`) VALUES
+	(1, 'PRUEBA DE NUTRIENTES', 100, 3, NULL, 17683560),
+	(2, 'ORGANOLÉPTICOS', 100, 2, NULL, 40683530),
+	(3, 'Antibióticos', 10, 3, NULL, 4);
 /*!40000 ALTER TABLE `resultados_pruebas` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.rol
@@ -384,45 +371,115 @@ INSERT INTO `rol` (`ID_ROL`, `ROL_NOMBRE`) VALUES
 	(5, 'PROVEEDOR');
 /*!40000 ALTER TABLE `rol` ENABLE KEYS */;
 
--- Volcando estructura para tabla bd_morelac.sexo
-CREATE TABLE IF NOT EXISTS `sexo` (
+-- Volcando estructura para tabla bd_morelac.sexonada
+CREATE TABLE IF NOT EXISTS `sexonada` (
   `ID` int(2) NOT NULL,
   `NOMBRE` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.sexo: ~3 rows (aproximadamente)
-/*!40000 ALTER TABLE `sexo` DISABLE KEYS */;
-INSERT INTO `sexo` (`ID`, `NOMBRE`) VALUES
+-- Volcando datos para la tabla bd_morelac.sexonada: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `sexonada` DISABLE KEYS */;
+INSERT INTO `sexonada` (`ID`, `NOMBRE`) VALUES
 	(0, ''),
 	(1, 'M'),
 	(2, 'F');
-/*!40000 ALTER TABLE `sexo` ENABLE KEYS */;
+/*!40000 ALTER TABLE `sexonada` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
-  `ID_TIPO_USUARIO` int(5) unsigned NOT NULL AUTO_INCREMENT,
-  `CORREO_ELECTRONICO` varchar(100) NOT NULL,
+  `ID_TIPO_USUARIO` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `CORREO_ELECTRONICO` varchar(50) NOT NULL,
   `CONTRASENA` varchar(50) NOT NULL,
   `FOTO` varchar(300) DEFAULT NULL,
+  `USU_ESTADO` enum('ACTIVO','INACTIVO') NOT NULL DEFAULT 'ACTIVO',
   `PERSONA_ID_PERSONA` int(11) NOT NULL,
-  `ROL_ID_ROL` int(11) NOT NULL,
+  `ROL_ID_ROL` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID_TIPO_USUARIO`),
+  UNIQUE KEY `CORREO_ELECTRONICO` (`CORREO_ELECTRONICO`),
+  UNIQUE KEY `PERSONA_ID_PERSONA` (`PERSONA_ID_PERSONA`),
   KEY `fk_TIPO_USUARIO_PERSONA1_idx` (`PERSONA_ID_PERSONA`),
   KEY `fk_TIPO_USUARIO_ROL1_idx` (`ROL_ID_ROL`),
   CONSTRAINT `fk_TIPO_USUARIO_PERSONA1` FOREIGN KEY (`PERSONA_ID_PERSONA`) REFERENCES `persona` (`ID_PERSONA`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_TIPO_USUARIO_ROL1` FOREIGN KEY (`ROL_ID_ROL`) REFERENCES `rol` (`ID_ROL`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.usuario: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.usuario: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`ID_TIPO_USUARIO`, `CORREO_ELECTRONICO`, `CONTRASENA`, `FOTO`, `PERSONA_ID_PERSONA`, `ROL_ID_ROL`) VALUES
-	(1, 'johant.vargas', 'prueba', '~/img/friends/fr-08.jpg', 1117553549, 1),
-	(3, 'carloslosada9901@hotmail.com', 'caol', '', 17683600, 3),
-	(4, 'luis@gmail.com', 'luis', NULL, 17683560, 5),
-	(5, 'Sofia2000@gmail.com', 'sofia', NULL, 40683530, 5),
-	(6, 'juan@gmail.com', '1234', NULL, 9901, 4);
+INSERT INTO `usuario` (`ID_TIPO_USUARIO`, `CORREO_ELECTRONICO`, `CONTRASENA`, `FOTO`, `USU_ESTADO`, `PERSONA_ID_PERSONA`, `ROL_ID_ROL`) VALUES
+	(1, 'johant.vargas', 'prueba', '~/img/friends/fr-08.jpg', 'ACTIVO', 1117553549, 1),
+	(3, 'carloslosada9901@hotmail.com', 'caol', '', 'ACTIVO', 17683600, 3),
+	(4, 'luis@gmail.com', 'luis', NULL, 'ACTIVO', 17683560, 5),
+	(5, 'Sofia2000@gmail.com', 'sofia', NULL, 'ACTIVO', 40683530, 5),
+	(6, 'juan@gmail.com', '1234', NULL, 'ACTIVO', 9901, 4),
+	(7, 'Luna@gmail.com', 'luna', NULL, 'ACTIVO', 4, 5);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_RESULDADOS_PRUEBA
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_RESULDADOS_PRUEBA`()
+BEGIN
+SELECT NOMBRE_PRUEBA,DAT_NOMBRE,RES_TOTAL_PRUEBAS,CANTIDAD_PRUEBAS,NOMBRE1, APELLIDO1,ROL_NOMBRE FROM resultados_pruebas
+INNER JOIN persona ON (resultados_pruebas.PERSONA_ID_PERSONA=persona.ID_PERSONA)
+INNER JOIN aux_prueba ON (resultados_pruebas.ID_RESULTADOS_PRUEBAS=aux_prueba.ID_RESULTADOS_PRUEBAS)
+INNER JOIN datos ON(aux_prueba.DATOS_ID_DATOS=datos.ID_DATOS)
+INNER JOIN usuario ON ( persona.ID_PERSONA=usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL=rol.ID_ROL);
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.UPDA_PERSONA
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_PERSONA`(
+	IN `ID` INT,
+	IN `NOM1` VARCHAR(50),
+	IN `NOM2` VARCHAR(50),
+	IN `APE1` VARCHAR(50),
+	IN `APE2` VARCHAR(50),
+	IN `CELU` VARCHAR(10),
+	IN `F_NACIMIENTO` VARCHAR(50),
+	IN `DIREC` VARCHAR(50),
+	IN `DETA` VARCHAR(50),
+	IN `SEXO1` ENUM('F','M'),
+	IN `CONTRA` VARCHAR(50)
+)
+BEGIN
+	
+	UPDATE persona 
+	SET NOMBRE1 = NOM1,
+	NOMBRE2 = NOM2,
+	APELLIDO1 = APE1,
+	APELLIDO2 = APE2,
+	CELULAR=CELU,
+	NACIMIENTO = F_NACIMIENTO,
+	DIRECCION = DIREC,
+	DETALLES = DETA,
+	SEXO = SEXO1
+	WHERE PERSONA.ID_PERSONA = ID;
+	
+	CALL `UPDA_USUARIO`(ID, CONTRA,FOTO,ROLL); -- ESTADO
+	
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.UPDA_USUARIO
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_USUARIO`(
+	IN `ID` INT,
+	IN `CONTRA` VARCHAR(50),
+	IN `FOTO` VARCHAR(200),
+	IN `ROLL` INT
+)
+BEGIN
+
+	UPDATE usuario 
+	SET CONTRASENA = CONTRA,
+-- 	USU_ESTADO = ESTADO,
+	FOTO=FOTO,
+	ROL_ID_ROL = ROLL
+	WHERE usuario.ID_TIPO_USUARIO = ID;
+END//
+DELIMITER ;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
