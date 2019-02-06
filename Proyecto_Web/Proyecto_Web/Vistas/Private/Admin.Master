@@ -2,44 +2,44 @@
 
 <!DOCTYPE html>
 
-<html>
+<html  xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Dashboard"/>
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina"/>
     <title>MORELAC</title>
 
     <!-- Favicons -->
-    <link href="../../img/favicon.png" rel="icon">
-    <link href="../../img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="img/icon/vaca0.png" rel="icon"/>
+    <link href="img/icon/vaca0.png" rel="apple-touch-icon"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <!--external css-->
-    <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../../css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="../../lib/gritter/css/jquery.gritter.css" />
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/zabuto_calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css" />
 
-    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/css/datepicker.css" />
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-timepicker/compiled/timepicker.css" />
     <link rel="stylesheet" type="text/css" href="lib/bootstrap-datetimepicker/datertimepicker.css" />
 
     <!-- Custom styles for this template -->
-    <link href="../../css/style.css" rel="stylesheet" />
-    <link href="../../css/style-responsive.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-responsive.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css" />
-    <link href="../../static/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../../static/css/app.f637e9e6c19ce63f0094c086bedef65b.css" rel="stylesheet" />
+   <%-- <link href="static/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../static/css/app.f637e9e6c19ce63f0094c086bedef65b.css" rel="stylesheet" />--%>
 
-    <script src="../../lib/chart-master/Chart.js"></script>
-    <link href="../../lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
-    <link href="../../lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+    <script src="lib/chart-master/Chart.js"></script>
+    <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+    <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../lib/advanced-datatable/css/DT_bootstrap.css" />
 
     <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -47,7 +47,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>--%>
 
-    <script src="../../lib/chart-master/Chart.js"></script>
+    <script src="lib/chart-master/Chart.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -465,8 +465,8 @@
         *********************************************************************************************************************************************************** -->
             <!--main content start-->
             <section id="main-content">
-                <section class="wrapper">
-                    <div class="">
+                <section class="wrapper  site-min-height">
+                    <div class="row">
                         <div>
                             <asp:ContentPlaceHolder ID="body" runat="server">
                             </asp:ContentPlaceHolder>
@@ -474,6 +474,7 @@
                     </div>
                 </section>
             </section>
+
             <!--main content end-->
             <!--footer start-->
             <footer class="site-footer">

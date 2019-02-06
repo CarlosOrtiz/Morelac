@@ -14,16 +14,16 @@
     <title>Iniciar sesión</title>
 
     <!-- Favicons -->
-    <link href="../../img/icon/vaca.png" rel="icon" />
-    <link href="../../img/icon/vaca.png" rel="apple-touch-icon" />
+    <link href="../Private/img/icon/vaca.png" rel="icon" />
+    <link href="../Private/img/icon/vaca.png" rel="apple-touch-icon" />
 
     <!-- Bootstrap core CSS -->
-    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Private/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!--external css-->
-    <link href="../../lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../Private/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="../../css/style.css" rel="stylesheet" />
-    <link href="../../css/style-responsive.css" rel="stylesheet" />
+    <link href="../Private/css/style.css" rel="stylesheet" />
+    <link href="../Private/css/style-responsive.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script>
@@ -109,9 +109,9 @@
     <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="../../lib/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="../Private/lib/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("../../img/empresa/equipo_trabajo.jpg", {
+        $.backstretch("../Private/img/empresa/equipo_trabajo.jpg", {
             speed: 500
 
         });
