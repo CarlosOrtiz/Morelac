@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Proyecto_Web.Vistas.Private
 {
-    public partial class index_supervisor : System.Web.UI.Page
+    public partial class index_admin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1295,6 +1295,60 @@
     <Content Include="img\empresa\gerente.png" />
     <Content Include="img\empresa\usuaria.png" />
     <Content Include="img\empresa\usuario.png" />
+    <Content Include="img\icon\cattle.png" />
+    <Content Include="img\icon\lacteo.png" />
+    <Content Include="img\icon\leche 2.png" />
+    <Content Include="img\icon\lechoso.png" />
+    <Content Include="img\icon\productos-lacteos.png" />
+    <Content Include="img\icon\vaca.png" />
+    <Content Include="img\icon\vaca0.png" />
+    <Content Include="img\img\404.png" />
+    <Content Include="img\img\500.png" />
+    <Content Include="img\img\apple-touch-icon.png" />
+    <Content Include="img\img\blog-bg.jpg" />
+    <Content Include="img\img\checkbox-gray.png" />
+    <Content Include="img\img\empresa\Carlos Ortiz.jpg" />
+    <Content Include="img\img\empresa\equipo_trabajo.JPG" />
+    <Content Include="img\img\empresa\gerente.png" />
+    <Content Include="img\img\empresa\hombre.png" />
+    <Content Include="img\img\empresa\mujer.png" />
+    <Content Include="img\img\empresa\usuaria.png" />
+    <Content Include="img\img\empresa\usuario.png" />
+    <Content Include="img\img\favicon.png" />
+    <Content Include="img\img\friends\fr-01.jpg" />
+    <Content Include="img\img\friends\fr-02.jpg" />
+    <Content Include="img\img\friends\fr-03.jpg" />
+    <Content Include="img\img\friends\fr-04.jpg" />
+    <Content Include="img\img\friends\fr-05.jpg" />
+    <Content Include="img\img\friends\fr-06.jpg" />
+    <Content Include="img\img\friends\fr-07.jpg" />
+    <Content Include="img\img\friends\fr-08.jpg" />
+    <Content Include="img\img\friends\fr-09.jpg" />
+    <Content Include="img\img\friends\fr-10.jpg" />
+    <Content Include="img\img\friends\fr-11.jpg" />
+    <Content Include="img\img\instagram.jpg" />
+    <Content Include="img\img\login-bg.jpg" />
+    <Content Include="img\img\lorde.jpg" />
+    <Content Include="img\img\mask.png" />
+    <Content Include="img\img\ny.jpg" />
+    <Content Include="img\img\portfolio\port01.jpg" />
+    <Content Include="img\img\portfolio\port02.jpg" />
+    <Content Include="img\img\portfolio\port03.jpg" />
+    <Content Include="img\img\portfolio\port04.jpg" />
+    <Content Include="img\img\portfolio\port05.jpg" />
+    <Content Include="img\img\portfolio\port06.jpg" />
+    <Content Include="img\img\product.jpg" />
+    <Content Include="img\img\profile-01.jpg" />
+    <Content Include="img\img\profile-02.jpg" />
+    <Content Include="img\img\radio-gray.png" />
+    <Content Include="img\img\ui-danro.jpg" />
+    <Content Include="img\img\ui-divya.jpg" />
+    <Content Include="img\img\ui-sam.jpg" />
+    <Content Include="img\img\ui-sherman.jpg" />
+    <Content Include="img\img\ui-zac.jpg" />
+    <Content Include="img\img\weather.jpg" />
+    <Content Include="img\img\zoom.png" />
+    <Content Include="multimedia\Logo sin fondo.png" />
     <Content Include="multimedia\logo.png" />
     <Content Include="static\css\nucleo-icons.css" />
     <Content Include="static\Dashboard.PNG" />
@@ -1495,18 +1549,18 @@
     <Content Include="Vistas\Private\editar_perfil.aspx" />
     <Content Include="Vistas\Private\gestionar_cliente.aspx" />
     <Content Include="Vistas\Private\gestionar_proveedor.aspx" />
+    <Content Include="Vistas\Private\index_admin.aspx" />
     <Content Include="Vistas\Private\ingresar_cliente.aspx" />
     <Content Include="Vistas\Private\ingresar_proveedor.aspx" />
     <Content Include="Vistas\Private\gestionar_supervisor.aspx" />
     <Content Include="Vistas\Private\historialpruebas.aspx" />
-    <Content Include="Vistas\Private\index_gerente.aspx" />
-    <Content Include="Vistas\Private\index_supervisor.aspx" />
     <Content Include="Vistas\Private\ingresarresultados.aspx" />
     <Content Include="Vistas\Private\ingresar_supervisor.aspx" />
     <Content Include="Vistas\Private\ModificarCantidad.aspx" />
     <Content Include="Vistas\Private\modificarresultados.aspx" />
     <Content Include="Vistas\Private\modi_empresa.aspx" />
     <Content Include="Vistas\Private\pedidos_clientes.aspx" />
+    <Content Include="Vistas\Private\Perfil.aspx" />
     <Content Include="Vistas\Private\PerfilG.aspx" />
     <Content Include="Vistas\Private\REPORTEEE.aspx" />
     <Content Include="Vistas\Private\surtirleche.aspx" />
@@ -1546,6 +1600,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modelos\EMPRESA.cs" />
+    <Compile Include="Modelos\estructura.cs" />
     <Compile Include="Modelos\FACTURA.cs" />
     <Compile Include="Modelos\FINCA.cs" />
     <Compile Include="Modelos\PERSONA.cs" />
@@ -1587,13 +1642,6 @@
     <Compile Include="Vistas\Private\editar_perfil.aspx.designer.cs">
       <DependentUpon>editar_perfil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Private\gerente.Master.cs">
-      <DependentUpon>gerente.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Private\gerente.Master.designer.cs">
-      <DependentUpon>gerente.Master</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Private\gestionar_cliente.aspx.cs">
       <DependentUpon>gestionar_cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1607,6 +1655,13 @@
     </Compile>
     <Compile Include="Vistas\Private\gestionar_proveedor.aspx.designer.cs">
       <DependentUpon>gestionar_proveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\index_admin.aspx.cs">
+      <DependentUpon>index_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\index_admin.aspx.designer.cs">
+      <DependentUpon>index_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\ingresar_cliente.aspx.cs">
       <DependentUpon>ingresar_cliente.aspx</DependentUpon>
@@ -1635,20 +1690,6 @@
     </Compile>
     <Compile Include="Vistas\Private\historialpruebas.aspx.designer.cs">
       <DependentUpon>historialpruebas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Private\index_gerente.aspx.cs">
-      <DependentUpon>index_gerente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Private\index_gerente.aspx.designer.cs">
-      <DependentUpon>index_gerente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Private\index_supervisor.aspx.cs">
-      <DependentUpon>index_supervisor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Private\index_supervisor.aspx.designer.cs">
-      <DependentUpon>index_supervisor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\ingresarresultados.aspx.cs">
       <DependentUpon>ingresarresultados.aspx</DependentUpon>
@@ -1691,6 +1732,13 @@
     </Compile>
     <Compile Include="Vistas\Private\pedidos_clientes.aspx.designer.cs">
       <DependentUpon>pedidos_clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Perfil.aspx.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Perfil.aspx.designer.cs">
+      <DependentUpon>Perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\PerfilG.aspx.cs">
       <DependentUpon>PerfilG.aspx</DependentUpon>
@@ -1804,7 +1852,6 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="Vistas\Public\master1.Master" />
-    <Content Include="Vistas\Private\gerente.Master" />
     <Content Include="Vistas\Private\supervisor.Master" />
     <Content Include="Vistas\Private\Admin.Master" />
     <None Include="Web.Debug.config">

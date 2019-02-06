@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <a href="login.aspx"> INICIAR SESIÓN</a>
         </div>
     </form>
 </body>

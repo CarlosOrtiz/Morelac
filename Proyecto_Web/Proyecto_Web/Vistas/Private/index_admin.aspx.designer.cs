@@ -10,6 +10,6 @@
 namespace Proyecto_Web.Vistas.Private {
     
     
-    public partial class index_supervisor {
+    public partial class index_admin {
     }
 }
