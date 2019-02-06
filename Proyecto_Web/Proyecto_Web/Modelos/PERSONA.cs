@@ -1,11 +1,12 @@
-﻿using Proyecto_Web.Conection;
-using Proyecto_Web.Interface;
+﻿using Proyecto_Web.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 using Proyecto_Web.Modelos;
+using Proyecto_Web.Conection;
+
 namespace Proyecto_Web.Modelos
 {
     public class PERSONA
@@ -53,7 +54,7 @@ namespace Proyecto_Web.Modelos
 
         public bool RegistrarPersona(string NOM1, string NOM2, string APE1, string APE2, string CELULAR, string NACIMIENTO,string DIRECCION, string DETALLES, char SEXO){
             try{
-                return dat.OperarDatos("INSERT INTO persona ('" + NOMBRE1 + "', '" + NOMBRE2 + "', '" + APELLIDO1 + "', '" + APELLIDO2 + "', '" + CELULAR + "', '" + NACIMIENTO + "', '" + DIRECCION + "', '" + DETALLES + "', '" + SEXO + "');");  
+                return dat.OperarDatos("INSERT INTO persona ('" + NOM1 + "', '" + NOM2 + "', '" + APE1 + "', '" + APE2 + "', '" + CELULAR + "', '" + NACIMIENTO + "', '" + DIRECCION + "', '" + DETALLES + "', '" + SEXO + "');");  
             }catch (Exception){
                 return false;
             }
