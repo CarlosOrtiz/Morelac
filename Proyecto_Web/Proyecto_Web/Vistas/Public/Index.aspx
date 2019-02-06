@@ -35,26 +35,28 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand js-scroll-trigger" href="login.aspx"> 
+                    <img src="../../multimedia/Logo sin fondo.png" width="100" class="col-md-8" />
+                </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                            <a class="nav-link js-scroll-trigger" href="#about">Acerca de</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                            <a class="nav-link js-scroll-trigger" href="#services">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="login.aspx">INICIAR SESIÓN</a>
+                            <a class="nav-link js-scroll-trigger" href="login.aspx">Iniciar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -82,10 +84,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="section-heading text-white">We've got what you need!</h2>
+                        <h2 class="section-heading text-white">¡Tenemos lo que necesitas!</h2>
                         <hr class="light my-4">
-                        <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+                        <p class="text-faded mb-4">
+¡Start Bootstrap tiene todo lo que necesita para poner en marcha su nuevo sitio web en poco tiempo! Todas las plantillas y temas en Start Bootstrap son de código abierto, de descarga gratuita y fáciles de usar. ¡Sin ataduras!</p>
+                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">¡Empezar!</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +98,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">At Your Service</h2>
+                        <h2 class="section-heading">A su servicio</h2>
                         <hr class="my-4">
                     </div>
                 </div>

@@ -44,7 +44,7 @@
             <form runat="server" class="form-login">
                 <h2 class="form-login-heading">
                     <div class="col-md-2"></div>
-                    <img src="../../multimedia/Logo sin fondo.png" width="100" class="col-md-8" />
+                    <a href="Index.aspx"><img src="../../multimedia/Logo sin fondo.png" width="100" class="col-md-8" /></a>
                     <div style="padding-bottom: 1%;" class="col-md-2"></div>
                     <strong>INICIAR SESIÓN</strong></h2>
                 <div class="login-wrap">
