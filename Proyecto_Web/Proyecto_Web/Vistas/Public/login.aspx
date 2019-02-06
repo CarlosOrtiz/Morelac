@@ -24,10 +24,18 @@
     <!-- Custom styles for this template -->
     <link href="../../css/style.css" rel="stylesheet" />
     <link href="../../css/style-responsive.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script>
-        function myFunction() {
-            alert("Contraseña o Usuario incorrecto\nPor Favor Verificar");
-        }
+        function Confirm() {
+            $('#myModal2').modal('show');
+            return true;
+        };
+        //function Confirm(){
+        //$(document).ready(function(){
+        //$("#myModal2").modal();
+        //});
+        //}
     </script>
 </head>
 <body>
@@ -40,9 +48,9 @@
                     <div style="padding-bottom: 1%;" class="col-md-2"></div>
                     <strong>INICIAR SESIÓN</strong></h2>
                 <div class="login-wrap">
-                    <asp:TextBox runat="server" class="form-control" ID="Usu" placeholder="CORREO ELECTRONICO"></asp:TextBox>
+                    <asp:TextBox runat="server" class="form-control" ID="correo_login" placeholder="CORREO ELECTRONICO"></asp:TextBox>
                     <label class="checkbox"></label>
-                    <asp:TextBox runat="server" TextMode="Password" class="form-control" ID="contra" placeholder="CONTRASEÑA"></asp:TextBox>
+                    <asp:TextBox runat="server" TextMode="Password" class="form-control" ID="contra_login" placeholder="CONTRASEÑA"></asp:TextBox>
                     <label class="checkbox"></label>
                     <%--<label class="checkbox col-md-12">
                         <input  class="col-md-1" type="checkbox" value="remember-me" />
@@ -53,30 +61,46 @@
                     <asp:Label runat="server" ID="mostrar"></asp:Label>
                     <hr />
                     <div class="col-md-12">
-                       <a class="col-md-12" style="color: black; text-align: center;" data-toggle="modal" href="../../login.html#myModal"><strong>¿Se te olvidó tu contraseña?</strong></a>
+                        <a class="col-md-12" style="color: black; text-align: center;" data-toggle="modal" href="../../login.html#myModal"><strong>¿Se te olvidó tu contraseña?</strong></a>
                     </div>
                     <br />
                 </div>
-                <!-- Modal -->
+                <!-- Modal  1 -->
                 <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 style="text-align:center;" class="modal-title">¿RECORDAR CONTRASEÑA?</h4>
+                                <h4 style="text-align: center;" class="modal-title"><strong>¿RECORDAR CONTRASEÑA?</strong></h4>
                             </div>
                             <div class="modal-body">
-                                <p style="font-size:16px;">Ingresé su dirección de correo electrónico a continuación para restablecer su contraseña.</p>
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix" />
+                                <p style="font-size: 15px;text-align:center;"><strong> Ingresé su dirección de correo electrónico a continuación para restablecer su contraseña.</strong></p>
+                                <asp:TextBox runat="server" TextMode="Email" ID="Email_modal" placeholder="CORREO ELECTRONICO" CssClass="form-control placeholder-no-fix" autocomplete="off"></asp:TextBox>
                             </div>
-                            <div class="modal-footer">
-                                <button data-dismiss="modal" class="btn btn-default" type="button">CANCELAR</button>
-                                <button class="btn btn-theme" type="button">ENVIAR</button>
+                            <div style="text-align: center;" class="modal-footer">
+                                <asp:LinkButton style="text-align: center; position: center;" runat="server" ID="Cancelar_modal" data-dismiss="modal" CssClass="btn btn-danger"  >CANCELAR</asp:LinkButton>
+                                <asp:LinkButton runat="server" style="text-align: center; position: center;" CssClass="btn btn-theme" ID="btn_enviar_modal">ENVIAR</asp:LinkButton>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- modal -->
+                <!-- Modal  2-->
+                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal2" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div style="background:#f0ad4e;" class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 style="text-align: center;" class="modal-title"><strong>¡ADVERTENCIA!</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <p style="font-size: 16px; text-align:center;"><strong><%=mjs %></strong></p>
+                            </div>
+                            <div style="text-align: center;" class="modal-footer">
+                                <button style="text-align: center; position: center;" data-dismiss="modal" class="btn btn-warning" type="button">ACEPTAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
