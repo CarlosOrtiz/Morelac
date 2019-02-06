@@ -40,11 +40,11 @@ namespace Proyecto_Web.Modelos
                 return false;
             }
         }
-        public DataTable ConsultarFinca(string Cedula)
+        public DataTable ConsultarFinca(string ID)
         {
             try
             {
-                return dat.ConsultarDatos("CALL CONS_PERSONA ('" + Cedula + "');");
+                return dat.ConsultarDatos("CALL CONS_FINCA ('" + ID + "');");
             }
             catch (Exception io)
             {
@@ -52,11 +52,11 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
-        public bool Actualizar(int id, string nom, string ape, string naci, char sexo, string num, string bio, string foto, string con, string estado)
+        public bool Actualizar(int id, string nom, string ubi, string dime)
         {
             try
             {
-                return dat.OperarDatos("CALL UPDA_PERSONA ('" + id + "', '" + nom + "', '" + ape + "', '" + naci + "', '" + sexo + "', '" + num + "', '" + bio + "', '" + foto + "','" + con + "','" + estado + "');");
+                return dat.OperarDatos("CALL UPDA_FINCA ('" + id + "', '" + nom + "', '" + ubi + "', '" + dime + "');");
             }
             catch (Exception)
             {
