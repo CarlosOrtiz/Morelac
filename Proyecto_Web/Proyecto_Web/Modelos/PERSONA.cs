@@ -59,10 +59,11 @@ namespace Proyecto_Web.Modelos
                 return false;
             }
         }
-        public DataTable ConsultarPersona(string Cedula){
+        public DataTable ConsultarPersona(string correo){
             try{
-                return dat.ConsultarDatos("CALL CONS_PERSONA ('" + Cedula + "');");
-            }catch (Exception io){
+                return dat.ConsultarDatos("CALL CONS_PERSONA ('" + correo + "');");
+            }
+            catch (Exception io){
                 estructura err = new estructura();
                 return err.GetError(io.Message);
             }

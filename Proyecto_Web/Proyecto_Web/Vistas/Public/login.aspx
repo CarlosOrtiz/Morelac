@@ -14,16 +14,16 @@
     <title>Iniciar sesión</title>
 
     <!-- Favicons -->
-    <link href="../Private/img/icon/vaca.png" rel="icon" />
-    <link href="../Private/img/icon/vaca.png" rel="apple-touch-icon" />
+    <link href="../../../Plantilla/Privado/img/icon/vaca.png" rel="icon" />
+    <link href="../../../Plantilla/Privado/img/icon/vaca.png" rel="apple-touch-icon" />
 
     <!-- Bootstrap core CSS -->
-    <link href="../Private/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!--external css-->
-    <link href="../Private/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="../Private/css/style.css" rel="stylesheet" />
-    <link href="../Private/css/style-responsive.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/css/style.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/css/style-responsive.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script>
@@ -42,11 +42,11 @@
     <div id="login-page">
         <div class="container">
             <form runat="server" class="form-login">
-                <h2 class="form-login-heading">
+                <h2 style="height:140px;" class="form-login-heading">
+                    <div  class="col-md-2"></div>
+                    <a href="Index.aspx"><img src="../../Multimedia/Imagenes/Logo sin fondo.png" width="150" height="100"  class="col-md-8" /></a>
                     <div class="col-md-2"></div>
-                    <a href="Index.aspx"><img src="../../multimedia/Logo sin fondo.png" width="100" class="col-md-8" /></a>
-                    <div style="padding-bottom: 1%;" class="col-md-2"></div>
-                    <strong>INICIAR SESIÓN</strong></h2>
+                 </h2>
                 <div class="login-wrap">
                     <asp:TextBox runat="server" class="form-control" ID="correo_login" placeholder="CORREO ELECTRONICO"></asp:TextBox>
                     <label class="checkbox"></label>
@@ -56,12 +56,12 @@
                         <input  class="col-md-1" type="checkbox" value="remember-me" />
                         <p style="padding-left: 0px;margin-bottom: 0px;" class="col-md-11">Recordar credenciales</p>
                     </label>--%>
-                    <asp:Button runat="server" ID="In_Sesion" class="btn btn-theme btn-block" type="submit" Text="INICIAR SESIÓN" OnClick="In_Sesion_Click" />
+                    <asp:Button style="font-size:17px;font-weight:900;" runat="server" ID="In_Sesion" class="btn btn-theme btn-block" type="submit" Text="INICIAR SESIÓN" OnClick="In_Sesion_Click" />
 
                     <asp:Label runat="server" ID="mostrar"></asp:Label>
                     <hr />
                     <div class="col-md-12">
-                        <a class="col-md-12" style="color: black; text-align: center;" data-toggle="modal" href="../../login.html#myModal"><strong>¿Se te olvidó tu contraseña?</strong></a>
+                        <a class="col-md-12" style="color: black; text-align: center;" data-toggle="modal" href="../../login.html#myModal"><strong style="color:indianred;">¿Se te olvidó tu contraseña?</strong></a>
                     </div>
                     <br />
                 </div>
@@ -105,13 +105,12 @@
         </div>
     </div>
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="../../lib/jquery/jquery.min.js"></script>
-    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../Plantilla/Privado/lib/jquery/jquery.min.js"></script>
+    <script src="../../../Plantilla/Privado/lib/bootstrap/js/bootstrap.min.js"></script>
     <!--BACKSTRETCH-->
-    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="../Private/lib/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="../../Plantilla/Privado/lib/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("../Private/img/empresa/equipo_trabajo.jpg", {
+        $.backstretch("../../Plantilla/Privado/img/img/empresa/equipo_trabajo.JPG", {
             speed: 500
 
         });

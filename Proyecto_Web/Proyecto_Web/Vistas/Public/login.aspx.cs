@@ -37,7 +37,8 @@ namespace Proyecto_Web.Vistas.Public
                     if (MOD_USUARIO.ConsultarUsuarios(correo_login.Text, contra_login.Text).Rows[0]["TIPO"].Equals("3"))
                     {
                         Session["ID_ROL"] = MOD_ROL.Consultarrol(correo_login.Text).Rows[0]["ID_ROL"].ToString();
-                        Session["CORREO_ELECTRONICO"] = contra_login.Text;
+                        Session["CORREO_ELECTRONICO"] = correo_login.Text;
+                        Session["CONTRASENA"] = contra_login.Text;
                         Response.Redirect("~/Vistas/Private/index_admin.aspx");
 
                         switch (Int32.Parse(MOD_ROL.Consultarrol(correo_login.Text).Rows[0]["ID_ROL"].ToString()))
