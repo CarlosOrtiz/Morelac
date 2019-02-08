@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="surtirleche.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.surtirleche" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="surtirleche.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.surtirleche" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--<h3>LECHE SUMINISTRADA POR PROVEEDORES</h3>--%>

@@ -13,41 +13,41 @@
     <title>Morelac</title>
 
     <!-- Favicons -->
-    <link href="../../../Plantilla/Privado/img/icon/vaca0.png" rel="icon" />
-    <link href="img/icon/vaca0.png" rel="apple-touch-icon" />
+    <link href="../../../Multimedia/Imagenes/Logo sin fondo.png" rel="icon" />
+    <link href="../../../Multimedia/Imagenes/Logo sin fondo.png" rel="apple-touch-icon" />
 
     <!-- Bootstrap core CSS -->
     <link href="../../../Plantilla/Privado/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!--external css-->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/zabuto_calendar.css" />
-    <link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/css/zabuto_calendar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/lib/gritter/css/jquery.gritter.css" />
 
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css" />
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-timepicker/compiled/timepicker.css" />
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap-datetimepicker/datertimepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/lib/bootstrap-fileupload/bootstrap-fileupload.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/lib/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/lib/bootstrap-daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/lib/bootstrap-timepicker/compiled/timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../../../Plantilla/Privado/lib/bootstrap-datetimepicker/datertimepicker.css" />
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/css/style.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/css/style-responsive.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css" />
     <%-- <link href="static/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../../static/css/app.f637e9e6c19ce63f0094c086bedef65b.css" rel="stylesheet" />--%>
 
-    <script src="lib/chart-master/Chart.js"></script>
-    <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
-    <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../lib/advanced-datatable/css/DT_bootstrap.css" />
+    <script src="../../../Plantilla/Privado/lib/chart-master/Chart.js"></script>
+    <link href="../../../Plantilla/Privado/lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+    <link href="../../../Plantilla/Privado/lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../Plantilla/Privado/lib/advanced-datatable/css/DT_bootstrap.css" />
 
     <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>--%>
 
-    <script src="lib/chart-master/Chart.js"></script>
+    <script src="../../../Plantilla/Privado/lib/chart-master/Chart.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -66,12 +66,12 @@
                 <!--logo start-->
                 <a href="index_gerente.aspx" class="logo"><b>MORE<span>LACTEOS</span></b></a>
                 <!--logo end-->
-                <div class="nav notify-row" id="top_menu">
+             <%--   <div class="nav notify-row" id="top_menu">
                     <!--  notification start -->
                     <ul class="nav top-menu">
                         <!-- settings start -->
                         <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index_admin.aspx">
                                 <i class="fa fa-tasks"></i>
                                 <span class="badge bg-theme">4</span>
                             </a>
@@ -152,7 +152,7 @@
                                 <li>
                                     <a href="index.html#">
                                         <span class="photo">
-                                            <img alt="avatar" src="../../img/ui-zac.jpg"></span>
+                                            <img alt="avatar" src="../../../Plantilla/Privado/img/ui-zac.jpg"></span>
                                         <span class="subject">
                                             <span class="from">Zac Snider</span>
                                             <span class="time">Just now</span>
@@ -164,7 +164,7 @@
                                 <li>
                                     <a href="index.html#">
                                         <span class="photo">
-                                            <img alt="avatar" src="../../img/ui-divya.jpg"></span>
+                                            <img alt="avatar" src="../../../Plantilla/Privado/img/ui-divya.jpg"></span>
                                         <span class="subject">
                                             <span class="from">Divya Manian</span>
                                             <span class="time">40 mins.</span>
@@ -176,7 +176,7 @@
                                 <li>
                                     <a href="index.html#">
                                         <span class="photo">
-                                            <img alt="avatar" src="../../img/ui-danro.jpg"></span>
+                                            <img alt="avatar" src="../../../Plantilla/Privado/img/ui-danro.jpg"></span>
                                         <span class="subject">
                                             <span class="from">Dan Rogers</span>
                                             <span class="time">2 hrs.</span>
@@ -188,7 +188,7 @@
                                 <li>
                                     <a href="index.html#">
                                         <span class="photo">
-                                            <img alt="avatar" src="../../img/ui-sherman.jpg"></span>
+                                            <img alt="avatar" src="../../../Plantilla/Privado/img/ui-sherman.jpg"></span>
                                         <span class="subject">
                                             <span class="from">Dj Sherman</span>
                                             <span class="time">4 hrs.</span>
@@ -250,10 +250,10 @@
                         <!-- notification dropdown end -->
                     </ul>
                     <!--  notification end -->
-                </div>
+                </div>--%>
                 <div class="top-menu">
                     <ul class="nav pull-right top-menu">
-                        <li><a class="logout" href="/Vistas/Public/login.aspx">Cerrar sesión</a></li>
+                        <li><a class="logout" href="../../Public/login.aspx">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </header>
@@ -274,7 +274,7 @@
                         <h5 class="centered"><%=Nombre %> </h5>
                         
                         <li>
-                            <a href="modi_empresa.aspx">
+                            <a href="../Gerente/modi_empresa.aspx">
                                 <i class="fa fa-book"></i>
                                 <span>EMPRESA</span>
                             </a>
@@ -286,7 +286,7 @@
                                 <span class="dcjq-icon"></span>
                             </a>
                             <ul class="sub">
-                                <li><a href="ingresar_supervisor.aspx">SUPERVISOR</a></li>
+                                <li><a href="../Supervisor/ingresar_supervisor.aspx">SUPERVISOR</a></li>
                                 <li><a href="ingresar_proveedor.aspx">PROVEEDOR</a></li>
                                 <li><a href="ingresar_cliente.aspx">CLIENTE</a></li>
                             </ul>
@@ -487,19 +487,19 @@
             <!--footer end-->
         </section>
         <!-- js placed at the end of the document so the pages load faster -->
-        <script src="../../lib/jquery/jquery.min.js"></script>
-        <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../../Plantilla/Privado/lib/jquery/jquery.min.js"></script>
+        <script src="../../../Plantilla/Privado/lib/bootstrap/js/bootstrap.min.js"></script>
         <script class="include" type="text/javascript" src="../../lib/jquery.dcjqaccordion.2.7.js"></script>
-        <script src="../../lib/jquery.scrollTo.min.js"></script>
-        <script src="../../lib/jquery.nicescroll.js" type="text/javascript"></script>
-        <script src="../../lib/jquery.sparkline.js"></script>
+        <script src="../../../Plantilla/Privado/lib/jquery.scrollTo.min.js"></script>
+        <script src="../../../Plantilla/Privado/lib/jquery.nicescroll.js" type="text/javascript"></script>
+        <script src="../../../Plantilla/Privado/lib/jquery.sparkline.js"></script>
         <!--common script for all pages-->
-        <script src="../../lib/common-scripts.js"></script>
-        <script type="text/javascript" src="../../lib/gritter/js/jquery.gritter.js"></script>
-        <script type="text/javascript" src="../../lib/gritter-conf.js"></script>
+        <script src="../../../Plantilla/Privado/lib/common-scripts.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/gritter/js/jquery.gritter.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/gritter-conf.js"></script>
         <!--script for this page-->
-        <script src="../../lib/sparkline-chart.js"></script>
-        <script src="../../lib/zabuto_calendar.js"></script>
+        <script src="../../../Plantilla/Privado/lib/sparkline-chart.js"></script>
+        <script src="../../../Plantilla/Privado/lib/zabuto_calendar.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var unique_id = $.gritter.add({
@@ -508,7 +508,7 @@
                     // (string | mandatory) the text inside the notification
                     text: 'Desplázame para habilitar el botón Cerrar. Puede ocultar la barra lateral izquierda haciendo clic en el botón al lado del logotipo.',
                     // (string | optional) the image to display on the left
-                    image: '../../img/ui-sam.jpg',
+                    image: '../../../Plantilla/Privado/img/ui-sam.jpg',
                     // (bool | optional) if you want it to fade out on its own or just sit there
                     sticky: false,
                     // (int | optional) the time you want it to be alive for before fading out
@@ -562,15 +562,15 @@
                 console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
             }
         </script>
-        <script src="../../lib/jquery-ui-1.9.2.custom.min.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-daterangepicker/date.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-daterangepicker/daterangepicker.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-daterangepicker/moment.min.js"></script>
-        <script type="text/javascript" src="../../lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-        <script src="../../lib/advanced-form-components.js"></script>
+        <script src="../../../Plantilla/Privado/lib/jquery-ui-1.9.2.custom.min.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-daterangepicker/date.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+        <script src="../../../Plantilla/Privado/lib/advanced-form-components.js"></script>
         <div id="ascrail2000" class="nicescroll-rails" style="width: 3px; z-index: auto; background: rgb(64, 64, 64); cursor: default; position: fixed; top: 0px; left: 207px; height: 627px; opacity: 0; display: none;">
             <div style="position: relative; top: 0px; float: right; width: 3px; height: 0px; background-color: rgb(78, 205, 196); background-clip: padding-box; border-radius: 10px;"></div>
         </div>

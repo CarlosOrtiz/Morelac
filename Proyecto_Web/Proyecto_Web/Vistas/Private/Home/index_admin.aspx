@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="index_admin.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.index_admin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="index_admin.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.index_admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -292,7 +292,7 @@
         <!-- First Member -->
         <div class="desc">
             <div class="thumb">
-                <img class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align="">
+                <img class="img-circle" src="../../../Plantilla/Privado/img/img/ui-sam.jpg" width="35px" height="35px" align="">
             </div>
             <div class="details">
                 <p>

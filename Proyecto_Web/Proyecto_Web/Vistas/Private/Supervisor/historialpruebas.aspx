@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="historialpruebas.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.historialpruebas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="historialpruebas.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.historialpruebas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--<h3><i class="fa fa-angle-right"></i>HISTORIAL DE PRUEBAS SOBRE LA CALIDAD DE LA LECHE</h3>--%>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="ingresarresultados.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ingresarresultados" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="ingresarresultados.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ingresarresultados" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--<h3><i class="fa fa-angle-right"></i>REGISTRO DE RESUTADOS SOBRE LAS PRUEBAS DE CALIDAD DE LA LECHE</h3>--%>
 </asp:Content>

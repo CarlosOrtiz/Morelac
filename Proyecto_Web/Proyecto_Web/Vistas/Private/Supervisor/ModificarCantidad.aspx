@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Admin.Master" AutoEventWireup="true" CodeBehind="ModificarCantidad.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ModificarCantidad" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="ModificarCantidad.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ModificarCantidad" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 

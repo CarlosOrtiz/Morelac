@@ -1010,9 +1010,6 @@ D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\Microsoft.CodeDo
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\MySql.Data.dll
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\MySql.Web.dll
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csprojAssemblyReference.cache
-D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csproj.CoreCompileInputs.cache
-D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csproj.CopyComplete
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.dll
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.pdb
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.CrystalReports.Engine.dll
@@ -1102,3 +1099,4 @@ D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDe
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.Web.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\log4net.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\log4net.xml
+D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csprojResolveAssemblyReference.cache

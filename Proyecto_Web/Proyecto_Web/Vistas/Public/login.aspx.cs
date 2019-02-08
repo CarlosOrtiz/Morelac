@@ -39,12 +39,12 @@ namespace Proyecto_Web.Vistas.Public
                         Session["ID_ROL"] = MOD_ROL.Consultarrol(correo_login.Text).Rows[0]["ID_ROL"].ToString();
                         Session["CORREO_ELECTRONICO"] = correo_login.Text;
                         Session["CONTRASENA"] = contra_login.Text;
-                        Response.Redirect("~/Vistas/Private/index_admin.aspx");
+                        Response.Redirect("~/Vistas/Private/Home/index_admin.aspx");
 
                         switch (Int32.Parse(MOD_ROL.Consultarrol(correo_login.Text).Rows[0]["ID_ROL"].ToString()))
                         {
                             case 1:
-                                Response.Redirect("~/Vistas/Private/index_admin.aspx");
+                                Response.Redirect("~/Vistas/Private/Home/index_admin.aspx");
                                 break;
                             default:
                                 Response.Redirect("~/Vistas/Public/login.aspx");
