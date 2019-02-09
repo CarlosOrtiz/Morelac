@@ -3302,13 +3302,6 @@
     <Compile Include="Vistas\Private\Reportes\REPORTEEE.aspx.designer.cs">
       <DependentUpon>REPORTEEE.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Private\Supervisor\supervisor.Master.cs">
-      <DependentUpon>supervisor.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Private\Supervisor\supervisor.Master.designer.cs">
-      <DependentUpon>supervisor.Master</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Private\Supervisor\surtirleche.aspx.cs">
       <DependentUpon>surtirleche.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3395,7 +3388,6 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="Vistas\Public\master1.Master" />
-    <Content Include="Vistas\Private\Supervisor\supervisor.Master" />
     <Content Include="Vistas\Private\Home\Admin.Master" />
     <Content Include="Plantilla\Publico\scss\creative.scss" />
     <Content Include="Plantilla\Publico\scss\_bootstrap-overrides.scss" />

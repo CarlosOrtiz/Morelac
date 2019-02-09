@@ -343,20 +343,20 @@
                         </li>
                         <li>
                             <a href="historialpruebas.aspx">
-                                <i class="fa fa-book"></i>
+                                <i class="REPORTES"></i>
                                 <span>HISTORIAL DE PRUEBAS</span>
                             </a>
                         </li>
                         <li class="sub-menu dcjq-parent-li">
-                            <a href="javascript:;" class="dcjq-parent">
+                            <a href="REPORTEEE.aspx" class="dcjq-parent">
                                 <i class="fa fa-book"></i>
                                 <span>REPORTES</span>
                                 <span class="dcjq-icon"></span>
                             </a>
-                            <ul class="sub">
+                            <%--<ul class="sub">
                                 <li><a href="REPORTEEE.aspx">LISTADO DE PROVEEDORES</a></li>
                                 <li><a href="modificarresultados.aspx">MODIFICAR RESULTADOS</a></li>
-                            </ul>
+                            </ul>--%>
                         </li>
 
 
