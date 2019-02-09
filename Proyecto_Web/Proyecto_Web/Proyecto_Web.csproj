@@ -1292,6 +1292,8 @@
     <Content Include="aspnet_client\system_web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
     <Content Include="Plantilla\Privado\contactform\contactform.php" />
     <Content Include="Global.asax" />
+    <Content Include="Plantilla\Privado\CSS CAOL\jquery.dataTables.min.css" />
+    <Content Include="Plantilla\Privado\CSS CAOL\responsive.dataTables.min.css" />
     <Content Include="Plantilla\Privado\img\empresa\gerente.png" />
     <Content Include="Plantilla\Privado\img\empresa\usuaria.png" />
     <Content Include="Plantilla\Privado\img\empresa\usuario.png" />
@@ -1395,6 +1397,9 @@
     <Content Include="Plantilla\Privado\img\ui-zac.jpg" />
     <Content Include="Plantilla\Privado\img\weather.jpg" />
     <Content Include="Plantilla\Privado\img\zoom.png" />
+    <Content Include="Plantilla\Privado\JS CAOL\dataTables.responsive.min.js" />
+    <Content Include="Plantilla\Privado\JS CAOL\jquery-3.3.1.js" />
+    <Content Include="Plantilla\Privado\JS CAOL\jquery.dataTables.min.js" />
     <Content Include="Plantilla\Privado\lib\advanced-datatable\css\demo_page.css" />
     <Content Include="Plantilla\Privado\lib\advanced-datatable\css\demo_table.css" />
     <Content Include="Plantilla\Privado\lib\advanced-datatable\css\demo_table_jui.css" />
@@ -1523,6 +1528,9 @@
     <Content Include="Plantilla\Publico\img\Icon2\WhatsApp.png" />
     <Content Include="Vistas\Private\Cliente\abono_clientes.aspx" />
     <Content Include="Vistas\Private\Proveedor\abono_proveedores.aspx" />
+    <Content Include="Vistas\Private\Supervisor\advanced_table.html" />
+    <Content Include="Vistas\Private\Supervisor\SupervisorTabla.aspx" />
+    <Content Include="Vistas\Private\Supervisor\WebForm1.aspx" />
     <Content Include="Vistas\Private\Usuarios\editar_perfil.aspx" />
     <Content Include="Vistas\Private\Cliente\gestionar_cliente.aspx" />
     <Content Include="Vistas\Private\Proveedor\gestionar_proveedor.aspx" />
@@ -3182,6 +3190,20 @@
     </Compile>
     <Compile Include="Vistas\Private\Home\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\SupervisorTabla.aspx.cs">
+      <DependentUpon>SupervisorTabla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\SupervisorTabla.aspx.designer.cs">
+      <DependentUpon>SupervisorTabla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Usuarios\editar_perfil.aspx.cs">
       <DependentUpon>editar_perfil.aspx</DependentUpon>

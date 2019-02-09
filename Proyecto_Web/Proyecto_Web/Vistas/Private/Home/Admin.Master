@@ -280,13 +280,13 @@
                             </a>
                         </li>
                         <li class="sub-menu dcjq-parent-li">
-                            <a href="javascript:;" class="dcjq-parent">
+                            <a href="~/Vistas/Private/Supervisor/SupervisorTabla.aspx" class="dcjq-parent">
                                 <i class="fa fa-cogs"></i>
                                 <span>REGISTRAR</span>
                                 <span class="dcjq-icon"></span>
                             </a>
                             <ul class="sub">
-                                <li><a href="../Supervisor/ingresar_supervisor.aspx">SUPERVISOR</a></li>
+                                <li><a href="~/Vistas/Private/Supervisor/SupervisorTabla.aspx">SUPERVISOR</a></li>
                                 <li><a href="ingresar_proveedor.aspx">PROVEEDOR</a></li>
                                 <li><a href="ingresar_cliente.aspx">CLIENTE</a></li>
                             </ul>
