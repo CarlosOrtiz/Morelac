@@ -3159,6 +3159,7 @@
     <Compile Include="Modelos\estructura.cs" />
     <Compile Include="Modelos\FACTURA.cs" />
     <Compile Include="Modelos\FINCA.cs" />
+    <Compile Include="Modelos\MENU.cs" />
     <Compile Include="Modelos\PERSONA.cs" />
     <Compile Include="Modelos\PRODUCTOS.cs" />
     <Compile Include="Modelos\ROL.cs" />

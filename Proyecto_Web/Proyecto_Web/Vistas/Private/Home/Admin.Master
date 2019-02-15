@@ -64,9 +64,9 @@
                     <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
                 </div>
                 <!--logo start-->
-                <a href="index_gerente.aspx" class="logo"><b>MORE<span>LACTEOS</span></b></a>
+                <a href="index_admin.aspx" class="logo"><b>MORE<span>LACTEOS</span></b></a>
                 <!--logo end-->
-             <%--   <div class="nav notify-row" id="top_menu">
+                <%--   <div class="nav notify-row" id="top_menu">
                     <!--  notification start -->
                     <ul class="nav top-menu">
                         <!-- settings start -->
@@ -268,18 +268,28 @@
                     <ul class="sidebar-menu" id="nav-accordion">
                         <p class="centered">
                             <a href="profile.html">
-                                <img src="<%=foto %>" Class="img-circle" Width="100" />
+                                <img src="<%=foto %>" class="img-circle" width="100" />
                             </a>
                         </p>
                         <h5 class="centered"><%=Nombre %> </h5>
-                        
-                        <li>
-                            <a href="../Gerente/modi_empresa.aspx">
+
+                        <asp:Repeater runat="server" ID="Rep_Menu_Dinamico">
+                            <ItemTemplate>
+                                <li>
+                                 <a href="<%#Eval("MENU_URL") %>">
+                                          <i class="<%#Eval("MENU_ICON")%>"></i>
+                                        <span><%#Eval("MENU_NOMBRE") %></span>
+                                    </a>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                       <%--  <li>
+                            <a href="">
                                 <i class="fa fa-book"></i>
                                 <span>EMPRESA</span>
                             </a>
                         </li>
-                        <li class="sub-menu dcjq-parent-li">
+                       <li class="sub-menu dcjq-parent-li">
                             <a href="~/Vistas/Private/Supervisor/SupervisorTabla.aspx" class="dcjq-parent">
                                 <i class="fa fa-cogs"></i>
                                 <span>REGISTRAR</span>
@@ -326,7 +336,7 @@
                                 <span class="dcjq-icon"></span>
                             </a>
                             <ul class="sub">
-                                <li><a href="surtirleche.aspx">SURTIR LECHE</a></li>
+                                <li><a href="../Supervisor/surtirleche.aspx">SURTIR LECHE</a></li>
                                 <li><a href="ModificarCantidad.aspx">MODIFICAR LA CANTIDAD TOP</a></li>
                             </ul>
                         </li>
@@ -356,8 +366,8 @@
                             <%--<ul class="sub">
                                 <li><a href="REPORTEEE.aspx">LISTADO DE PROVEEDORES</a></li>
                                 <li><a href="modificarresultados.aspx">MODIFICAR RESULTADOS</a></li>
-                            </ul>--%>
-                        </li>
+                            </ul>
+                        </li>--%>
 
 
                         <%--<li class="sub-menu">

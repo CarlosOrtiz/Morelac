@@ -78,10 +78,10 @@
                         <h1 class="text-uppercase">
                             <strong>MORELACT</strong>
                         </h1>
-                        <hr >
+                        <hr>
                     </div>
                     <div class="col-lg-8 mx-auto">
-                        <p class="text-faded mb-5" style="color:black;font-size:20px;font-weight:500;padding-bottom:0px;margin:0px;"><strong>Empresa distribuidora de alimentos lacteos</strong></p>
+                        <p class="text-faded mb-5" style="color: black; font-size: 20px; font-weight: 500; padding-bottom: 0px; margin: 0px;"><strong>Empresa distribuidora de alimentos lacteos</strong></p>
                         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#Acerca">¡CONOCE MÁS!</a>
                     </div>
                 </div>
@@ -98,23 +98,23 @@
                 </div>
             </div>
             <div class="container">
-                                <div class="row">
-                    
+                <div class="row">
+
                     <div class="col-sm-6 col-md-6">
-                       <h3 class="section-heading text-white" style="text-align:center;">VISIÓN</h3>
-                         <p class="text-faded" style="text-align:justify;">
-                                ¡Start Bootstrap tiene todo lo que necesita para poner en marcha su nuevo sitio web en poco tiempo! Todas las plantillas y temas en Start Bootstrap son de código abierto, de descarga gratuita y fáciles de usar. ¡Sin ataduras!
-                            </p>
+                        <h3 class="section-heading text-white" style="text-align: center;">VISIÓN</h3>
+                        <p class="text-faded" style="text-align: justify;">
+                            ¡Start Bootstrap tiene todo lo que necesita para poner en marcha su nuevo sitio web en poco tiempo! Todas las plantillas y temas en Start Bootstrap son de código abierto, de descarga gratuita y fáciles de usar. ¡Sin ataduras!
+                        </p>
                     </div>
-                    
+
                     <div class="col-sm-6 col-md-6">
-                       <h3 class="section-heading text-white" style="text-align:center;">MISIÓN</h3>
-                            <p class="text-faded" style="text-align:justify;">
-                                ¡Start Bootstrap tiene todo lo que necesita para poner en marcha su nuevo sitio web en poco tiempo! Todas las plantillas y temas en Start Bootstrap son de código abierto, de descarga gratuita y fáciles de usar. ¡Sin ataduras!
-                            </p>
+                        <h3 class="section-heading text-white" style="text-align: center;">MISIÓN</h3>
+                        <p class="text-faded" style="text-align: justify;">
+                            ¡Start Bootstrap tiene todo lo que necesita para poner en marcha su nuevo sitio web en poco tiempo! Todas las plantillas y temas en Start Bootstrap son de código abierto, de descarga gratuita y fáciles de usar. ¡Sin ataduras!
+                        </p>
                     </div>
                 </div>
-           
+
             </div>
         </section>
 
@@ -133,8 +133,10 @@
                         <div class="service-box mt-5 mx-auto">
                             <i class="fas fa-4x fa-hand-holding-heart text-primary mb-3 sr-icon-1"></i>
                             <h3 class="mb-3">Más Nutrientes</h3>
-                            <p class="text-muted mb-0">Contamos con los mejores productos lacteos,en base a nuestros nutrientres ricos en proteinas,
-                                calorías, fibra, vitaminas A, C, D, B2 y B12, calcio, hierro, potasio, magnesio, grasa saturada, azúcares añadidos y sodio.</p>
+                            <p class="text-muted mb-0">
+                                Contamos con los mejores productos lacteos,en base a nuestros nutrientres ricos en proteinas,
+                                calorías, fibra, vitaminas A, C, D, B2 y B12, calcio, hierro, potasio, magnesio, grasa saturada, azúcares añadidos y sodio.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
@@ -322,33 +324,33 @@
         </section>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <%--<form>--%>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        <%--</form>--%>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <%--<form>--%>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                        <%--</form>--%>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
