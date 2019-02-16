@@ -13,9 +13,23 @@ namespace Proyecto_Web.Vistas.Private
         PERSONA MOD_PERSONA = new PERSONA();
         MENU mod_menu = new MENU();
         public string foto, Nombre,n1,n2,ape1,ape2,IDn;
+
+       
+
         DataTable MenuDin = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["CORREO_ELECTRONICO"].ToString().Equals(null))
+                {
+                    Response.Redirect("~/Vistas/Public/Index.aspx");
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("~/Vistas/Public/Index.aspx");
+            }
             IDn = 1 + "";
             //foto = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_FOTO"].ToString();
             foto = "https://scontent-mia3-2.xx.fbcdn.net/v/t1.0-9/51158817_2195938630723557_1395904580683825152_n.jpg?_nc_cat=100&_nc_ht=scontent-mia3-2.xx&oh=f20742908ec47d141eb77c5ae7e1499a&oe=5CE32017";
@@ -29,6 +43,15 @@ namespace Proyecto_Web.Vistas.Private
             Rep_Menu_Dinamico.DataSource = MenuDin;
             Rep_Menu_Dinamico.DataBind();
             
+        }
+        protected void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            Session["ID_ROL"] = null;
+            Session["CORREO_ELECTRONICO"] = null;
+            Session["CONTRASENA"] = null;
+            Session.Abandon();
+            Session.Contents.RemoveAll();
+            Response.Redirect("~/Vistas/Public/Index.aspx");
         }
     }
 }

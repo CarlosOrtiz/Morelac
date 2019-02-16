@@ -31,6 +31,15 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Control Btn_cerrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Btn_cerrar;
+        
+        /// <summary>
         /// Control Rep_Menu_Dinamico.
         /// </summary>
         /// <remarks>

@@ -253,7 +253,8 @@
                 </div>--%>
                 <div class="top-menu">
                     <ul class="nav pull-right top-menu">
-                        <li><a class="logout" href="../../Public/login.aspx">Cerrar sesión</a></li>
+                        <li><asp:LinkButton runat="server" ID="Btn_cerrar" Text="Cerrar Sesión" CssClass="logout" OnClick="Btn_cerrar_Click"></asp:LinkButton>
+                           </li>
                     </ul>
                 </div>
             </header>
@@ -487,7 +488,7 @@
                         &copy; Derechos de autor <strong>CARLOS & JOHANT</strong>. Todos los derechos reservados
                     </p>
                     <div class="credits">
-                        Creado por <a href="#">MI_TIERRITA Inc.</a>
+                        Creado por <a href="#">CAOL & JVV</a>
                     </div>
                     <a href="index.html#" class="go-top">
                         <i class="fa fa-angle-up"></i>
