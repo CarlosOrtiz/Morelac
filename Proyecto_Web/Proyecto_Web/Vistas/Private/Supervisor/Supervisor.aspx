@@ -1,6 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Supervisor.Supervisor" %>
 
+<!DOCTYPE html>
+
+<html lang="es">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
@@ -11,8 +13,8 @@
     <title>Morelac</title>
 
     <!-- Favicons -->
-    <link href="../../../Multimedia/Imagenes/Logo sin fondo.png" rel="icon" />
-    <link href="../../../Multimedia/Imagenes/Logo sin fondo.png" rel="apple-touch-icon" />
+    <link href="../../../Plantilla/Privado/img/icon/vaca.png" rel="icon" />
+    <link href="../../../Plantilla/Privado/img/icon/vaca.png"  rel="apple-touch-icon" />
 
     <!-- Bootstrap core CSS -->
     <link href="../../../Plantilla/Privado/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -32,21 +34,25 @@
     <link href="../../../Plantilla/Privado/css/style-responsive.css" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css" />
-   
+    <%-- <link href="static/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../../static/css/app.f637e9e6c19ce63f0094c086bedef65b.css" rel="stylesheet" />--%>
 
     <script src="../../../Plantilla/Privado/lib/chart-master/Chart.js"></script>
     <link href="../../../Plantilla/Privado/lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
     <link href="../../../Plantilla/Privado/lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../../Plantilla/Privado/lib/advanced-datatable/css/DT_bootstrap.css" />
 
-   
+    <%--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>--%>
 
     <script src="../../../Plantilla/Privado/lib/chart-master/Chart.js"></script>
 
 </head>
-
 <body>
-  <section id="container">
+    <form id="form1" runat="server">
+        <section id="container">
     <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
         *********************************************************************************************************************************************************** -->
@@ -827,8 +833,8 @@
     </footer>
     <!--footer end-->
   </section>
-  <!-- js placed at the end of the document so the pages load faster -->
-  <script src="../../../Plantilla/Privado/lib/jquery/jquery.min.js"></script>
+    </form>
+   <script src="../../../Plantilla/Privado/lib/jquery/jquery.min.js"></script>
   <script type="text/javascript" language="javascript" src="../../../Plantilla/Privado/lib/advanced-datatable/js/jquery.js"></script>
   <script src="../../../Plantilla/Privado/lib/bootstrap/js/bootstrap.min.js"></script>
   <script class="include" type="text/javascript" src="../../../Plantilla/Privado/lib/jquery.dcjqaccordion.2.7.js"></script>
@@ -844,7 +850,13 @@
     function fnFormatDetails(oTable, nTr) {
       var aData = oTable.fnGetData(nTr);
       var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
-      sOut += '<tr><td>Rendering engine:</td><td>' + aData[1] + ' ' + aData[4] + '</td></tr>';
+      sOut += '<tr><td>Rendering engine:</td><td>' + aData[1] + ' ' + aData[8] + '</td></tr>';
+      sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
+        sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
+      sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
+        sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
+         sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
+        sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
       sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
       sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
       sOut += '</table>';
@@ -903,3 +915,4 @@
 </body>
 
 </html>
+

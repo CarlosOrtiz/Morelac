@@ -1,34 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="SupervisorTabla.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Supervisor.Supervisor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <script>
-  $(document).ready(function() {
-    $('#example').DataTable( {
-        responsive: true
-    } );
-} );
-  </script>
-  <script src="../../../Plantilla/Privado/JS CAOL/jquery-3.3.1.js" type="text/javascript"></script>
-  <script src="../../../Plantilla/Privado/JS CAOL/dataTables.responsive.min.js" type="text/javascript"></script>
-  <script src="../../../Plantilla/Privado/JS CAOL/jquery.dataTables.min.js" type="text/javascript"></script>
-   
-    <link href="../../../Plantilla/Privado/CSS CAOL/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
-    <link href="../../../Plantilla/Privado/CSS CAOL/responsive.dataTables.min.css" type="text/css" rel="stylesheet" />
 
-    <style>
-        div.container { max-width: 1200px }
-    </style>
-
-     <script src="lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" language="javascript" src="lib/advanced-datatable/js/jquery.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
-  <script src="lib/jquery.scrollTo.min.js"></script>
-  <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
-  <script type="text/javascript" language="javascript" src="lib/advanced-datatable/js/jquery.dataTables.js"></script>
-  <script type="text/javascript" src="lib/advanced-datatable/js/DT_bootstrap.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-     <!-- page start-->
+
+          <!-- page start-->
           <div class="content-panel">
             <div class="adv-table">
               <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
@@ -446,4 +422,6 @@
             </div>
           </div>
           <!-- page end-->
+
+
 </asp:Content>
