@@ -580,7 +580,7 @@
                 console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
             }
         </script>
-<%--        <script src="../../../Plantilla/Privado/lib/jquery-ui-1.9.2.custom.min.js"></script>
+        <script src="../../../Plantilla/Privado/lib/jquery-ui-1.9.2.custom.min.js"></script>
         <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
         <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-daterangepicker/date.js"></script>
@@ -588,9 +588,7 @@
         <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
         <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-daterangepicker/moment.min.js"></script>
         <script type="text/javascript" src="../../../Plantilla/Privado/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-        <script src="../../../Plantilla/Privado/lib/advanced-form-components.js"></script>--%>
-
-
+        <script src="../../../Plantilla/Privado/lib/advanced-form-components.js"></script>
 
 
         <div id="ascrail2000" class="nicescroll-rails" style="width: 3px; z-index: auto; background: rgb(64, 64, 64); cursor: default; position: fixed; top: 0px; left: 207px; height: 627px; opacity: 0; display: none;">
