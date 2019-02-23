@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Supervisor.supervisor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Supervisor.supervisor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
       <section class="content-header">
-        <div class="col-xs-6"><h3 style="margin-top:5px">ARTÍCULOS</h3></div>
+        <div class="col-xs-6"><h3 style="margin-top:5px"><i class="fa fa-hand-o-right"></i> SUPERVISORES</h3></div>
         <div class="col-xs-6 text-right"><a href="registrar_articulo.aspx" class="btn btn-success">Registrar nuevo</a></div>
     </section>
     <section class="content">
@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Todos los artículos</h3>
+                        <h3 class="box-title">Visualización de los supervisores del sistema</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body table-responsive">
