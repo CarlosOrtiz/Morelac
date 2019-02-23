@@ -54,11 +54,11 @@ namespace Proyecto_Web.Modelos
                 return false;
             }
         }
-        public DataTable ConsultarEmpresa(string nit)
+        public DataTable ConsultarEmpresa()
         {
             try
             {
-                return dat.ConsultarDatos("CALL CONS_EMPRESA ('" + nit + "');");
+                return dat.ConsultarDatos("CALL CONS_EMPRESA ();");
             }
             catch (Exception io)
             {
@@ -68,11 +68,23 @@ namespace Proyecto_Web.Modelos
         }
 
         // falta crear el procedimineto en la base de datos
-        public bool ActualizarEmpresa(int id, string nom, string ape, string naci, char sexo, string num, string bio, string foto, string con, string estado)
+        public bool ActualizarEmpresa(string id, string nom, string dir, string correo, string tele, string dueno, string mis, string vio)
         {
             try
             {
-                return dat.OperarDatos("CALL UPDA_PERSONA ('" + id + "', '" + nom + "', '" + ape + "', '" + naci + "', '" + sexo + "', '" + num + "', '" + bio + "', '" + foto + "','" + con + "','" + estado + "');");
+                return dat.OperarDatos("CALL UPDA_EMPRESA ('" + id + "', '" + nom + "', '" + dir + "', '" + correo + "', '" + tele + "', '" + dueno + "', '" + mis + "', '" + vio + "');");
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+        public bool ActualizarEmpresaFoto(string id, string nom, string dir, string correo, string tele, string dueno, string mis, string vio)
+        {
+            try
+            {
+                return dat.OperarDatos("CALL UPDA_EMPRESA ('" + id + "', '" + nom + "', '" + dir + "', '" + correo + "', '" + tele + "', '" + dueno + "', '" + mis + "', '" + vio + "');");
             }
             catch (Exception)
             {

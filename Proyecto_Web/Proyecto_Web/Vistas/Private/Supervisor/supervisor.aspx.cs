@@ -8,7 +8,7 @@ namespace Proyecto_Web.Vistas.Private.Supervisor
         PERSONA MOD_PERSONA = new PERSONA();
         MENU mod_menu = new MENU();
         public string foto, Nombre, n1, n2, ape1, ape2, IDn;
-        DataTable MenuDin, tabla = new DataTable();
+        DataTable tabla = new DataTable();
         SUPERVISOR mod_supervisor = new SUPERVISOR();
         protected void Page_Load(object sender, EventArgs e)
         {

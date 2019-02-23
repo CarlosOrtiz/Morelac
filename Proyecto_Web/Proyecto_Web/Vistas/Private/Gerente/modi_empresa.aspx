@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-
     <section class="content-header">
         <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>INFORMACIÓN DE SU EMPRESA</h3>
     </section>
@@ -20,8 +19,11 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <strong><i class="fa fa-book margin-r-5"></i>MORELACT</strong>
-                        <p style="text-align: center;" class="text-muted col-md-12">
+                        <p style="text-align: center; color: #333;" class="text-muted col-md-12">
                             <asp:Image runat="server" ID="IMG_EMPRESAS" ImageUrl="~/Multimedia/Imagenes/Logo sin fondo.png" Width="150" />
+                            <br />
+                            <strong style="color: black;">DUEÑO (A) DE LA EMPRESA:</strong><br />
+                            CARLOS ALBERTO ORTIZ LOSADA
                         </p>
 
                         <hr>
@@ -45,8 +47,8 @@
                         <strong><i class="fa fa-pencil margin-r-5"></i>Contacto</strong>
 
                         <p>
-                            <span style="cursor: pointer;" class="label label-danger">Correo Electrónico</span>
-                            <span style="cursor: pointer;" class="label label-success">Numero Teléfonico</span>
+                            <span style="cursor: pointer;" class="label label-danger" data-toggle="modal" data-target="#modal-default">Correo Electrónico</span>
+                            <span style="cursor: pointer;" class="label label-success" data-toggle="modal" data-target="#modal-default">Numero Teléfonico</span>
                         </p>
 
                     </div>
@@ -62,66 +64,87 @@
                         <div class="active tab-pane" id="Modificar">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-building"></i>NOMBRE DE SU EMPRESA</label>
-                                    <div class="col-sm-10">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="TextBox1" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-building"></i> NOMBRE DE SU EMPRESA</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" ViewStateMode="Disabled" disabled="disabled" ID="NOMBRE" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
+                                    <div class="col-sm-1"></div>
                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-university"></i> NIT</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" TextMode="Number" runat="server" ViewStateMode="Disabled" disabled="disabled" ID="NIT" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-file-text-o"></i> MISIÓN</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" TextMode="MultiLine" ID="MISION" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-file-text-o"></i> VISIÓN</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" TextMode="MultiLine" ID="VISION" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-map-marker"></i> DIRECCIÓN</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="DIRECCIÓN" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                  <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-envelope"></i> CORREO ELECTRONICO</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="CORREO" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" TextMode="Number" ID="NUMERO" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-user"></i> NOMBRE DEL EMPRESARIO</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="DUEÑO" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                 <div class="form-group">
+                                     <asp:Button runat="server" ID="Habilitar_datos" CssClass="col-sm-offset-2 col-sm-2 btn btn-success" Text="Habilitar Datos" OnClick="Habilitar_datos_Click" ></asp:Button> 
+                                  <asp:LinkButton runat="server" disabled="" ID="Save_datos_empresa" CssClass="col-sm-offset-1 col-sm-2 btn btn-success" Text="Guardar" OnClick="Save_datos_empresa_Click"></asp:LinkButton> 
+                                 </div>
                             </div>
                         </div>
 
                         <div class="tab-pane" id="Act_Logo">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                    <label for="inputName" class="col-sm-2 control-label">LOGO DE SU EMPRESA</label>
 
                                     <div class="col-sm-8">
-                                        <input type="email" class="form-control" id="inputName" placeholder="Name">
+                                        <asp:Image runat="server" ID="IMG_EMPRESA2" ImageUrl="~/Multimedia/Imagenes/Logo sin fondo.png" ImageAlign="Middle" Width="200" Height="100" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-
+                                    <label style="text-align:center;" class="col-sm-2" for="exampleInputFile">File input</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                    <input type="file" id="exampleInputFile">
+                                    <p class="help-block">Formato de la imagen permitido .png "sin fondo"</p>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="inputName" class="col-sm-2 control-label">Name</label>
-
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputName" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
-
-                                    <div class="col-sm-10">
-                                        <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
-
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox">
-                                                I agree to the <a href="#">terms and conditions</a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-danger">Submit</button>
-                                    </div>
-                                </div>
+                                 <div class="form-group">
+                                 <asp:LinkButton  runat="server" ID="save_imagen" CssClass="col-sm-offset-2 col-sm-2 btn btn-success" Text="ACTUALIZAR"></asp:LinkButton> 
+                                 </div>
                             </div>
                         </div>
                         <!-- /.tab-pane -->
@@ -136,103 +159,45 @@
 
     </section>
 
-    <div class="content">
-        <div class="container-fluid">
-            <div class="form-row">
-                <div class="col-md-10">
-                    <div class="contact-form">
-                        <div class="card-header">
-                            <br />
-                            <h4 class="card-title">PERFIL EMPRESA</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label" for="validationCustom01">
-                                            NOMBRE EMPRESA
-                                        </label>
-                                        <!---->
-                                        <asp:TextBox runat="server" aria-describedby="addon-right addon-left" ID="empresa" type="text" placeholder="EMPRESA" class="form-control" pattern="[A-Za-z]+"></asp:TextBox>
-                                        <!---->
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            NIT
-                                        </label>
-                                        <!---->
-                                        <asp:TextBox runat="server" aria-describedby="addon-right addon-left" type="number" ID="iden" placeholder="800123456" class="form-control"></asp:TextBox>
-                                        <!---->
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            DIRECCION
-                                        </label>
-                                        <!---->
-                                        <asp:TextBox runat="server" aria-describedby="addon-right addon-left" type="text" ID="direc" placeholder="UBICACION" class="form-control"></asp:TextBox>
-                                        <!---->
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            EMAIL
-                                        </label>
-                                        <!---->
-                                        <asp:TextBox runat="server" aria-describedby="addon-right addon-left" ID="corre" type="email" placeholder="Email" class="form-control"></asp:TextBox>
-                                        <!---->
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            TELEFONO
-                                        </label>
-                                        <!---->
-                                        <asp:TextBox runat="server" aria-describedby="addon-right addon-left" type="number" placeholder="3147258369" ID="telefo" class="form-control"></asp:TextBox>
-                                        <!---->
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="control-label">
-                                            DUEÑO
-                                        </label>
-                                        <!---->
-                                        <asp:TextBox runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="DUEÑO" ID="due" class="form-control"></asp:TextBox>
-                                        <!---->
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>MISION</label>
-                                        <textarea rows="5" runat="server" placeholder="MISION EMPRESA" id="mi" class="form-control border-input"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>VISION</label>
-                                        <textarea rows="5" runat="server" placeholder="VISION EMPRESA" id="vi" class="form-control border-input"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="text-left">
-                                    <asp:Button ID="boton1" Text="" runat="server" class="btn btn-info btn-fill float-center" />
-                                </div>
-                                <div class="text-right">
-                                    <asp:Button ID="boton" Text="MODIFICAR" runat="server" class="btn btn-info btn-fill float-center" />
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
+    <script>
+        function activar() {
+            $(".style-form").removeClass("remove-style-form");
+            $(".style-form").removeAttr("disabled");
+            $("#ContentPlaceHolder1_Btn_Actualizar").show();
+            $("#Btn_Cancelar").show();
+            $("#Btn_Activar_Form").hide();
+        }
+
+        function reset() {
+            $(".style-form, .style-form2").addClass("remove-style-form").attr("disabled", "disabled");
+            $(".solo-letras").keydown(sololetras);
+            $("#ContentPlaceHolder1_Btn_Actualizar").hide();
+            $("#Btn_Cancelar").hide();
+            $("#Btn_Activar_Form").show();
+        }
+
+        $(function () {
+            $(".solo-letras").keydown(sololetras);
+            $("#Btn_Activar_Form").click(activar);
+            
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+
+            today = (yyyy-10) + '-' + mm + '-' + dd;
+            past = (yyyy - 100) + '-' + mm + '-' + dd;
+            document.getElementById("ContentPlaceHolder1_TB_Nacimiento").setAttribute("max", today);
+            document.getElementById("ContentPlaceHolder1_TB_Nacimiento").setAttribute("min", past);
+        });
+    </script>
 </asp:Content>

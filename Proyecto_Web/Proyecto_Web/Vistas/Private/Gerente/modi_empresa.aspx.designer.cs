@@ -22,102 +22,111 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.Image IMG_EMPRESAS;
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control NOMBRE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox NOMBRE;
         
         /// <summary>
-        /// Control empresa.
+        /// Control NIT.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox empresa;
+        protected global::System.Web.UI.WebControls.TextBox NIT;
         
         /// <summary>
-        /// Control iden.
+        /// Control MISION.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox iden;
+        protected global::System.Web.UI.WebControls.TextBox MISION;
         
         /// <summary>
-        /// Control direc.
+        /// Control VISION.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox direc;
+        protected global::System.Web.UI.WebControls.TextBox VISION;
         
         /// <summary>
-        /// Control corre.
+        /// Control DIRECCIÓN.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox corre;
+        protected global::System.Web.UI.WebControls.TextBox DIRECCIÓN;
         
         /// <summary>
-        /// Control telefo.
+        /// Control CORREO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox telefo;
+        protected global::System.Web.UI.WebControls.TextBox CORREO;
         
         /// <summary>
-        /// Control due.
+        /// Control NUMERO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox due;
+        protected global::System.Web.UI.WebControls.TextBox NUMERO;
         
         /// <summary>
-        /// Control mi.
+        /// Control DUEÑO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea mi;
+        protected global::System.Web.UI.WebControls.TextBox DUEÑO;
         
         /// <summary>
-        /// Control vi.
+        /// Control Habilitar_datos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea vi;
+        protected global::System.Web.UI.WebControls.Button Habilitar_datos;
         
         /// <summary>
-        /// Control boton1.
+        /// Control Save_datos_empresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button boton1;
+        protected global::System.Web.UI.WebControls.LinkButton Save_datos_empresa;
         
         /// <summary>
-        /// Control boton.
+        /// Control IMG_EMPRESA2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button boton;
+        protected global::System.Web.UI.WebControls.Image IMG_EMPRESA2;
+        
+        /// <summary>
+        /// Control save_imagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton save_imagen;
     }
 }

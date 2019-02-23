@@ -41,7 +41,7 @@
 </head>
 <body class="sidebar-mini skin-yellow-light wysihtml5-supported fixed">
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"> </asp:ScriptManager>
         <div class="wrapper">
             <header class="main-header aside-fijo" style="top: 0; right: 0; left: 0;">
                 <!-- Logo -->
@@ -51,8 +51,8 @@
                         <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="50" /></span>
                     <!-- logo for regular state and mobile devices -->
                     <%-- <span class="logo-lg"><b>MORE</b>LAC</span>--%>
-                     <span class="logo-lg">
-                       <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="85" /></span>
+                    <span class="logo-lg">
+                        <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="85" /></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">
@@ -80,11 +80,12 @@
                         <div class="pull-left image">
                             <asp:Image runat="server" ID="IMG" CssClass="img-circle" />
                         </div>
-                     
+
                         <div class="pull-left info">
                             <p>
                                 <asp:Label runat="server" ID="NombreUser" Text="UserName"></asp:Label><br />
-                                <a href="#" style="font-size: 10px;"><i class="fa fa-circle text-success"> </i> <asp:Label style="color:black;" runat="server" ID="RolUser" ></asp:Label></a>
+                                <a href="#" style="font-size: 10px;"><i class="fa fa-circle text-success"></i>
+                                    <asp:Label Style="color: black;" runat="server" ID="RolUser"></asp:Label></a>
                             </p>
                         </div>
                     </div>
@@ -94,11 +95,11 @@
                         <asp:Repeater ID="Rep_Menu_Dim" runat="server">
                             <ItemTemplate>
                                 <li>
-                            <a href="<%#Eval("MENU_URL") %>">
-                                <i class="fa <%#Eval("MENU_ICON") %>"></i>
-                                <span><%#Eval("MENU_NOMBRE") %></span>
-                            </a>
-                        </li>
+                                    <a href="<%#Eval("MENU_URL") %>">
+                                        <i class="fa <%#Eval("MENU_ICON") %>"></i>
+                                        <span><%#Eval("MENU_NOMBRE") %></span>
+                                    </a>
+                                </li>
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>
@@ -109,6 +110,9 @@
                 <asp:ContentPlaceHolder ID="body" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
+            <!--Modal -->
+         
+            <!--Fin de modal -->
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
                     <b>Version</b> 1.0
@@ -154,6 +158,8 @@
             <!-- AdminLTE for demo purposes -->
             <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
         </div>
+        <asp:ContentPlaceHolder ID="ScriptsEndPage" runat="server">
+    </asp:ContentPlaceHolder>
 
     </form>
 
