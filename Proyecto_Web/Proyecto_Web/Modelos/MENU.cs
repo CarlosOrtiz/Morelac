@@ -31,11 +31,11 @@ namespace Proyecto_Web.Modelos
 
         }
 
-        public DataTable ConsultarMenu(string Permiso,string correo)
+        public DataTable ConsultarMenu(string correo)
         {
             try
             {
-                return dat.ConsultarDatos("CALL CONS_MENU ('" + Permiso + "','" + correo + "');");
+                return dat.ConsultarDatos("CALL CONS_MENU ('" + correo + "');");
             }
             catch (Exception io)
             {

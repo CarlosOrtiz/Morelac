@@ -4,26 +4,24 @@
 
 <html lang="es">
 <head runat="server">
-    <%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>--%>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="Dashboard" />
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />
-
-    <title>Iniciar sesión</title>
-
-    <!-- Favicons -->
-    <link href="../../../Plantilla/Privado/img/icon/vaca.png" rel="icon" />
-    <link href="../../../Plantilla/Privado/img/icon/vaca.png" rel="apple-touch-icon" />
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../../Plantilla/Privado/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <!--external css-->
-    <link href="../../../Plantilla/Privado/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="../../../Plantilla/Privado/css/style.css" rel="stylesheet" />
-    <link href="../../../Plantilla/Privado/css/style-responsive.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href="../../Plantilla/Privado/dist/img/icon/vaca.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="../../Plantilla/Login/css/main.css">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script>
@@ -31,90 +29,95 @@
             $('#myModal2').modal('show');
             return true;
         };
-        //function Confirm(){
-        //$(document).ready(function(){
-        //$("#myModal2").modal();
-        //});
-        //}
+
     </script>
 </head>
 <body>
-    <div id="login-page">
-        <div class="container">
-            <form runat="server" class="form-login">
-                <h2 style="height:140px;" class="form-login-heading">
-                    <div  class="col-md-2"></div>
-                    <a href="Index.aspx"><img src="../../Multimedia/Imagenes/Logo sin fondo.png" width="150" height="100"  class="col-md-8" /></a>
-                    <div class="col-md-2"></div>
-                 </h2>
-                <div class="login-wrap">
-                    <asp:TextBox runat="server" class="form-control" ID="correo_login" placeholder="CORREO ELECTRONICO"></asp:TextBox>
-                    <label class="checkbox"></label>
-                    <asp:TextBox runat="server" TextMode="Password" class="form-control" ID="contra_login" placeholder="CONTRASEÑA"></asp:TextBox>
-                    <label class="checkbox"></label>
-                    <%--<label class="checkbox col-md-12">
-                        <input  class="col-md-1" type="checkbox" value="remember-me" />
-                        <p style="padding-left: 0px;margin-bottom: 0px;" class="col-md-11">Recordar credenciales</p>
-                    </label>--%>
-                    <asp:Button style="font-size:17px;font-weight:900;" runat="server" ID="In_Sesion" class="btn btn-theme btn-block" type="submit" Text="INICIAR SESIÓN" OnClick="In_Sesion_Click" />
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url('../../Plantilla/Privado/dist/img/empresa/equipo_trabajo.JPG');">
+                    <span class="login100-form-title-1">INICIAR SESIÓN
+                    </span>
+                </div>
 
-                    <asp:Label runat="server" ID="mostrar"></asp:Label>
-                    <hr />
-                    <div class="col-md-12">
-                        <a class="col-md-12" style="color: black; text-align: center;" data-toggle="modal" href="../../login.html#myModal"><strong style="color:indianred;">¿Se te olvidó tu contraseña?</strong></a>
+                <form class="login100-form validate-form" runat="server">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                        <span class="label-input100">Correo electrónico</span>
+                        <asp:TextBox runat="server" CssClass="input100" ID="correo_login" placeholder="Ejemplo2019@gmail.com"></asp:TextBox>
+                        <span class="focus-input100"></span>
                     </div>
-                    <br />
-                </div>
-                <!-- Modal  1 -->
-                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 style="text-align: center;" class="modal-title"><strong>¿RECORDAR CONTRASEÑA?</strong></h4>
-                            </div>
-                            <div class="modal-body">
-                                <p style="font-size: 15px;text-align:center;"><strong> Ingresé su dirección de correo electrónico a continuación para restablecer su contraseña.</strong></p>
-                                <asp:TextBox runat="server" TextMode="Email" ID="Email_modal" placeholder="CORREO ELECTRONICO" CssClass="form-control placeholder-no-fix" autocomplete="off"></asp:TextBox>
-                            </div>
-                            <div style="text-align: center;" class="modal-footer">
-                                <asp:LinkButton style="text-align: center; position: center;" runat="server" ID="Cancelar_modal" data-dismiss="modal" CssClass="btn btn-danger"  >CANCELAR</asp:LinkButton>
-                                <asp:LinkButton runat="server" style="text-align: center; position: center;" CssClass="btn btn-theme" ID="btn_enviar_modal">ENVIAR</asp:LinkButton>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                        <span class="label-input100">Contraseña</span>
+                        <asp:TextBox runat="server" TextMode="Password" CssClass="input100" ID="contra_login" placeholder="*******************"></asp:TextBox>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30">
+                        <div class="contact100-form-checkbox">
+                            <input disabled="disabled" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Recuérdame
+                            </label>
+                        </div>
+
+                        <div>
+                            <a href="Olvidar.aspx" style="cursor: pointer;" class="txt1">¿Se te olvidó tu contraseña?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <asp:Button runat="server" ID="In_Sesion" CssClass="login100-form-btn" Text="INICIAR SESIÓN" OnClick="In_Sesion_Click" />
+                    </div>
+                    <div class="container">
+                        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal2" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div style="background: #333" class="modal-header">
+                                        <p style="text-align: center;color:white;font-size:30px;" class="modal-title"><strong>¡ADVERTENCIA!</strong></p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="font-size: 16px; text-align: center;"><strong><%=mjs %></strong></p>
+                                    </div>
+                                    <div style="text-align: center;" class="modal-footer">
+                                        <button style="text-align: center; position: center;border-color:none;" data-dismiss="modal" class="btn btn-warning" type="button">ACEPTAR</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Modal  2-->
-                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal2" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div style="background:#f0ad4e;" class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 style="text-align: center;" class="modal-title"><strong>¡ADVERTENCIA!</strong></h4>
-                            </div>
-                            <div class="modal-body">
-                                <p style="font-size: 16px; text-align:center;"><strong><%=mjs %></strong></p>
-                            </div>
-                            <div style="text-align: center;" class="modal-footer">
-                                <button style="text-align: center; position: center;" data-dismiss="modal" class="btn btn-warning" type="button">ACEPTAR</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="../../../Plantilla/Privado/lib/jquery/jquery.min.js"></script>
-    <script src="../../../Plantilla/Privado/lib/bootstrap/js/bootstrap.min.js"></script>
-    <!--BACKSTRETCH-->
-    <script type="text/javascript" src="../../Plantilla/Privado/lib/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch("../../Plantilla/Privado/img/img/empresa/equipo_trabajo.JPG", {
+
+
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/vendor/bootstrap/js/popper.js"></script>
+    <script src="../../Plantilla/Login/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/daterangepicker/moment.min.js"></script>
+    <script src="../../Plantilla/Login/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="../../Plantilla/Login/js/main.js"></script>
+    <%--    <script type="text/javascript" src="../../Plantilla/Login/js/jquery.backstretch.min.js"></script>
+   <script>
+        $.backstretch("../../Plantilla/Privado/images/Empresa/equipo_trabajo.JPG", {
             speed: 500
 
         });
-    </script>
+    </script>--%>
 </body>
 </html>
+
 

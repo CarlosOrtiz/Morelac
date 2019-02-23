@@ -35,7 +35,7 @@ namespace Proyecto_Web.Vistas.Private.Supervisor
             ape1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_APELLIDO1"].ToString();
             Nombre = n1 + " " + ape1;
 
-            MenuDin = mod_menu.ConsultarMenu(IDn, Session["CORREO_ELECTRONICO"].ToString());
+            MenuDin = mod_menu.ConsultarMenu(Session["CORREO_ELECTRONICO"].ToString());
             Rep_Menu_Dinamico.DataSource = MenuDin;
             Rep_Menu_Dinamico.DataBind();
 

@@ -29,18 +29,15 @@ namespace Proyecto_Web.Vistas.Private
             {
                 Response.Redirect("~/Vistas/Public/Index.aspx");
             }
-            IDn = 1 + "";
-            foto = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_FOTO"].ToString();
-            n1 =MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_NOMBRE1"].ToString();
+            IMG.ImageUrl = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_FOTO"].ToString();
+            n1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_NOMBRE1"].ToString();
             ape1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_APELLIDO1"].ToString();
-            Nombre = n1 + " " + ape1;
-           
+            NombreUser.Text = n1 + " " + ape1;
 
+            MenuDin = mod_menu.ConsultarMenu(Session["CORREO_ELECTRONICO"].ToString());
+            Rep_Menu_Dim.DataSource = MenuDin;
+            Rep_Menu_Dim.DataBind();
 
-            MenuDin = mod_menu.ConsultarMenu(IDn,Session["CORREO_ELECTRONICO"].ToString());
-            Rep_Menu_Dinamico.DataSource = MenuDin;
-            Rep_Menu_Dinamico.DataBind();
-            
         }
         protected void Btn_cerrar_Click(object sender, EventArgs e)
         {
