@@ -13,6 +13,7 @@ namespace Proyecto_Web.Vistas.Private
     {
         PERSONA MOD_PERSONA = new PERSONA();
         MENU mod_menu = new MENU();
+        ROL mod_rol = new ROL();
         public string foto, Nombre,n1,n2,ape1,ape2,IDn;
         DataTable MenuDin = new DataTable();
 
@@ -33,7 +34,7 @@ namespace Proyecto_Web.Vistas.Private
             n1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_NOMBRE1"].ToString();
             ape1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_APELLIDO1"].ToString();
             NombreUser.Text = n1 + " " + ape1;
-
+            RolUser.Text = mod_rol.Consultarrol(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["ROL_NOMBRE"].ToString();
             MenuDin = mod_menu.ConsultarMenu(Session["CORREO_ELECTRONICO"].ToString());
             Rep_Menu_Dim.DataSource = MenuDin;
             Rep_Menu_Dim.DataBind();

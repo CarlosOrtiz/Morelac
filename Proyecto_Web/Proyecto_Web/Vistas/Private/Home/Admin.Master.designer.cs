@@ -67,6 +67,15 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.Label NombreUser;
         
         /// <summary>
+        /// Control RolUser.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RolUser;
+        
+        /// <summary>
         /// Control Rep_Menu_Dim.
         /// </summary>
         /// <remarks>

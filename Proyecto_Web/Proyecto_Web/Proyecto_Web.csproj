@@ -8010,7 +8010,7 @@
     <Content Include="Plantilla\Publico\img\Icon2\WhatsApp.png" />
     <Content Include="Vistas\Private\Cliente\abono_clientes.aspx" />
     <Content Include="Vistas\Private\Proveedor\abono_proveedores.aspx" />
-    <Content Include="Vistas\Private\Supervisor\SupervisorTabla.aspx" />
+    <Content Include="Vistas\Private\Supervisor\supervisor.aspx" />
     <Content Include="Vistas\Private\Usuarios\editar_perfil.aspx" />
     <Content Include="Vistas\Private\Cliente\gestionar_cliente.aspx" />
     <Content Include="Vistas\Private\Proveedor\gestionar_proveedor.aspx" />
@@ -9675,12 +9675,12 @@
     <Compile Include="Vistas\Private\Home\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Private\Supervisor\SupervisorTabla.aspx.cs">
-      <DependentUpon>SupervisorTabla.aspx</DependentUpon>
+    <Compile Include="Vistas\Private\Supervisor\supervisor.aspx.cs">
+      <DependentUpon>supervisor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\Private\Supervisor\SupervisorTabla.aspx.designer.cs">
-      <DependentUpon>SupervisorTabla.aspx</DependentUpon>
+    <Compile Include="Vistas\Private\Supervisor\supervisor.aspx.designer.cs">
+      <DependentUpon>supervisor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Usuarios\editar_perfil.aspx.cs">
       <DependentUpon>editar_perfil.aspx</DependentUpon>
