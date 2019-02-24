@@ -100,16 +100,7 @@ namespace Proyecto_Web.Vistas.Private {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Habilitar_datos;
-        
-        /// <summary>
-        /// Control Save_datos_empresa.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Save_datos_empresa;
+        protected global::System.Web.UI.WebControls.LinkButton Habilitar_datos;
         
         /// <summary>
         /// Control IMG_EMPRESA2.

@@ -8009,7 +8009,9 @@
     <Content Include="Plantilla\Publico\img\Icon2\Facebook.png" />
     <Content Include="Plantilla\Publico\img\Icon2\WhatsApp.png" />
     <Content Include="Vistas\Private\Cliente\abono_clientes.aspx" />
+    <Content Include="Vistas\Private\Cliente\Clientes.aspx" />
     <Content Include="Vistas\Private\Proveedor\abono_proveedores.aspx" />
+    <Content Include="Vistas\Private\Proveedor\Proveedores.aspx" />
     <Content Include="Vistas\Private\Supervisor\Supervisor.aspx" />
     <Content Include="Vistas\Private\Usuarios\editar_perfil.aspx" />
     <Content Include="Vistas\Private\Cliente\gestionar_cliente.aspx" />
@@ -9637,6 +9639,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\CLIENTES.cs" />
     <Compile Include="Modelos\EMPRESA.cs" />
     <Compile Include="Modelos\estructura.cs" />
     <Compile Include="Modelos\FACTURA.cs" />
@@ -9644,6 +9647,7 @@
     <Compile Include="Modelos\MENU.cs" />
     <Compile Include="Modelos\PERSONA.cs" />
     <Compile Include="Modelos\PRODUCTOS.cs" />
+    <Compile Include="Modelos\PROVEEDOR.cs" />
     <Compile Include="Modelos\ROL.cs" />
     <Compile Include="Modelos\SUPERVISOR.cs" />
     <Compile Include="Modelos\USUARIO.cs" />
@@ -9661,6 +9665,13 @@
     <Compile Include="Vistas\Private\Cliente\abono_clientes.aspx.designer.cs">
       <DependentUpon>abono_clientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Private\Cliente\Clientes.aspx.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Cliente\Clientes.aspx.designer.cs">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Private\Proveedor\abono_proveedores.aspx.cs">
       <DependentUpon>abono_proveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -9674,6 +9685,13 @@
     </Compile>
     <Compile Include="Vistas\Private\Home\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Proveedor\Proveedores.aspx.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Proveedor\Proveedores.aspx.designer.cs">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Supervisor\Supervisor.aspx.cs">
       <DependentUpon>Supervisor.aspx</DependentUpon>

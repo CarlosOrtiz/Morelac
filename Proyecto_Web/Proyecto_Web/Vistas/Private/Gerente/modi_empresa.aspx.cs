@@ -11,6 +11,7 @@ namespace Proyecto_Web.Vistas.Private
         private IDatos da = new Datos();
         EMPRESA mod_empresa = new EMPRESA();
         public string id_empresa;
+        public string Static_Nombre,Static_Mision, Static_Vision, Static_Direccion, Static_Correo, Static_Numero,Static_Dueño;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -38,7 +39,14 @@ namespace Proyecto_Web.Vistas.Private
                     IMG_EMPRESA2.ImageUrl = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_FOTO"].ToString();
                     IMG_EMPRESAS.ImageUrl = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_FOTO"].ToString();
                     id_empresa = mod_empresa.ConsultarEmpresa().Rows[0]["ID_EMPRESA"].ToString();
-                     //ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script1", "reset();", true);
+
+                Static_Nombre = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_NOMBRE"].ToString();
+                Static_Dueño = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_DUENO"].ToString();
+                Static_Mision = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_MISION"].ToString();
+                Static_Vision = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_VISION"].ToString(); 
+                Static_Direccion = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_DIRECCION"].ToString();
+                Static_Correo = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_CORREO"].ToString();
+                Static_Numero = mod_empresa.ConsultarEmpresa().Rows[0]["EMP_TELEFONO"].ToString();
             }
 
 

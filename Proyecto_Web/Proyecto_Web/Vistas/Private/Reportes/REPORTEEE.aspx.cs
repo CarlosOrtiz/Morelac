@@ -7,13 +7,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Proyecto_Web.Modelos;
+using Proyecto_Web.Reportes;
 
 namespace Proyecto_Web.Vistas.Private
 {
     public partial class REPORTEEE : System.Web.UI.Page
     {
         private IDatos dat = new Datos();
-
+        PROVEEDOR m_pro = new PROVEEDOR();
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -31,19 +33,21 @@ namespace Proyecto_Web.Vistas.Private
             DataSet dts = new DataSet();
             DataTable da, em = new DataTable();
 
-            Reportes.Lis_proveedores rep = new Proyecto_Web.Reportes.Lis_proveedores();
-            da = dat.ConsultarDatos("SELECT persona.ID_PERSONA,persona.NOMBRE1,persona.NOMBRE2,persona.APELLIDO1,persona.APELLIDO2,persona.DIRECCION,rol.ID_ROL, usuario.ROL_ID_ROL FROM usuario INNER JOIN persona ON usuario.PERSONA_ID_PERSONA =  persona.ID_PERSONA INNER JOIN rol ON usuario.ROL_ID_ROL=rol.ID_ROL WHERE ROL_ID_ROL=5;");
+            Lis_proveedores rep = new Lis_proveedores();
+            da = dat.ConsultarDatos("SELECT ID_EMPRESA,EMP_NOMBRE,EMP_DIRECCION,EMP_CORREO,EMP_TELEFONO,EMP_DUENO,EMP_MISION,EMP_VISION,EMP_FOTO FROM EMPRESA ;");
             rep.SetDataSource(da);
+            
 
-            em = dat.ConsultarDatos("Select NOMBRE From empresa ;");
-            rep.SetParameterValue("Empresa", em.Rows[0]["NOMBRE"].ToString());
+            em = dat.ConsultarDatos("Select EMP_NOMBRE From empresa ;");
+            rep.SetParameterValue("Empresa", em.Rows[0]["EMP_NOMBRE"].ToString());
 
             re_proveedoores.ReportSource = rep;
             re_proveedoores.Height = 200;
-            re_proveedoores.Width = 200;
+            re_proveedoores.Width = 400;
+            re_proveedoores.DataBind();
 
         }
 
-
+     
     }
 }

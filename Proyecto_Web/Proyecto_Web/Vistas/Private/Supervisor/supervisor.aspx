@@ -57,3 +57,18 @@
         </div>
     </section>
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+            $('#example2').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+    </script>
+</asp:Content>

@@ -14,41 +14,41 @@
                 <!-- About Me Box -->
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">PERFIL DE MORELAC</h3>
+                        <h3 class="box-title">PERFIL DE SU EMPRESA</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <strong><i class="fa fa-book margin-r-5"></i>MORELACT</strong>
+                        <strong><i class="fa fa-book margin-r-5"></i><%=Static_Nombre %></strong>
                         <p style="text-align: center; color: #333;" class="text-muted col-md-12">
                             <asp:Image runat="server" ID="IMG_EMPRESAS" ImageUrl="~/Multimedia/Imagenes/Logo sin fondo.png" Width="150" />
                             <br />
                             <strong style="color: black;">DUEÑO (A) DE LA EMPRESA:</strong><br />
-                            CARLOS ALBERTO ORTIZ LOSADA
+                           <%=Static_Dueño %>
                         </p>
 
                         <hr>
 
                         <strong><i class="fa fa-file-text-o margin-r-5"></i>Misión</strong>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                        <p><%=Static_Mision %></p>
                         <hr>
 
                         <strong><i class="fa fa-file-text-o margin-r-5"></i>Visión</strong>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                        <p><%=Static_Vision %></p>
                         <hr>
 
                         <strong><i class="fa fa-map-marker margin-r-5"></i>Dirección</strong>
 
-                        <p class="text-muted">Malibu, California</p>
+                        <p class="text-muted"><%=Static_Direccion %></p>
 
                         <hr>
 
                         <strong><i class="fa fa-pencil margin-r-5"></i>Contacto</strong>
 
                         <p>
-                            <span style="cursor: pointer;" class="label label-danger" data-toggle="modal" data-target="#modal-default">Correo Electrónico</span>
-                            <span style="cursor: pointer;" class="label label-success" data-toggle="modal" data-target="#modal-default">Numero Teléfonico</span>
+                            <span style="cursor: pointer;" class="label label-danger" data-toggle="modal" data-target="#modal-default"><%=Static_Correo %></span>
+                            <span style="cursor: pointer;" class="label label-success" data-toggle="modal" data-target="#modal-default"><%=Static_Numero %></span>
                         </p>
 
                     </div>
@@ -120,8 +120,8 @@
                                     <div class="col-sm-1"></div>
                                 </div>
                                  <div class="form-group">
-                                     <asp:Button runat="server" ID="Habilitar_datos" CssClass="col-sm-offset-2 col-sm-2 btn btn-success" Text="Habilitar Datos" OnClick="Habilitar_datos_Click" ></asp:Button> 
-                                  <asp:LinkButton runat="server" disabled="" ID="Save_datos_empresa" CssClass="col-sm-offset-1 col-sm-2 btn btn-success" Text="Guardar" OnClick="Save_datos_empresa_Click"></asp:LinkButton> 
+                                     <asp:LinkButton runat="server" ID="Habilitar_datos" CssClass="col-sm-offset-2 col-sm-2 btn btn-success"  OnClick="Habilitar_datos_Click" > 
+                                         <i class="fa fa-pencil"></i> &nbsp Actualizar</asp:LinkButton> 
                                  </div>
                             </div>
                         </div>
