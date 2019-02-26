@@ -24,10 +24,13 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/_all-skins.min.css">
     <!-- Google Font -->
+           <link rel="stylesheet" href="../../../Plantilla/Privado/plugins/iCheck/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css">
     
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -174,8 +177,13 @@
             <!-- AdminLTE for demo purposes -->
             <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
             <!-- page script -->
+ 
         <link rel="stylesheet" href="../../../Plantilla/Privado/dist/js/pages/OwnScript.js">
         <%--  --%>
+
+        <script src="../../../Plantilla/Privado/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="../../../Plantilla/Privado/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="../../../Plantilla/Privado/plugins/input-mask/jquery.inputmask.extensions.js"></script>
       
         <asp:ContentPlaceHolder ID="ScriptsEndPage" runat="server">
         </asp:ContentPlaceHolder>

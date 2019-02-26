@@ -17,11 +17,12 @@ namespace Proyecto_Web.Vistas.Private
         PERSONA mod_persona = new PERSONA();
         PROVEEDOR mod_proveedor = new PROVEEDOR();
         FINCA mod_finca = new FINCA();
+        
         public string modal_mensaje;
         public string modal_titulo;
         public string modal_tipo;
         public string modal_link;
-        DataTable ListNom, DT_FINCA;
+        DataTable ListNom, DT_FINCA,DT_LECHE;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -38,25 +39,31 @@ namespace Proyecto_Web.Vistas.Private
             if (!IsPostBack)
             {
                 ListNom = mod_proveedor.ConsultarProvedoresAll2();
+                
                 DT_FINCA = mod_finca.ConsultarFinca();
                 Asig_Persona.DataValueField = "ID";
                 Asig_Persona.DataTextField = "NOMBRE";
                 Asig_Persona.DataSource = ListNom;
                 Asig_Persona.DataBind();
+
+                Drop_Finca.DataValueField = "ID_FINCA";
+                Drop_Finca.DataTextField = "FIN_NOMBRE";
+                Drop_Finca.DataSource = DT_FINCA;
+                Drop_Finca.DataBind();
             }
 
         }
 
         protected void Btn_Save1_Click(object sender, EventArgs e)
         {
-                mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, FechaN.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "5");
-                Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+                mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, datepicker.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "5");
+                Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
            
         }
 
         protected void Btn_Cerrar1_Click(object sender, EventArgs e)
         {
-            ced.Text = null; nom1.Text = null; nom2.Text = null; ape1.Text = null; ape2.Text = null; Celular.Text = null; FechaN.Text = null;
+            ced.Text = null; nom1.Text = null; nom2.Text = null; ape1.Text = null; ape2.Text = null; Celular.Text = null; datepicker.Text = null;
             Direc.Text = null; Detalle.Text = null; correo.Text = null; contrasena.Text = null;
         }
         protected void Save_Finca_Click(object sender, EventArgs e)
@@ -64,8 +71,19 @@ namespace Proyecto_Web.Vistas.Private
             if (ValidarDatosFinca())
             {
                 mod_finca.RegistrarFinca(nom_finca.Text, hectarias.Text, ubi_finca.Text, Asig_Persona.SelectedValue.ToString());
-                Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+                Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+                
             }
+        }
+        protected void btn_Leche_Click(object sender, EventArgs e)
+        {
+            mod_finca.RegistrarFincaLenche(cant_leche.Text, FechaEn.Text, Drop_Finca.SelectedValue.ToString());
+            Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+        }
+
+        protected void btn_Leche_cerrar_Click(object sender, EventArgs e)
+        {
+
         }
 
         protected void Remove_Finca_Click(object sender, EventArgs e)
@@ -118,6 +136,8 @@ namespace Proyecto_Web.Vistas.Private
                 good = true;
             return good;
         }
+
+       
         public bool ValidarDatosFinca()
         {
             bool good = false;
