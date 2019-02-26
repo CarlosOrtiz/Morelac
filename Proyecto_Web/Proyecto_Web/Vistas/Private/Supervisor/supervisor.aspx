@@ -34,7 +34,7 @@
                                         <td><%#Eval("IDT")%></td>
                                         <td><%#Eval("ESTADO")%></td>
                                         <td>
-                                           <a href="Detalle_Articulo.aspx?Valor=<%#Eval("IDT")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                           <a href="Modificar_Supervisor.aspx?Valor=<%#Eval("IDT")%>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                        </td>
                                     </tr>
                             </ItemTemplate>

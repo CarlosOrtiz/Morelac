@@ -121,12 +121,12 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox Detalle;
         
         /// <summary>
-        /// Control Btn_Actualizar.
+        /// Control Btn_Guardar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Btn_Actualizar;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Guardar;
     }
 }

@@ -8213,6 +8213,7 @@
     <Content Include="Vistas\Private\Cliente\Clientes.aspx" />
     <Content Include="Vistas\Private\Proveedor\abono_proveedores.aspx" />
     <Content Include="Vistas\Private\Proveedor\Proveedores.aspx" />
+    <Content Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx" />
     <Content Include="Vistas\Private\Supervisor\Supervisor.aspx" />
     <Content Include="Vistas\Private\Usuarios\editar_perfil.aspx" />
     <Content Include="Vistas\Private\Cliente\gestionar_cliente.aspx" />
@@ -9893,6 +9894,13 @@
     </Compile>
     <Compile Include="Vistas\Private\Proveedor\Proveedores.aspx.designer.cs">
       <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx.cs">
+      <DependentUpon>Modificar_Supervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx.designer.cs">
+      <DependentUpon>Modificar_Supervisor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Supervisor\Supervisor.aspx.cs">
       <DependentUpon>Supervisor.aspx</DependentUpon>

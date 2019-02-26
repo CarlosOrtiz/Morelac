@@ -13,6 +13,7 @@ namespace Proyecto_Web.Vistas.Private
     public partial class Ingresar_supervisor : System.Web.UI.Page
     {
         private IDatos da = new Datos();
+        PERSONA mod_persona = new PERSONA();
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -33,9 +34,11 @@ namespace Proyecto_Web.Vistas.Private
 
         }
 
-        protected void Guardar(object sender, EventArgs e)
+    
+
+        protected void Btn_Guardar_Click(object sender, EventArgs e)
         {
- 
+
         }
     }
 }

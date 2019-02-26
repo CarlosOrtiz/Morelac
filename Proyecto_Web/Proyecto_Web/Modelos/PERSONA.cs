@@ -52,10 +52,11 @@ namespace Proyecto_Web.Modelos
             SEXO = sEXO;
         }
 
-        public bool RegistrarPersona(string NOM1, string NOM2, string APE1, string APE2, string CELULAR, string NACIMIENTO,string DIRECCION, string DETALLES, char SEXO,string foto){
+        public bool RegistrarPersona(string NOM1, string NOM2, string APE1, string APE2, string CELULAR, string NACIMIENTO,string DIRECCION, string DETALLES, char SEXO,string correo,string contrasena,string rol){
             try{
-                return dat.OperarDatos("CALL INSE_PERSONA ('" + NOM1 + "', '" + NOM2 + "', '" + APE1 + "', '" + APE2 + "', '" + CELULAR + "', '" + NACIMIENTO + "', '" + DIRECCION + "', '" + DETALLES + "', '" + SEXO + "', '" + foto + "');");  
-            }catch (Exception){
+                return dat.OperarDatos("CALL INSE_PERSONA ('" + NOM1 + "', '" + NOM2 + "', '" + APE1 + "', '" + APE2 + "', '" + CELULAR + "', '" + NACIMIENTO + "', '" + DIRECCION + "', '" + DETALLES + "', '" + SEXO + "', '" + correo + "', '"+ contrasena + "', '" + rol + "');");
+            }
+            catch (Exception){
                 return false;
             }
         }

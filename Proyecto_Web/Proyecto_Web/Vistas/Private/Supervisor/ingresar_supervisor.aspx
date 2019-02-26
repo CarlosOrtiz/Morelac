@@ -97,9 +97,8 @@
                             </div>
                             <div class="row" runat="server">
                                 <div class="col-sm-offset-2 col-sm-10 text-right">
-                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp Actualizar</asp:LinkButton>
-                                        <span class="btn btn-primary" id="Btn_Activar_Form" style="display:none;"><i class="fa fa-pencil"></i>&nbsp Actualizar datos</span>
-                                        <a href="Perfil.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
+                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-primary"><i class="fa fa-save"></i>&nbsp Guardar datos</asp:LinkButton>
+                                        <a href="Ingresar_supervisor.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
                                     </div>
                             </div>
                             <div class="clearfix"></div>
