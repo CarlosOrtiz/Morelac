@@ -34,7 +34,7 @@ namespace Proyecto_Web.Vistas.Private
             DataTable da, em = new DataTable();
 
             Lis_proveedores rep = new Lis_proveedores();
-            da = dat.ConsultarDatos("SELECT ID_EMPRESA,EMP_NOMBRE,EMP_DIRECCION,EMP_CORREO,EMP_TELEFONO,EMP_DUENO,EMP_MISION,EMP_VISION,EMP_FOTO FROM EMPRESA ;");
+            da = dat.ConsultarDatos("CALL CONS_PROVEEDOR_REPORTE");
             rep.SetDataSource(da);
             
 
@@ -42,8 +42,8 @@ namespace Proyecto_Web.Vistas.Private
             rep.SetParameterValue("Empresa", em.Rows[0]["EMP_NOMBRE"].ToString());
 
             re_proveedoores.ReportSource = rep;
-            re_proveedoores.Height = 200;
-            re_proveedoores.Width = 400;
+            //re_proveedoores.Height = 200;
+            //re_proveedoores.Width = 400;
             re_proveedoores.DataBind();
 
         }

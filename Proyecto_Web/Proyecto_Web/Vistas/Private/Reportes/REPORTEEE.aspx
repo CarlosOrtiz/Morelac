@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <%--<form runat="server">--%>
         <div>
-            <CR:CrystalReportViewer ID="re_proveedoores" runat="server" AutoDataBind="true" Width="400px" />
+            <CR:CrystalReportViewer ID="re_proveedoores" runat="server" AutoDataBind="true" Width="100%" />
         </div>
         <%--<p>
             <asp:Label runat="server" ID="nombre"></asp:Label>
