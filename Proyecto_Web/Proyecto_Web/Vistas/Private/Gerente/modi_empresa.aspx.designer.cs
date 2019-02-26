@@ -10,7 +10,7 @@
 namespace Proyecto_Web.Vistas.Private {
     
     
-    public partial class modi_empresa {
+    public partial class Modi_empresa {
         
         /// <summary>
         /// Control IMG_EMPRESAS.
@@ -94,13 +94,13 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox DUEÑO;
         
         /// <summary>
-        /// Control Habilitar_datos.
+        /// Control Btn_Actualizar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Habilitar_datos;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Actualizar;
         
         /// <summary>
         /// Control IMG_EMPRESA2.

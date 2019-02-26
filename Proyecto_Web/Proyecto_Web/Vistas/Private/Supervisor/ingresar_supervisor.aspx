@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="ingresar_supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.ingresar_supervisor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Ingresar_supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Ingresar_supervisor" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -6,13 +6,12 @@
     <%--<form runat="server">--%>
         <div class="content">
             <div class="container-fluid">
-
                 <div class="form-row">
                     <div class="col-md-10">
                         <div class="contact-form">
                             <div class="card-header">
                                 <br />
-                                <h4 class="card-title">INGRESAR SUPERVISOR</h4>
+                                <h4 class="card-title">CREAR UN NUEVO SUPERVISOR</h4>
                             </div>
                             <div class="card-body">
                                 <%--<form>--%>
@@ -20,7 +19,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <asp:Label runat="server">NOMBRE 1 </asp:Label>
-                                            <asp:TextBox runat="server" required ID="nom1" aria-describedby="addon-right addon-left" type="text" class="form-control" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                            <asp:TextBox runat="server"  ID="nom1" aria-describedby="addon-right addon-left" type="text" class="form-control" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -81,31 +80,27 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <asp:Label runat="server">SEXO </asp:Label>
-                                        <asp:DropDownList ID="sexolis"  runat="server" aria-describedby="addon-right addon-left" class="form-control"  >
-                                            <%--<asp:ListItem value =""> </asp:ListItem>
-                                                <asp:ListItem value ="1"> M </asp:ListItem>
-                                                <asp:ListItem value ="2"> F </asp:ListItem>--%>
+                                     
+                                        <asp:DropDownList ID="DDL_Sexo" CssClass="form-control" runat="server" BackColor="White">
+                                            <asp:ListItem Value="M" Text="Masculino"></asp:ListItem>
+                                            <asp:ListItem Value="F" Text="Femenino"></asp:ListItem>
                                         </asp:DropDownList>
-                                        <%--<asp:RequiredFieldValidator id="validarsexo" ControlToValidate="sexolis" InitialValue=" " runat="server"/>--%>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">ESTADO </asp:Label>
-                                        <asp:TextBox ID="Estado" required runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="ACTIVO O INACTIVO" class="form-control" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
+                                
                                 <div class="col-md-12" runat="server">
                                     <div class="form-group">
                                         <asp:Label runat="server">DETALLES</asp:Label>
-                                        <asp:TextBox ID="Detalle" runat="server" type="text" Rows="3" placeholder="Aqui puedes escribir una breve descripció" class="form-control border-input"></asp:TextBox>
+                                        <asp:TextBox ID="Detalle" runat="server" Rows="5" placeholder="Aqui puedes escribir una breve descripció" class="form-control border-input" TextMode="MultiLine"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
                             <div class="row" runat="server">
-                                <div class="text-center">
-                                    <asp:Button runat="server" Text="GUARDAR" type="submit" ID="guardarprove" OnClick="Guardar" class="btn btn-info btn-fill float-right" />
-                                </div>
+                                <div class="col-sm-offset-2 col-sm-10 text-right">
+                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp Actualizar</asp:LinkButton>
+                                        <span class="btn btn-primary" id="Btn_Activar_Form" style="display:none;"><i class="fa fa-pencil"></i>&nbsp Actualizar datos</span>
+                                        <a href="Perfil.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
+                                    </div>
                             </div>
                             <div class="clearfix"></div>
                         </div>

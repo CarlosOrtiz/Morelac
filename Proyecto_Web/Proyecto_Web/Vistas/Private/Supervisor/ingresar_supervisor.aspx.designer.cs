@@ -10,7 +10,7 @@
 namespace Proyecto_Web.Vistas.Private {
     
     
-    public partial class ingresar_supervisor {
+    public partial class Ingresar_supervisor {
         
         /// <summary>
         /// Control nom1.
@@ -103,22 +103,13 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox contrasena;
         
         /// <summary>
-        /// Control sexolis.
+        /// Control DDL_Sexo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList sexolis;
-        
-        /// <summary>
-        /// Control Estado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Estado;
+        protected global::System.Web.UI.WebControls.DropDownList DDL_Sexo;
         
         /// <summary>
         /// Control Detalle.
@@ -130,12 +121,12 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox Detalle;
         
         /// <summary>
-        /// Control guardarprove.
+        /// Control Btn_Actualizar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button guardarprove;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Actualizar;
     }
 }

@@ -68,15 +68,16 @@ namespace Proyecto_Web.Modelos
         }
 
         // falta crear el procedimineto en la base de datos
-        public bool ActualizarEmpresa(string id, string nom, string dir, string correo, string tele, string dueno, string mis, string vio)
+        public DataTable ActualizarEmpresa(string id, string nom, string dir, string correo, string tele, string dueno, string mis, string vio)
         {
             try
             {
-                return dat.OperarDatos("CALL UPDA_EMPRESA ('" + id + "', '" + nom + "', '" + dir + "', '" + correo + "', '" + tele + "', '" + dueno + "', '" + mis + "', '" + vio + "');");
+                return dat.OperarProcedimiento("CALL UPDA_EMPRESA ('" + id + "', '" + nom + "', '" + dir + "', '" + correo + "', '" + tele + "', '" + dueno + "', '" + mis + "', '" + vio + "');");
             }
-            catch (Exception)
+            catch (Exception io)
             {
-                return false;
+                estructura err = new estructura();
+                return err.GetError(io.Message);
             }
 
         }

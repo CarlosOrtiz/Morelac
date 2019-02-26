@@ -46,5 +46,20 @@ namespace Proyecto_Web.Conection
         return null;
       }
     }
-  }
+        public DataTable OperarProcedimiento(string sql)
+        {
+            DataTable datos = new DataTable();
+            try
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, Conectar());
+                da.Fill(datos);
+                Desconector();
+                return datos;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+    }
 }

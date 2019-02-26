@@ -9,8 +9,9 @@ namespace Proyecto_Web.Interface
 {
   interface IDatos
   {
-    bool OperarDatos(string sql);
-    DataTable ConsultarDatos(string sql);
-  }
+        bool OperarDatos(string sql);
+        DataTable ConsultarDatos(string sql);
+        DataTable OperarProcedimiento(string sql);
+    }
 }
 

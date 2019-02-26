@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="modi_empresa.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.modi_empresa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Modi_empresa.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Modi_empresa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -64,64 +64,59 @@
                         <div class="active tab-pane" id="Modificar">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-building"></i> NOMBRE DE SU EMPRESA</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-building"></i> NOMBRE DE SU EMPRESA</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" ViewStateMode="Disabled" disabled="disabled" ID="NOMBRE" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="NOMBRE" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                  <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-university"></i> NIT</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-university"></i> NIT</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" TextMode="Number" runat="server" ViewStateMode="Disabled" disabled="disabled" ID="NIT" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" TextMode="Number" runat="server"  ID="NIT" CssClass="form-control style-form " pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-file-text-o"></i> MISIÓN</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-file-text-o"></i> MISIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" TextMode="MultiLine" ID="MISION" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  TextMode="MultiLine" ID="MISION" CssClass="form-control no-resize style-form " pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-file-text-o"></i> VISIÓN</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-file-text-o"></i> VISIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" TextMode="MultiLine" ID="VISION" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" TextMode="MultiLine" ID="VISION" CssClass="form-control no-resize style-form " pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-map-marker"></i> DIRECCIÓN</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-map-marker"></i> DIRECCIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="DIRECCIÓN" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="DIRECCIÓN" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                   <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-envelope"></i> CORREO ELECTRONICO</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-envelope"></i> CORREO ELECTRONICO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="CORREO" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="CORREO" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" TextMode="Number" ID="NUMERO" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server" TextMode="Number" ID="NUMERO" CssClass="form-control style-form " pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="inputSuccess"><i class="fa fa-user"></i> NOMBRE DEL EMPRESARIO</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-user"></i> NOMBRE DEL EMPRESARIO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" disabled="" ID="DUEÑO" CssClass="form-control" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="DUEÑO" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
-                                    <div class="col-sm-1"></div>
                                 </div>
                                  <div class="form-group">
-                                     <asp:LinkButton runat="server" ID="Habilitar_datos" CssClass="col-sm-offset-2 col-sm-2 btn btn-success"  OnClick="Habilitar_datos_Click" > 
-                                         <i class="fa fa-pencil"></i> &nbsp Actualizar</asp:LinkButton> 
+                                    <div class="col-sm-offset-2 col-sm-10 text-right">
+                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-primary" OnClick="Btn_Actualizar_Click"><i class="fa fa-pencil"></i>&nbsp Actualizar</asp:LinkButton>
+                                        <span class="btn btn-primary" id="Btn_Activar_Form" style="display:none;"><i class="fa fa-pencil"></i>&nbsp Actualizar datos</span>
+                                        <a href="Modi_empresa.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
+                                    </div>
                                  </div>
                             </div>
                         </div>
@@ -156,7 +151,21 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-
+        <div class="modal <%=modal_tipo%> fade" id="modal-perfil" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><%=modal_titulo%></h4>
+                </div>
+                <div class="modal-body">
+                    <p><%=modal_mensaje%></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="redirect(<%= modal_link %>)">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
 </asp:Content>

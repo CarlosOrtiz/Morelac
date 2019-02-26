@@ -36,9 +36,9 @@
                                     <td><%#Eval("NOMBRET")%></td>
                                     <td><%#Eval("IDT")%></td>
                                     <td><%#Eval("ESTADO")%></td>
-                                    <td>
-                                        <a href="Detalle_Articulo.aspx?Valor=<%#Eval("IDT")%>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
-                                    </td>
+                                   <td style="text-align:center;">
+                                           <a style="text-align:center;border-radius:50%;" href="Detalle_Articulo.aspx?Valor=<%#Eval("IDT")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                       </td>
                                 </tr>
                             </ItemTemplate>
                             <FooterTemplate>

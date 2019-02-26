@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Proveedores.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Proveedor.Proveedores" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-        <section class="content-header">
-        <div class="col-xs-6"><h3 style="margin-top:5px"><i class="fa fa-hand-o-right"></i> PROVEEDORES</h3></div>
+    <section class="content-header">
+        <div class="col-xs-6">
+            <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>PROVEEDORES</h3>
+        </div>
         <div class="col-xs-6 text-right"><a href="registrar_articulo.aspx" class="btn btn-success">Registrar nuevo</a></div>
     </section>
     <section class="content">
@@ -21,31 +24,34 @@
                                     <thead>
                                         <tr>
                                             <th>NOMBRE</th>
-                                            <th>FECHA DE PUBLICACIÓN</th>
+                                            <th>IDENTIFICACÓN</th>
+                                            <th>FINCA</th>
                                             <th>ESTADO</th>
                                             <th></th>
                                         </tr>
                                     </thead>
-                                <tbody>
+                                    <tbody>
                             </HeaderTemplate>
                             <ItemTemplate>
-                                    <tr>
-                                        <td><%#Eval("NOMBRET")%></td>
-                                        <td><%#Eval("IDT")%></td>
-                                        <td><%#Eval("ESTADO")%></td>
-                                        <td>
-                                           <a href="Detalle_Articulo.aspx?Valor=<%#Eval("IDT")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                <tr>
+                                    <td><%#Eval("NOMBRE")%></td>
+                                    <td><%#Eval("ID")%></td>
+                                    <td><%#Eval("FIN_NOMBRE")%></td>
+                                    <td><%#Eval("ESTADO")%></td>
+                                    <td style="text-align:center;">
+                                           <a style="text-align:center;border-radius:50%;" href="Detalle_Articulo.aspx?Valor=<%#Eval("ID")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                        </td>
-                                    </tr>
+                                </tr>
                             </ItemTemplate>
                             <FooterTemplate>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                       <th>NOMBRE</th>
-                                       <th>FECHA DE PUBLICACIÓN</th>
-                                       <th>ESTADO</th>
-                                       <th></th>
+                                        <th>NOMBRE</th>
+                                        <th>IDENTIFICACÓN</th>
+                                        <th>FINCA</th>
+                                        <th>ESTADO</th>
+                                        <th></th>
                                     </tr>
                                 </tfoot>
                                 </table>

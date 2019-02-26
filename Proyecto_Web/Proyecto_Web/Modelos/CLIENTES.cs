@@ -13,10 +13,8 @@ namespace Proyecto_Web.Modelos
     {
 
         private IDatos dat = new Datos();
-        string nom_cli;
         public CLIENTES()
         {
-            nom_cli = null;
         }
 
         public DataTable ConsultarClienteAll()

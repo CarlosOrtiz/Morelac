@@ -26,10 +26,56 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
+    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css">
+    
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+     <script type="text/javascript">
+        
+        function sololetras(e) {
+            key = e.keyCode || e.which;
+            teclado = String.fromCharCode(key).toLocaleLowerCase();
+            letras = " abcdefghijfklmnñopqrstuvwxyz"
+            especiales = "8-37-38-46-164"
+            teclado_especial = false;
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    teclado_especial = true;
+                    break;
+                }
+            }
+            if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+                return false;
+            }
+        }
+
+        //Validacion MaxLength TextBox Multiline
+        function checkTextAreaMaxLength(textBox, e, length) {
+            var mLen = textBox["MaxLength"];
+            if (null == mLen)
+                mLen = length;
+
+            var maxLength = parseInt(mLen);
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    if (window.event)//IE
+                        e.returnValue = false;
+                    else//Firefox
+                        e.preventDefault();
+                }
+            }
+        }
+        function checkSpecialKeys(e) {
+            if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
+                return false;
+            else
+                return true;
+        }
+    </script>
 </head>
-<body class="hold-transition skin-yellow-light sidebar-mini  fixed">
+<body class="hold-transition skin-yellow-light sidebar-mini fixed">
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="wrapper">
@@ -109,7 +155,7 @@
                 </div>
                 2019 | <strong>Morelac</strong>. - Morelia - Caquetá. Todos los derechos reservados CARLOS ORTIZ & JOHANT VARGAS &copy; 
             </footer>
-
+              </div>
             <!-- jQuery 3 -->
             <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
             <!-- Bootstrap 3.3.7 -->
@@ -128,7 +174,9 @@
             <!-- AdminLTE for demo purposes -->
             <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
             <!-- page script -->
-        </div>
+        <link rel="stylesheet" href="../../../Plantilla/Privado/dist/js/pages/OwnScript.js">
+        <%--  --%>
+      
         <asp:ContentPlaceHolder ID="ScriptsEndPage" runat="server">
         </asp:ContentPlaceHolder>
 

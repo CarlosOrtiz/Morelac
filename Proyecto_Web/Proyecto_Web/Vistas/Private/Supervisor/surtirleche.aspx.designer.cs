@@ -13,30 +13,12 @@ namespace Proyecto_Web.Vistas.Private {
     public partial class surtirleche {
         
         /// <summary>
-        /// Control buscar.
+        /// Control Rep_Proveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox buscar;
-        
-        /// <summary>
-        /// Control entregaleche.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox entregaleche;
-        
-        /// <summary>
-        /// Control cantleche.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cantleche;
+        protected global::System.Web.UI.WebControls.Repeater Rep_Proveedor;
     }
 }
