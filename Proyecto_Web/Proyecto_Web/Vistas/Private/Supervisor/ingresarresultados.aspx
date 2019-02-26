@@ -3,7 +3,7 @@
     <%--<h3><i class="fa fa-angle-right"></i>REGISTRO DE RESUTADOS SOBRE LAS PRUEBAS DE CALIDAD DE LA LECHE</h3>--%>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
     <fieldset>

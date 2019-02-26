@@ -4,12 +4,13 @@
 
 <html lang="es">
 <head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Morelac Admin</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Morelac Admin</title>
-    <link href="../../../Plantilla/Privado/dist/img/icon/vaca.png" rel="icon" />
-    <link href="../../../Plantilla/Privado/dist/img/icon/vaca.png" rel="apple-touch-icon" />
-     <!-- Tell the browser to be responsive to screen width -->
+    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -24,13 +25,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/_all-skins.min.css">
     <!-- Google Font -->
-           <link rel="stylesheet" href="../../../Plantilla/Privado/plugins/iCheck/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css">
     
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css"/>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -146,7 +143,7 @@
             </aside>
 
             <div class="content-wrapper">
-                <asp:ContentPlaceHolder ID="body" runat="server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
             <!--Modal -->
@@ -159,31 +156,26 @@
                 2019 | <strong>Morelac</strong>. - Morelia - Caquetá. Todos los derechos reservados CARLOS ORTIZ & JOHANT VARGAS &copy; 
             </footer>
               </div>
-            <!-- jQuery 3 -->
-            <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
-            <!-- Bootstrap 3.3.7 -->
-            <script src="../../../Plantilla/Privado/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-            <!-- DataTables -->
-            <script src="../../../Plantilla/Privado/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-            <script src="../../../Plantilla/Privado/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-            <!-- FastClick -->
-            <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
-            <!-- Select2 -->
-            <script src="../../../Plantilla/Privado/bower_components/select2/dist/js/select2.full.min.js"></script>
-            <!-- AdminLTE App -->
-            <script src="../../../Plantilla/Privado/dist/js/adminlte.min.js"></script>
-            <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-            <script src="../../../Plantilla/Privado/dist/js/pages/dashboard.js"></script>
-            <!-- AdminLTE for demo purposes -->
-            <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
-            <!-- page script -->
+  <!-- jQuery 3 -->
+    <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../../Plantilla/Privado/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../../Plantilla/Privado/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../../Plantilla/Privado/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- Select2 -->
+    <script src="../../../Plantilla/Privado/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../Views/PrivateViews/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="../../../Plantilla/Privado/dist/js/pages/dashboard.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
+    <!-- page script -->
+    <script src="../../../Plantilla/Privado/dist/js/OwnScript.js"></script>
  
-        <link rel="stylesheet" href="../../../Plantilla/Privado/dist/js/pages/OwnScript.js">
-        <%--  --%>
-
-        <script src="../../../Plantilla/Privado/plugins/input-mask/jquery.inputmask.js"></script>
-<script src="../../../Plantilla/Privado/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="../../../Plantilla/Privado/plugins/input-mask/jquery.inputmask.extensions.js"></script>
       
         <asp:ContentPlaceHolder ID="ScriptsEndPage" runat="server">
         </asp:ContentPlaceHolder>

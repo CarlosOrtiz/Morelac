@@ -4,7 +4,7 @@
 
     <%--<h3><i class="fa fa-angle-right"></i>MODIFICAR LA CANTIDAD DE LA LECHE </h3>--%>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <!--   <div class="row mb">
         <!-- page start
         <div class="content-panel">

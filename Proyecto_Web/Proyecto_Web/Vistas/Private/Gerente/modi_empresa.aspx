@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="content-header">
         <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>INFORMACIÓN DE SU EMPRESA</h3>
     </section>
@@ -61,54 +61,57 @@
                         <li><a href="#Act_Logo" data-toggle="tab">Actualizar Logo</a></li>
                     </ul>
                     <div class="tab-content">
+
+
                         <div class="active tab-pane" id="Modificar">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-building"></i> NOMBRE DE SU EMPRESA</label>
+                                    <label class="col-sm-3 control-label"><i class="fa fa-building"></i> NOMBRE DE SU EMPRESA</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="NOMBRE" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  runat="server"  ID="NOMBRE" CssClass="form-control style-form solo-letras" BackColor="White"></asp:TextBox>
                                     </div>
                                 </div>
                                  <div class="form-group">
                                     <label class="col-sm-3 control-label" ><i class="fa fa-university"></i> NIT</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" TextMode="Number" runat="server"  ID="NIT" CssClass="form-control style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  TextMode="Number" runat="server"  ID="NIT" CssClass="form-control style-form" BackColor="White"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" ><i class="fa fa-file-text-o"></i> MISIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  TextMode="MultiLine" ID="MISION" CssClass="form-control no-resize style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  runat="server"  TextMode="MultiLine" ID="MISION" CssClass="form-control no-resize style-form" Rows="2"
+                                     onkeyDown="checkTextAreaMaxLength(this,event,'1000');" BackColor="White" placeholder="(Mínimo 10 caracteres, máximo 1000)"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" ><i class="fa fa-file-text-o"></i> VISIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" TextMode="MultiLine" ID="VISION" CssClass="form-control no-resize style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" TextMode="MultiLine" ID="VISION" CssClass="form-control no-resize style-form" Rows="2"  onkeyDown="checkTextAreaMaxLength(this,event,'1000');" BackColor="White" placeholder="(Mínimo 10 caracteres, máximo 1000)" ></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" ><i class="fa fa-map-marker"></i> DIRECCIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="DIRECCIÓN" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  runat="server"  ID="DIRECCIÓN" CssClass="form-control style-form" BackColor="White"></asp:TextBox>
                                     </div>
                                 </div>
                                   <div class="form-group">
                                     <label class="col-sm-3 control-label" ><i class="fa fa-envelope"></i> CORREO ELECTRONICO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="CORREO" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  runat="server"  ID="CORREO" CssClass="form-control style-form" BackColor="White"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
+                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELÉFONICO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" TextMode="Number" ID="NUMERO" CssClass="form-control style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  runat="server"  ID="NUMERO" CssClass="form-control style-form" TextMode="Number" BackColor="White"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label" ><i class="fa fa-user"></i> NOMBRE DEL EMPRESARIO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="DUEÑO" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox  runat="server" ID="DUEÑO" CssClass="form-control style-form solo-letras" BackColor="White"></asp:TextBox>
                                     </div>
                                 </div>
                                  <div class="form-group">
@@ -187,8 +190,7 @@
             $("#Btn_Cancelar").hide();
             $("#Btn_Activar_Form").show();
         }
-
-        $(function () {
+             $(function () {
             $(".solo-letras").keydown(sololetras);
             $("#Btn_Activar_Form").click(activar);
             
@@ -208,5 +210,6 @@
             document.getElementById("ContentPlaceHolder1_TB_Nacimiento").setAttribute("max", today);
             document.getElementById("ContentPlaceHolder1_TB_Nacimiento").setAttribute("min", past);
         });
+       
     </script>
 </asp:Content>

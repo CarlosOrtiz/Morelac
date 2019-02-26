@@ -68,12 +68,12 @@ namespace Proyecto_Web.Vistas.Private
         }
         protected void Save_Finca_Click(object sender, EventArgs e)
         {
-            if (ValidarDatosFinca())
-            {
+            //if (ValidarDatosFinca())
+            //{
                 mod_finca.RegistrarFinca(nom_finca.Text, hectarias.Text, ubi_finca.Text, Asig_Persona.SelectedValue.ToString());
                 Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
                 
-            }
+            //}
         }
         protected void btn_Leche_Click(object sender, EventArgs e)
         {

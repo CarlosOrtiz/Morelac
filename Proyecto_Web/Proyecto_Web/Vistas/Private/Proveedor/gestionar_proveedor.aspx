@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Head" runat="server">
     </asp:Content>
-<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%--<form runat="server">--%>
         <div class="content">
             <div class="container-fluid">

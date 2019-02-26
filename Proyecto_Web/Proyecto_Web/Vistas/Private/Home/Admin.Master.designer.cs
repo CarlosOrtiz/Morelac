@@ -85,13 +85,13 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.Repeater Rep_Menu_Dim;
         
         /// <summary>
-        /// Control body.
+        /// Control ContentPlaceHolder1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
         
         /// <summary>
         /// Control ScriptsEndPage.
