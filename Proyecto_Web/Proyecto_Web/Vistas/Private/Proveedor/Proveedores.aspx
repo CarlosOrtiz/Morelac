@@ -7,7 +7,7 @@
         <div class="col-xs-6">
             <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>PROVEEDORES</h3>
         </div>
-        <div class="col-xs-6 text-right"><a href="registrar_articulo.aspx" class="btn btn-success">Registrar nuevo</a></div>
+        <div class="col-xs-6 text-right"><a href="ingresar_proveedor.aspx" class="btn btn-success">Registrar nuevo</a></div>
     </section>
     <section class="content">
         <div class="row">
