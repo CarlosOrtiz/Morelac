@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-   <section class="content">
+    <section class="content">
 
         <div class="row">
             <div class="col-md-3">
@@ -20,6 +20,13 @@
                             <asp:Image runat="server" ID="IMG_EMPRESAS" ImageUrl="~/Plantilla/Privado/dist/img/avatar2.png" Width="150" />
                         </p>
                         <hr>
+                        <div class="form-group">
+                            <label style="text-align: center;" class="col-sm-2" for="exampleInputFile">Buscar</label>
+                            <div class="col-sm-10">
+                                <input type="file" id="exampleInputFile">
+                                <p class="help-block">Formato de la imagen permitido .png "sin fondo"</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,127 +40,123 @@
                         <div class="active tab-pane" id="Modificar">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" >NOMBRE 1</label>
+                                    <label class="col-sm-3 control-label">NOMBRE 1</label>
                                     <div class="col-sm-9">
                                         <asp:TextBox runat="server" ID="nom1" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" >NOMBRE 2</label>
+                                    <label class="col-sm-3 control-label">NOMBRE 2</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="nom2"  CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label"> APELLIDO 1</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="ape1"  CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" > APELLIDO 2</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="ape2"  CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-university"></i> CEDULA</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" TextMode="Number" runat="server"  ID="ced" CssClass="form-control style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="nom2" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-file-text-o"></i> MISIÓN</label>
+                                    <label class="col-sm-3 control-label">APELLIDO 1</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  TextMode="MultiLine" ID="MISION" CssClass="form-control no-resize style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="ape1" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-file-text-o"></i> VISIÓN</label>
+                                    <label class="col-sm-3 control-label">APELLIDO 2</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server" TextMode="MultiLine" ID="VISION" CssClass="form-control no-resize style-form " pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="ape2" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-map-marker"></i> DIRECCIÓN</label>
+                                    <label class="col-sm-3 control-label">CÉDULA</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox ID="Direc" runat="server" aria-describedby="addon-right addon-left" placeholder="CAQUETA-FLORENCIA-ATALAYA" CssClass="form-control style-form solo-letras"  pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox Style="border-radius: 5px;" TextMode="Number" runat="server" ID="ced" CssClass="form-control style-form " pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">DIRECCIÓN</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox ID="Celular"  runat="server"  TextMode="Number" placeholder="3144703595" CssClass="form-control style-form "></asp:TextBox>
+                                        <asp:TextBox ID="Direc" runat="server" aria-describedby="addon-right addon-left" placeholder="CAQUETA-FLORENCIA-ATALAYA" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> FECHA DE NACIMIENTO</label>
+                                    <label class="col-sm-3 control-label">NUMERO TELÉFONICO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox ID="FechaN" runat="server" aria-describedby="addon-right addon-left" TextMode="Date" Text="dd-mm-aaaa" class="form-control"></asp:TextBox>
-                                        <asp:TextBox ID="TextBox1"  runat="server"  TextMode="Number" placeholder="3144703595" CssClass="form-control style-form "></asp:TextBox>
-                                    </div>
-                                    <!--estoy cudrando los id para cada texbx--->
-                                </div>
-                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox ID="TextBox2"  runat="server"  TextMode="Number" placeholder="3144703595" CssClass="form-control style-form "></asp:TextBox>
+                                        <asp:TextBox ID="Celular" runat="server" TextMode="Number" placeholder="3144703595" CssClass="form-control style-form "></asp:TextBox>
                                     </div>
                                 </div>
-                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox ID="TextBox3"  runat="server"  TextMode="Number" placeholder="3144703595" CssClass="form-control style-form "></asp:TextBox>
-                                    </div>
-                                      <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-phone"></i> NUMERO TELEFONICO</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox ID="TextBox4"  runat="server"  TextMode="Number" placeholder="3144703595" CssClass="form-control style-form "></asp:TextBox>
-                                    </div>
-                                </div>
-                                </div>
-                                  <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-envelope"></i> CORREO ELECTRONICO</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="CORREO" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                              
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" ><i class="fa fa-user"></i> NOMBRE DEL EMPRESARIO</label>
+                                    <label class="col-sm-3 control-label">FECHA DE NACIMIENTO</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox Style="border-radius: 5px;" runat="server"  ID="DUEÑO" CssClass="form-control style-form solo-letras" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox ID="FechaN" runat="server" aria-describedby="addon-right addon-left" TextMode="Date" Text="dd-mm-aaaa" CssClass="form-control style-form"></asp:TextBox>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">CORREO ELECTRONICO</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox ID="correo" runat="server" aria-describedby="addon-right addon-left" TextMode="email" placeholder="Ejemplogmail.com" CssClass="form-control style-form "></asp:TextBox>
                                     </div>
                                 </div>
-                                 <div class="form-group">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">CONTRASEÑA</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox ID="contrasena" required runat="server" aria-describedby="addon-right addon-left" TextMode="password" placeholder="*****" CssClass="form-control style-form"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">SEXO</label>
+                                    <div class="col-sm-9">
+                                        <asp:DropDownList ID="DDL_Sexo" CssClass="form-control" aria-describedby="addon-right addon-left" runat="server" BackColor="White">
+                                            <asp:ListItem Value="M" Text="Masculino"></asp:ListItem>
+                                            <asp:ListItem Value="F" Text="Femenino"></asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">DETALLES</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox ID="Detalle" runat="server" Rows="4" placeholder="Aqui puedes escribir una breve descripció" CssClass="form-control style-form" TextMode="MultiLine"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10 text-right">
-                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp Actualizar</asp:LinkButton>
-                                        <span class="btn btn-primary" id="Btn_Activar_Form" style="display:none;"><i class="fa fa-pencil"></i>&nbsp Actualizar datos</span>
-                                        <a href="Modi_empresa.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
+                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-success"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <a href="ingresar_proveedor.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
                                     </div>
-                                 </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="tab-pane" id="Act_Logo">
                             <div class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="inputName" class="col-sm-2 control-label">LOGO DE SU EMPRESA</label>
-
-                                    <div class="col-sm-8">
-                                        <asp:Image runat="server" ID="IMG_EMPRESA2" ImageUrl="~/Multimedia/Imagenes/Logo sin fondo.png" ImageAlign="Middle" Width="200" Height="100" />
+                                    <label class="col-sm-3 control-label">NOMBRE DE SU FINCA</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox runat="server" ID="nom_finca" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label style="text-align:center;" class="col-sm-2" for="exampleInputFile">File input</label>
-                                    <div class="col-sm-10">
-                                    <input type="file" id="exampleInputFile">
-                                    <p class="help-block">Formato de la imagen permitido .png "sin fondo"</p>
+                                    <label class="col-sm-3 control-label">UBICACIÓN DE SU FINCA</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox runat="server" ID="ubi_finca" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
-                                 <div class="form-group">
-                                 <asp:LinkButton  runat="server" ID="save_imagen" CssClass="col-sm-offset-2 col-sm-2 btn btn-success" Text="ACTUALIZAR"></asp:LinkButton> 
-                                 </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">¿CUANTAS HECTÁREAS CUENTA SU FINCA?</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox runat="server" ID="hactarias" TextMode="Number" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">¿CUAL ES SU  CAPACIDAD POR SEMANA PARA PRODUCCIR LECHE?</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox runat="server" ID="cap_leche" TextMode="Number" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <asp:LinkButton ID="Save_finca" runat="server" CssClass="col-sm-offset-2 col-sm-2 btn btn-success"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                </div>
                             </div>
                         </div>
                         <!-- /.tab-pane -->
@@ -165,7 +168,7 @@
             <!-- /.col -->
         </div>
         <!-- /.row -->
-                      <%--  <div class="card-body">
+        <%--  <div class="card-body">
                             <%--<form>--%
                             <div class="row">
                                 <div class="col-md-3">
@@ -255,12 +258,12 @@
                             </div>
                             <div class="clearfix"></div>
                         </div>--%>
-                    </div>
+        <%--                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <%-- <br />
+    </div>--%>
+        <%-- <br />
         <br />
     </form>--%>
 </asp:Content>
