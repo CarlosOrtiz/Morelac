@@ -49,7 +49,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <asp:Label runat="server">DIRECCIÓN</asp:Label>
-                                            <asp:TextBox ID="Direc" required runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="CAQUETA-FLORENCIA-ATALAYA" class="form-control" ></asp:TextBox>
+                                            <asp:TextBox ID="Direc"  runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="CAQUETA-FLORENCIA-ATALAYA" class="form-control" ></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -61,7 +61,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <asp:Label runat="server">FECHA NACIMIENTO </asp:Label>
-                                            <asp:TextBox ID="FechaN" required runat="server" aria-describedby="addon-right addon-left" TextMode="Date" Text="dd-mm-aaaa" class="form-control" ></asp:TextBox>
+                                            <asp:TextBox ID="FechaN" runat="server" aria-describedby="addon-right addon-left" TextMode="Date" Text="dd-mm-aaaa" class="form-control" ></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -97,7 +97,7 @@
                             </div>
                             <div class="row" runat="server">
                                 <div class="col-sm-offset-2 col-sm-10 text-right">
-                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-primary"><i class="fa fa-save"></i>&nbsp Guardar datos</asp:LinkButton>
+                                        <asp:LinkButton ID="Btn_Guardar" runat="server" CssClass="btn btn-primary" OnClick="Btn_Guardar_Click"><i class="fa fa-save"></i>&nbsp Guardar datos</asp:LinkButton>
                                         <a href="Ingresar_supervisor.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
                                     </div>
                             </div>

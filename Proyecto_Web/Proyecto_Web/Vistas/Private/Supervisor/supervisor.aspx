@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Supervisor.supervisor" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-      <section class="content-header">
-        <div class="col-xs-6"><h3 style="margin-top:5px"><i class="fa fa-hand-o-right"></i> SUPERVISORES</h3></div>
+    <section class="content-header">
+        <div class="col-xs-6">
+            <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>SUPERVISORES</h3>
+        </div>
         <div class="col-xs-6 text-right"><a href="ingresar_supervisor.aspx" class="btn btn-success">Registrar nuevo</a></div>
     </section>
     <section class="content">
@@ -21,31 +24,31 @@
                                     <thead>
                                         <tr>
                                             <th>NOMBRE</th>
-                                            <th>FECHA DE PUBLICACIÓN</th>
+                                            <th>IDENTIFICACIÓN</th>
                                             <th>ESTADO</th>
                                             <th></th>
                                         </tr>
                                     </thead>
-                                <tbody>
+                                    <tbody>
                             </HeaderTemplate>
                             <ItemTemplate>
-                                    <tr>
-                                        <td><%#Eval("NOMBRET")%></td>
-                                        <td><%#Eval("IDT")%></td>
-                                        <td><%#Eval("ESTADO")%></td>
-                                        <td>
-                                           <a href="Modificar_Supervisor.aspx?Valor=<%#Eval("IDT")%>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
-                                       </td>
-                                    </tr>
+                                <tr>
+                                    <td><%#Eval("NOMBRET")%></td>
+                                    <td><%#Eval("IDT")%></td>
+                                    <td><%#Eval("ESTADO")%></td>
+                                    <td>
+                                        <a href="Modificar_Supervisor.aspx?Valor=<%#Eval("IDT")%>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                    </td>
+                                </tr>
                             </ItemTemplate>
                             <FooterTemplate>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                       <th>NOMBRE</th>
-                                       <th>FECHA DE PUBLICACIÓN</th>
-                                       <th>ESTADO</th>
-                                       <th></th>
+                                        <th>NOMBRE</th>
+                                        <th>IDENTIFICACIÓN</th>
+                                        <th>ESTADO</th>
+                                        <th></th>
                                     </tr>
                                 </tfoot>
                                 </table>
