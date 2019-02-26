@@ -130,13 +130,22 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox Detalle;
         
         /// <summary>
-        /// Control Btn_Actualizar.
+        /// Control Btn_Save1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Btn_Actualizar;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Save1;
+        
+        /// <summary>
+        /// Control Btn_Cerrar1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Cerrar1;
         
         /// <summary>
         /// Control nom_finca.
@@ -157,13 +166,13 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox ubi_finca;
         
         /// <summary>
-        /// Control hactarias.
+        /// Control hectarias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox hactarias;
+        protected global::System.Web.UI.WebControls.TextBox hectarias;
         
         /// <summary>
         /// Control cap_leche.
@@ -175,12 +184,30 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox cap_leche;
         
         /// <summary>
-        /// Control Save_finca.
+        /// Control Asig_Persona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Save_finca;
+        protected global::System.Web.UI.WebControls.DropDownList Asig_Persona;
+        
+        /// <summary>
+        /// Control Save_Finca.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Save_Finca;
+        
+        /// <summary>
+        /// Control Remove_Finca.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Remove_Finca;
     }
 }

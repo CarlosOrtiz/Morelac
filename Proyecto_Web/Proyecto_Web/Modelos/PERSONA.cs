@@ -69,6 +69,18 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
+        public DataTable ConsultarPersona_ALL()
+        {
+            try
+            {
+                return dat.ConsultarDatos("CALL CONS_PERSONA_ALL ();");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+        }
         public bool Actualizar(int id, string nom, string ape, string naci, char sexo, string num, string bio, string foto, string con, string estado)
         {
             try{

@@ -95,7 +95,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">CONTRASEÑA</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox ID="contrasena" required runat="server" aria-describedby="addon-right addon-left" TextMode="password" placeholder="*****" CssClass="form-control style-form"></asp:TextBox>
+                                        <asp:TextBox ID="contrasena"  runat="server" aria-describedby="addon-right addon-left" TextMode="password" placeholder="*****" CssClass="form-control style-form"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -117,8 +117,8 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10 text-right">
-                                        <asp:LinkButton ID="Btn_Actualizar" runat="server" CssClass="btn btn-success"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
-                                        <a href="ingresar_proveedor.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
+                                        <asp:LinkButton ID="Btn_Save1" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <asp:LinkButton ID="Btn_Cerrar1" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>
@@ -129,30 +129,41 @@
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">NOMBRE DE SU FINCA</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="nom_finca" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" MaxLength="45" ID="nom_finca" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">UBICACIÓN DE SU FINCA</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="ubi_finca" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server"  MaxLength="45" ID="ubi_finca" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">¿CUANTAS HECTÁREAS CUENTA SU FINCA?</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="hactarias" TextMode="Number" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="hectarias"  MaxLength="45" TextMode="Number" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label">¿CUAL ES SU  CAPACIDAD POR SEMANA PARA PRODUCCIR LECHE?</label>
+                                    <label class="col-sm-3 control-label">¿CUAL ES SU CAPACIDAD POR SEMANA PARA PRODUCCIR LECHE?</label>
                                     <div class="col-sm-9">
-                                        <asp:TextBox runat="server" ID="cap_leche" TextMode="Number" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="cap_leche"  MaxLength="45" TextMode="Number" CssClass="form-control style-form solo-letras" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">PROVEEDOR: </label>
+                                    <div class="col-sm-9">
+                                        <asp:DropDownList ID="Asig_Persona" CssClass="form-control select2" AppendDataBoundItems="true" runat="server" BackColor="White">
+                                          <asp:ListItem Value="0">Seleccionar</asp:ListItem>
+                                        </asp:DropDownList>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <asp:LinkButton ID="Save_finca" runat="server" CssClass="col-sm-offset-2 col-sm-2 btn btn-success"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                   <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10 text-right">
+                                        <asp:LinkButton ID="Save_Finca" runat="server" CssClass="btn btn-success" OnClick="Save_Finca_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <asp:LinkButton ID="Remove_Finca" runat="server" CssClass="btn btn-danger" OnClick="Remove_Finca_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -8027,8 +8027,6 @@
     <Content Include="Plantilla\Privado\documentation\docs.js" />
     <Content Include="Plantilla\Privado\documentation\index.html" />
     <Content Include="Plantilla\Privado\documentation\style.css" />
-    <Content Include="Plantilla\Privado\index.html" />
-    <Content Include="Plantilla\Privado\index2.html" />
     <Content Include="Plantilla\Privado\pages\calendar.html" />
     <Content Include="Plantilla\Privado\pages\charts\chartjs.html" />
     <Content Include="Plantilla\Privado\pages\charts\flot.html" />
@@ -8205,7 +8203,6 @@
     <Content Include="Plantilla\Privado\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Plantilla\Privado\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Plantilla\Privado\plugins\timepicker\bootstrap-timepicker.min.js" />
-    <Content Include="Plantilla\Privado\starter.html" />
     <Content Include="Plantilla\Publico\img\header2.jpg" />
     <Content Include="Plantilla\Publico\img\Icon2\Facebook.png" />
     <Content Include="Plantilla\Publico\img\Icon2\WhatsApp.png" />

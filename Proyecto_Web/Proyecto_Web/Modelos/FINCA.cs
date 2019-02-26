@@ -41,11 +41,11 @@ namespace Proyecto_Web.Modelos
                 return false;
             }
         }
-        public DataTable ConsultarFinca(string ID)
+        public DataTable ConsultarFinca()
         {
             try
             {
-                return dat.ConsultarDatos("CALL CONS_FINCA ('" + ID + "');");
+                return dat.ConsultarDatos("CALL CONS_FINCA ();");
             }
             catch (Exception io)
             {
