@@ -3,7 +3,9 @@
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-        <Connections />
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="bd_morelacConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bd_morelacConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.bd_morelacConnectionString.ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
         <Tables />
         <Sources />
       </DataSource>
@@ -12,18 +14,15 @@
   <xs:element name="Datos_proveedores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Datos_proveedores" msprop:Generator_UserDSName="Datos_proveedores">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="EMPRESA" msprop:Generator_TableClassName="EMPRESADataTable" msprop:Generator_TableVarName="tableEMPRESA" msprop:Generator_RowChangedName="EMPRESARowChanged" msprop:Generator_TablePropName="EMPRESA" msprop:Generator_RowDeletingName="EMPRESARowDeleting" msprop:Generator_RowChangingName="EMPRESARowChanging" msprop:Generator_RowEvHandlerName="EMPRESARowChangeEventHandler" msprop:Generator_RowDeletedName="EMPRESARowDeleted" msprop:Generator_RowClassName="EMPRESARow" msprop:Generator_UserTableName="EMPRESA" msprop:Generator_RowEvArgName="EMPRESARowChangeEvent">
+        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_RowClassName="personaRow" msprop:Generator_UserTableName="persona" msprop:Generator_RowEvArgName="personaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_EMPRESA" msprop:Generator_ColumnVarNameInTable="columnID_EMPRESA" msprop:Generator_ColumnPropNameInRow="ID_EMPRESA" msprop:Generator_ColumnPropNameInTable="ID_EMPRESAColumn" msprop:Generator_UserColumnName="ID_EMPRESA" type="xs:int" minOccurs="0" />
-              <xs:element name="EMP_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnEMP_NOMBRE" msprop:Generator_ColumnPropNameInRow="EMP_NOMBRE" msprop:Generator_ColumnPropNameInTable="EMP_NOMBREColumn" msprop:Generator_UserColumnName="EMP_NOMBRE" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_DIRECCION" msprop:Generator_ColumnVarNameInTable="columnEMP_DIRECCION" msprop:Generator_ColumnPropNameInRow="EMP_DIRECCION" msprop:Generator_ColumnPropNameInTable="EMP_DIRECCIONColumn" msprop:Generator_UserColumnName="EMP_DIRECCION" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_CORREO" msprop:Generator_ColumnVarNameInTable="columnEMP_CORREO" msprop:Generator_ColumnPropNameInRow="EMP_CORREO" msprop:Generator_ColumnPropNameInTable="EMP_CORREOColumn" msprop:Generator_UserColumnName="EMP_CORREO" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_TELEFONO" msprop:Generator_ColumnVarNameInTable="columnEMP_TELEFONO" msprop:Generator_ColumnPropNameInRow="EMP_TELEFONO" msprop:Generator_ColumnPropNameInTable="EMP_TELEFONOColumn" msprop:Generator_UserColumnName="EMP_TELEFONO" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_DUENO" msprop:Generator_ColumnVarNameInTable="columnEMP_DUENO" msprop:Generator_ColumnPropNameInRow="EMP_DUENO" msprop:Generator_ColumnPropNameInTable="EMP_DUENOColumn" msprop:Generator_UserColumnName="EMP_DUENO" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_MISION" msprop:Generator_ColumnVarNameInTable="columnEMP_MISION" msprop:Generator_ColumnPropNameInRow="EMP_MISION" msprop:Generator_ColumnPropNameInTable="EMP_MISIONColumn" msprop:Generator_UserColumnName="EMP_MISION" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_VISION" msprop:Generator_ColumnVarNameInTable="columnEMP_VISION" msprop:Generator_ColumnPropNameInRow="EMP_VISION" msprop:Generator_ColumnPropNameInTable="EMP_VISIONColumn" msprop:Generator_UserColumnName="EMP_VISION" type="xs:string" minOccurs="0" />
-              <xs:element name="EMP_FOTO" msprop:Generator_ColumnVarNameInTable="columnEMP_FOTO" msprop:Generator_ColumnPropNameInRow="EMP_FOTO" msprop:Generator_ColumnPropNameInTable="EMP_FOTOColumn" msprop:Generator_UserColumnName="EMP_FOTO" type="xs:string" minOccurs="0" />
+              <xs:element name="ID_PERSONA" msprop:Generator_ColumnVarNameInTable="columnID_PERSONA" msprop:Generator_ColumnPropNameInRow="ID_PERSONA" msprop:Generator_ColumnPropNameInTable="ID_PERSONAColumn" msprop:Generator_UserColumnName="ID_PERSONA" type="xs:string" minOccurs="0" />
+              <xs:element name="PER_NOMBRE1" msprop:Generator_ColumnVarNameInTable="columnPER_NOMBRE1" msprop:Generator_ColumnPropNameInRow="PER_NOMBRE1" msprop:Generator_ColumnPropNameInTable="PER_NOMBRE1Column" msprop:Generator_UserColumnName="PER_NOMBRE1" type="xs:string" minOccurs="0" />
+              <xs:element name="PER_NOMBRE2" msprop:Generator_ColumnVarNameInTable="columnPER_NOMBRE2" msprop:Generator_ColumnPropNameInRow="PER_NOMBRE2" msprop:Generator_ColumnPropNameInTable="PER_NOMBRE2Column" msprop:Generator_UserColumnName="PER_NOMBRE2" type="xs:string" minOccurs="0" />
+              <xs:element name="PER_APELLIDO1" msprop:Generator_ColumnVarNameInTable="columnPER_APELLIDO1" msprop:Generator_ColumnPropNameInRow="PER_APELLIDO1" msprop:Generator_ColumnPropNameInTable="PER_APELLIDO1Column" msprop:Generator_UserColumnName="PER_APELLIDO1" type="xs:string" minOccurs="0" />
+              <xs:element name="PER_APELLIDO2" msprop:Generator_ColumnVarNameInTable="columnPER_APELLIDO2" msprop:Generator_ColumnPropNameInRow="PER_APELLIDO2" msprop:Generator_ColumnPropNameInTable="PER_APELLIDO2Column" msprop:Generator_UserColumnName="PER_APELLIDO2" type="xs:string" minOccurs="0" />
+              <xs:element name="PER_DIRECCION" msprop:Generator_ColumnVarNameInTable="columnPER_DIRECCION" msprop:Generator_ColumnPropNameInRow="PER_DIRECCION" msprop:Generator_ColumnPropNameInTable="PER_DIRECCIONColumn" msprop:Generator_UserColumnName="PER_DIRECCION" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

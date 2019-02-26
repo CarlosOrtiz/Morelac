@@ -124,6 +124,8 @@
       <HintPath>..\packages\CrystalReports.Web.13.0.3501\lib\net20\CrystalDecisions.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
@@ -153,6 +155,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -9815,10 +9818,21 @@
     <Compile Include="AccesoDatos\Conection\Connection.cs" />
     <Compile Include="AccesoDatos\Conection\Datos.cs" />
     <Compile Include="AccesoDatos\Interface\IDatos.cs" />
+    <Compile Include="Datos_Reporte\bdprueba.cs">
+      <DependentUpon>bdprueba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos_Reporte\bdprueba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdprueba.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos_Reporte\Calidad_leche.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Calidad_leche.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos_Reporte\Datos_proveedores.cs">
+      <DependentUpon>Datos_proveedores.xsd</DependentUpon>
     </Compile>
     <Compile Include="Datos_Reporte\Datos_proveedores.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -9855,6 +9869,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Lis_proveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\prueba.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prueba.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Vistas\Private\Cliente\abono_clientes.aspx.cs">
@@ -10067,6 +10087,17 @@
     </Content>
     <Content Include="Datos_Reporte\Calidad_leche.xsc">
       <DependentUpon>Calidad_leche.xsd</DependentUpon>
+    </Content>
+    <Content Include="Datos_Reporte\bdprueba.xsc">
+      <DependentUpon>bdprueba.xsd</DependentUpon>
+    </Content>
+    <None Include="Datos_Reporte\bdprueba.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdprueba.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Datos_Reporte\bdprueba.xss">
+      <DependentUpon>bdprueba.xsd</DependentUpon>
     </Content>
     <None Include="Datos_Reporte\Calidad_leche.xsd">
       <SubType>Designer</SubType>
@@ -10684,9 +10715,16 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\Lis_proveedores.resx">
+      <DependentUpon>Lis_proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Lis_proveedores.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Lis_proveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\prueba.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>prueba.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
