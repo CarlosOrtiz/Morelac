@@ -249,22 +249,21 @@ CREATE TABLE IF NOT EXISTS `finca` (
   CONSTRAINT `fk_FINCA_PERSONA1` FOREIGN KEY (`PERSONA_ID_PERSONA`) REFERENCES `persona` (`ID_PERSONA`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.finca: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.finca: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `finca` DISABLE KEYS */;
 INSERT INTO `finca` (`ID_FINCA`, `FIN_NOMBRE`, `FIN_UBICACION`, `FIN_DIMENSION`, `PERSONA_ID_PERSONA`) VALUES
 	(1, 'Hebron', 'Montañita', '20 hectarias', 17683560),
 	(2, 'CAMPANA', 'SAN VICENTE', '30 HECTARIAS', 40683530),
 	(3, 'AAAAAAAA', 'AAAAAAAAAAAAA', 'AAAAAAAAA', 1117553557),
-	(4, 'LA LECHERA SUPREMA', '400', 'SAN VICENTE', 1117553558),
-	(5, 'LA UNITARIA', '123', 'FLORENCIA CAQUETA', 1117553559),
-	(6, 'LA QUINTA DEL BARCELONA', '200', 'MORELIA', 1117553559);
+	(4, 'MESSI VACA', 'ESPAÑA', '4000', 1117553558),
+	(6, 'prueba de todo 2', 'Florencia tu papa', '666', 1117553559);
 /*!40000 ALTER TABLE `finca` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.leche
 CREATE TABLE IF NOT EXISTS `leche` (
   `ID_LECHE` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `CANT_LECHE` float DEFAULT '0',
-  `LEC_FECHA` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `LEC_FECHA` date DEFAULT NULL,
   `ID_FINCA_ID_LECHE` int(11) unsigned NOT NULL,
   PRIMARY KEY (`ID_LECHE`),
   KEY `FK_leche_finca` (`ID_FINCA_ID_LECHE`),
@@ -274,11 +273,11 @@ CREATE TABLE IF NOT EXISTS `leche` (
 -- Volcando datos para la tabla bd_morelac.leche: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `leche` DISABLE KEYS */;
 INSERT INTO `leche` (`ID_LECHE`, `CANT_LECHE`, `LEC_FECHA`, `ID_FINCA_ID_LECHE`) VALUES
-	(1, 15.92, '2019-02-24 18:00:46', 3),
-	(2, 23.5, '2019-02-23 00:00:00', 2),
-	(3, 23.43, '2019-02-22 18:00:48', 1),
-	(4, 34, '2019-02-26 00:00:00', 4),
-	(5, 3000, '2019-02-26 00:00:00', 6);
+	(1, 15.92, '2019-02-24', 3),
+	(2, 23.5, '2019-02-23', 2),
+	(3, 23.43, '2019-02-22', 1),
+	(4, 999999, '2019-02-28', 4),
+	(5, 3, '2019-02-26', 6);
 /*!40000 ALTER TABLE `leche` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.menu
@@ -294,7 +293,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   CONSTRAINT `fk_MENU_PERMISO1` FOREIGN KEY (`PERMISO_ID_PERMISO`) REFERENCES `permiso` (`ID_PERMISO`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.menu: ~9 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.menu: ~10 rows (aproximadamente)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`ID_MENU`, `MENU_NOMBRE`, `MENU_ICON`, `MENU_ORDEN`, `MENU_URL`, `PERMISO_ID_PERMISO`) VALUES
 	(1, 'Empresa', 'fa-briefcase', 1, '../Gerente/Modi_empresa.aspx', 1),
@@ -367,8 +366,8 @@ INSERT INTO `persona` (`ID_PERSONA`, `PER_CEDULA`, `PER_NOMBRE1`, `PER_NOMBRE2`,
 	(1117553555, '1125', 'ERNESTO', '', 'PINZON', 'ARBOLEDA', '312039123', '1988-02-05', 'MONTAÑITA', 'De puerto leguizamo putumayo', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
 	(1117553556, '1126', 'PR', 'PR', 'PR', 'PR', '123', '2000-02-20', 'SAD', 'SAD', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
 	(1117553557, '1127', 'PEREZ', 'PEREZ', 'PEREZ', 'PEREZ', '1233123', '1996-11-22', 'PEREZ', 'PEREZ  PEREZP ER EZPE REZP ER EZPEREZ', 'F', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
-	(1117553558, '1128', 'ANDRES', 'JULIAN', 'ORTIZ', 'ORTIZ', '31021312', '2015-09-22', 'FLORENCIA CAQUETA', 'Esdasdas das das dasd as', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
-	(1117553559, '111182262', 'DANILO', '', 'ZUÑIGA', '', '22131232', '2019-02-06', 'FLORENCA', 'da', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
+	(1117553558, '777777', 'MESSI', 'MESSI', 'MESSI', 'MESSI', '333333', '2010-10-10', 'MESSI', 'MESSI', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
+	(1117553559, '99999', 'DANILO2', 'SE CAMBIO', 'HOLA', 'QUE TAL', '310482363', '2000-10-17', 'UNIVERSIDAD', 'HOLA SOY YO DE PRUEBA', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
 	(1117553560, '1111755253', 'CRISTIANO', '', 'RONALDO ', 'DOS SANTOS', '1234567899', '1985-02-12', 'ITALIA', 'THE BEST PLAYER OF WORD', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 
@@ -466,18 +465,18 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`ID_USUARIO`, `USU_CORREO_ELECTRONICO`, `USU_CONTRASENA`, `USU_ESTADO`, `PERSONA_ID_PERSONA`, `ROL_ID_ROL`) VALUES
 	(1, 'j@j.j', 'j', 'ACTIVO', 1117553549, 1),
 	(3, 'c@c.co', 'caol', 'ACTIVO', 1117552597, 3),
-	(4, 'luis@gmail.com', 'luis', 'ACTIVO', 17683560, 5),
+	(4, 'luis@gmail.com', 'luis', 'ACTIVO', 17683560, 2),
 	(5, 'Sofia2000@gmail.com', 'sofia', 'INACTIVO', 40683530, 5),
 	(6, 'juan@gmail.com', '1234', 'INACTIVO', 9901, 4),
 	(7, 'Luna@gmail.com', 'luna', 'ACTIVO', 4, 5),
 	(8, 'Pruea@fs.com', '1234', 'INACTIVO', 3, 3),
-	(9, 'cadd1@gm.com', '123', 'INACTIVO', 1, 3),
+	(9, 'cadd1@gm.com', '123', 'INACTIVO', 1, 2),
 	(10, 'karen@gmail.comcom', '1234', 'INACTIVO', 1117553554, 3),
-	(11, 'ernesto2019@gmail.com', 'ernesto', 'INACTIVO', 1117553555, 3),
+	(11, 'ernesto2019@gmail.com', 'ernesto', 'INACTIVO', 1117553555, 2),
 	(12, 'M@M.M', 'M', 'INACTIVO', 1117553556, 5),
 	(13, 'PEREZ@p.p', 'PEREZ', 'INACTIVO', 1117553557, 5),
-	(14, 'a@a.com', 'a', 'INACTIVO', 1117553558, 5),
-	(15, 'da@da.da', 'da', 'INACTIVO', 1117553559, 5),
+	(14, 'a@a.com', 'MESSI', 'ACTIVO', 1117553558, 5),
+	(15, 'da@da.da', 'caol9901', 'ACTIVO', 1117553559, 5),
 	(16, 'cr7@cr7@.com', 'cr7', 'INACTIVO', 1117553560, 3);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
@@ -489,6 +488,30 @@ SELECT CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRET,ID_PERSONA AS IDT, ROL
 INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
 INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
 WHERE rol.ID_ROL=2 ;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_CLIENTE_ALL
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_CLIENTE_ALL`()
+BEGIN
+SELECT ID_PERSONA AS ID, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE, USU_ESTADO AS ESTADO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL=4 ;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_CLIENTE_ID
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_CLIENTE_ID`(
+	IN `IDCLI` INT
+)
+BEGIN
+SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL='4' AND ID_PERSONA = IDCLI;
 END//
 DELIMITER ;
 
@@ -506,6 +529,30 @@ DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_FINCA`()
 BEGIN
 	SELECT ID_FINCA,FIN_NOMBRE,FIN_UBICACION,FIN_DIMENSION,PERSONA_ID_PERSONA FROM finca;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_GERENTE_ALL
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_GERENTE_ALL`()
+BEGIN
+SELECT ID_PERSONA AS ID, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE, USU_ESTADO AS ESTADO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL=2 ;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_GERENTE_ID
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_GERENTE_ID`(
+	IN `IDGER` INT
+)
+BEGIN
+SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL='2' AND ID_PERSONA = IDGER;
 END//
 DELIMITER ;
 
@@ -619,14 +666,49 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_morelac.CONS_SUPERVISOR_ALL
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_SUPERVISOR_ALL`()
+BEGIN
+SELECT ID_PERSONA AS ID, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE, USU_ESTADO AS ESTADO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL=3 ;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_SUPERVISOR_ID
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_SUPERVISOR_ID`(
+	IN `IDSUP` INT
+)
+BEGIN
+SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL='3' AND ID_PERSONA = IDSUP;
+END//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento bd_morelac.CONS_TODOS_CLIENTES
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_TODOS_CLIENTES`()
 BEGIN
-SELECT CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRET,ID_PERSONA AS IDT, ROL_NOMBRE AS ROLT,USU_ESTADO AS ESTADO FROM persona
+SELECT ID_PERSONA AS ID, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE, USU_ESTADO AS ESTADO FROM persona
 INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
 INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
 WHERE rol.ID_ROL=4 ;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_TODOS_GERENTES
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_TODOS_GERENTES`()
+BEGIN
+SELECT ID_PERSONA AS ID, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE, USU_ESTADO AS ESTADO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL=2 ;
 END//
 DELIMITER ;
 
@@ -965,9 +1047,10 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_EMPRESA`(
 
 
 
+
+
 )
 BEGIN
-
 
 	DECLARE EXIT HANDLER FOR SQLEXCEPTION
 	
@@ -976,14 +1059,14 @@ BEGIN
 	START TRANSACTION;
 
 	UPDATE empresa 
-	SET ID_EMPRESA = ID,
-	EMP_NOMBRE = NOM,
+	SET EMP_NOMBRE = NOM,
 	EMP_DIRECCION= DIR,
 	EMP_CORREO=COR,
 	EMP_TELEFONO=TEL,	
 	EMP_DUENO=DUE,
 	EMP_MISION=MIS,
-	EMP_VISION=VIS;
+	EMP_VISION=VIS
+	WHERE empresa.ID_EMPRESA=ID;
 	
 	CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente!');
 	COMMIT;
@@ -995,24 +1078,77 @@ DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_FINCA`(
 	IN `ID` INT
 ,
-	IN `NOMBRE` INT,
-	IN `UBICACION` INT,
-	IN `DIME` INT
+	IN `NOMBRE` VARCHAR(50),
+	IN `UBICACION` VARCHAR(50),
+	IN `DIME` VARCHAR(50)
 )
 BEGIN
+   DECLARE ID_FI INT;
+   DECLARE EXIT HANDLER FOR SQLEXCEPTION
+
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en la modificacion de los datos FINCA!');
+	
+	START TRANSACTION;
+	SET ID_FI = (SELECT ID_FINCA FROM finca WHERE finca.PERSONA_ID_PERSONA=ID);
 	UPDATE finca
 	SET FIN_NOMBRE = NOMBRE,
 	FIN_UBICACION = UBICACION,
 	FIN_DIMENSION = DIME
-	WHERE finca.ID_FINCA = ID;
+	WHERE finca.ID_FINCA = ID_FI;
+	
+	CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente FINCA!');
+	COMMIT;
 END//
 DELIMITER ;
 
 -- Volcando estructura para procedimiento bd_morelac.UPDA_FOTO_EMPRESA
 DELIMITER //
-CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_FOTO_EMPRESA`()
-BEGIN
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_FOTO_EMPRESA`(
+	IN `ID` INT,
+	IN `FOTO` VARCHAR(250)
 
+)
+BEGIN
+	
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en la modificacion de los datos!');
+	
+	START TRANSACTION;
+
+	UPDATE empresa 
+	SET EMP_FOTO = FOTO
+	WHERE empresa.ID_EMPRESA=ID;
+		
+	CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente!');
+	COMMIT;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.UPDA_LECHE
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_LECHE`(
+	IN `ID` INT,
+	IN `CANT` FLOAT,
+	IN `FECHA` DATE
+
+)
+BEGIN
+	DECLARE ID_FIN_LECHE INT;
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en la modificacion de los datos LECHE!');
+	START TRANSACTION;
+	
+	SET	ID_FIN_LECHE = (SELECT ID_FINCA FROM finca WHERE finca.PERSONA_ID_PERSONA=ID);
+
+	UPDATE leche
+	SET CANT_LECHE = CANT,
+	LEC_FECHA = FECHA
+   WHERE leche.ID_LECHE = ID_FIN_LECHE;
+
+	CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente LECHE!');
+	COMMIT;
 END//
 DELIMITER ;
 
@@ -1020,6 +1156,7 @@ DELIMITER ;
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_PERSONA`(
 	IN `ID` INT,
+	IN `CEDU` INT,
 	IN `NOM1` VARCHAR(50),
 	IN `NOM2` VARCHAR(50),
 	IN `APE1` VARCHAR(50),
@@ -1030,22 +1167,93 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_PERSONA`(
 	IN `DETA` VARCHAR(50),
 	IN `SEXO1` ENUM('F','M'),
 	IN `CONTRA` VARCHAR(50)
+
+
+
+,
+	IN `ESTADO` ENUM('ACTIVO','INACTIVO'),
+	IN `ROL` INT
+
+
+
+)
+BEGIN
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en la modificacion de los datos!');
+	
+	START TRANSACTION;
+	UPDATE persona 
+	SET PER_NOMBRE1 = NOM1,
+	PER_CEDULA = CEDU,
+	PER_NOMBRE2 = NOM2,
+	PER_APELLIDO1 = APE1,
+	PER_APELLIDO2 = APE2,
+	PER_CELULAR=CELU,
+	PER_NACIMIENTO = F_NACIMIENTO,
+	PER_DIRECCION = DIREC,
+	PER_DETALLES = DETA,
+	PER_SEXO = SEXO1
+   WHERE persona.ID_PERSONA=ID;
+
+   CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente!');
+	COMMIT;
+	CALL UPDA_USUARIO(ID, CONTRA, ESTADO, ROLL);
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.UPDA_PROVEEDOR
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_PROVEEDOR`(
+	IN `ID` INT,
+	IN `CEDU` INT,
+	IN `NOM1` VARCHAR(50),
+	IN `NOM2` VARCHAR(50),
+	IN `APE1` VARCHAR(50),
+	IN `APE2` VARCHAR(50),
+	IN `CELU` INT,
+	IN `F_NACIMIENTO` DATE,
+	IN `DIREC` VARCHAR(50),
+	IN `DETA` VARCHAR(50),
+	IN `SEXO1` ENUM('M','F')
+,
+	IN `CONTRA` VARCHAR(50),
+	IN `ESTADO` ENUM('ACTIVO','INACTIVO'),
+	IN `ROLL` INT,
+	IN `NOMBRE_FINCA` VARCHAR(50),
+	IN `UBICACION` VARCHAR(50),
+	IN `DIME` VARCHAR(50),
+	IN `CANT` INT,
+	IN `FECHA` DATE
+
+
 )
 BEGIN
 	
-	UPDATE persona 
-	SET NOMBRE1 = NOM1,
-	NOMBRE2 = NOM2,
-	APELLIDO1 = APE1,
-	APELLIDO2 = APE2,
-	CELULAR=CELU,
-	NACIMIENTO = F_NACIMIENTO,
-	DIRECCION = DIREC,
-	DETALLES = DETA,
-	SEXO = SEXO1
-	WHERE PERSONA.ID_PERSONA = ID;
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
 	
-	CALL `UPDA_USUARIO`(ID, CONTRA,FOTO,ROLL); -- ESTADO
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en la modificacion de los datos PRO!');
+	
+	START TRANSACTION;
+	UPDATE persona 
+	SET PER_CEDULA = CEDU,
+	PER_NOMBRE1 = NOM1,
+	PER_NOMBRE2 = NOM2,
+	PER_APELLIDO1 = APE1,
+	PER_APELLIDO2 = APE2,
+	PER_CELULAR=CELU,
+	PER_NACIMIENTO = F_NACIMIENTO,
+	PER_DIRECCION = DIREC,
+	PER_DETALLES = DETA,
+	PER_SEXO = SEXO1
+   WHERE persona.ID_PERSONA=ID;
+
+   CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente PRO!');
+	COMMIT;
+	
+	CALL UPDA_USUARIO(ID, CONTRA, ESTADO, ROLL);
+	CALL UPDA_FINCA(ID, NOMBRE_FINCA, UBICACION, DIME);
+	CALL UPDA_LECHE(ID, CANT, FECHA);
 	
 END//
 DELIMITER ;
@@ -1059,13 +1267,30 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_USUARIO`(
 	IN `ROLL` INT
 
 
+
+
+
+
+
 )
 BEGIN
+DECLARE ID_U INT;
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en la modificacion de los datos USUARIO!');
+	
+	START TRANSACTION;
+	
+	SET ID_U= (SELECT ID_USUARIO FROM usuario WHERE usuario.PERSONA_ID_PERSONA = ID);
+	
 	UPDATE usuario 
 	SET USU_CONTRASENA = CONTRA,
 	USU_ESTADO = ESTADO,
 	ROL_ID_ROL = ROLL
-	WHERE usuario.ID_USUARIO = ID;
+	WHERE usuario.ID_USUARIO = ID_U;
+	
+	CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente USUARIO!');
+	COMMIT;
 END//
 DELIMITER ;
 
