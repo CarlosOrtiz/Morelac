@@ -39,7 +39,7 @@
                                     <td><%#Eval("FIN_NOMBRE")%></td>
                                     <td><%#Eval("ESTADO")%></td>
                                     <td style="text-align:center;">
-                                           <a style="text-align:center;border-radius:50%;" href="Detalle_Articulo.aspx?Valor=<%#Eval("ID")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                           <a style="text-align:center;border-radius:50%;" href="Previsualizacion_Proveedor.aspx?Valor=<%#Eval("ID")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                        </td>
                                 </tr>
                             </ItemTemplate>
