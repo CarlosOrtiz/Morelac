@@ -64,14 +64,14 @@
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Cédula</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_CEDULA" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
+                                <asp:TextBox ID="TB_CEDULA" runat="server"  onKeyPress="return soloNumeros(event)" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
                                     placeholder="Ingrese su cédula..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Numero teléfonico</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Telefono" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
+                                <asp:TextBox ID="TB_Telefono" runat="server" onKeyPress="return soloNumeros(event)" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
                                     placeholder="Ingrese su número teléfonico..."></asp:TextBox>
                             </div>
                         </div>
@@ -103,14 +103,14 @@
                             <span class="col-md-4 control-label text-bold no-padding">¿Donde se ubica la finca?</span>
                             <div class="col-lg-8 no-padding">
                                 <asp:TextBox ID="ubicacion" runat="server" CssClass="form-control" onkeyDown="checkTextAreaMaxLength(this,event,'45');" autocomplete="off" required MaxLength="45"
-                                    placeholder="Ingrese el nombre de su finca..."></asp:TextBox>
+                                    placeholder="Ingrese la ubicacion de su finca..."></asp:TextBox>
                             </div>
                         </div>
                          <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">¿Cuantas hectareas tiene su finca?</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="dimencion" runat="server" CssClass="form-control" autocomplete="off" onkeyDown="checkTextAreaMaxLength(this,event,'45');" MaxLength="45"
-                                    placeholder="Ingrese el nombre de su finca..."></asp:TextBox>
+                                <asp:TextBox ID="dimencion" runat="server" CssClass="form-control" onkeypress="return filterFloat(event,this);"   autocomplete="off" onkeyDown="checkTextAreaMaxLength(this,event,'45');" MaxLength="45"
+                                    placeholder="Ingrese el numero de hectareas de su finca..."></asp:TextBox>
                             </div>
                         </div>
                  <div class="form-group col-md-12 no-padding">
@@ -170,7 +170,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title"><%=modal_titulo%></h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body"> 
                     <p><%=modal_mensaje%></p>
                 </div>
                 <div class="modal-footer">

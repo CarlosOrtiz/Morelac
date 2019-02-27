@@ -34,7 +34,7 @@
                             <p><b>No Teléfonico:</b>&nbsp<asp:Label ID="Celular" runat="server"></asp:Label></p>
                             <p><b>Dirección:</b>&nbsp<asp:Label ID="Direc" runat="server"></asp:Label></p>
                             <p><b>Finca:</b>&nbsp<asp:Label ID="FincaNom" runat="server"></asp:Label></p>
-                            <p><b>Cantidad de leche que entrego:</b>&nbsp<asp:Label ID="Cant_En" runat="server"></asp:Label>&nbsp<b>Kg</b></p>
+                            <p><b>Cantidad de leche que entrego:</b>&nbsp<asp:Label ID="Cant_En" runat="server"></asp:Label>&nbsp<b>Kg/L</b></p>
                             <p><b>Fecha y hora de la entrega de leche:</b>&nbsp<asp:Label ID="Fecha" runat="server"></asp:Label></p>
                             <p><b>Estado:</b>&nbsp<asp:Label ID="Estado" runat="server"></asp:Label></p>
                             <p align="justify"><b>Descripción:&nbsp</b><asp:Label ID="Descripcion" runat="server"></asp:Label></p>

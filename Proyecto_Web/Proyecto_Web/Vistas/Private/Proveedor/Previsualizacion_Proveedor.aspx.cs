@@ -16,6 +16,17 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
         private string nombres, apellidos;
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["CORREO_ELECTRONICO"].ToString().Equals(null))
+                {
+                    Response.Redirect("~/Vistas/Public/Index.aspx");
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("~/Vistas/Public/Index.aspx");
+            }
             DT_Proveedor = mod_proveedor.ConsultarProvedores_ID(Convert.ToString(Request.QueryString["Valor"]));
 
             Nombre.Text = DT_Proveedor.Rows[0]["PER_NOMBRE1"].ToString() + " " + DT_Proveedor.Rows[0]["PER_NOMBRE2"].ToString() + " " + DT_Proveedor.Rows[0]["PER_APELLIDO1"].ToString() + " " + DT_Proveedor.Rows[0]["PER_APELLIDO2"].ToString();

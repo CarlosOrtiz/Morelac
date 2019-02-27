@@ -4460,6 +4460,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Vistas\Private\ImgUser\" />
     <Folder Include="Vistas\Private\Usuarios\" />
   </ItemGroup>
   <PropertyGroup>
