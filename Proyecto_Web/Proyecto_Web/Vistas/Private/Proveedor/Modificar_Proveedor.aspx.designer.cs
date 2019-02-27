@@ -13,6 +13,24 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
     public partial class Modificar_Proveedor {
         
         /// <summary>
+        /// Control FU_Imagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FU_Imagen;
+        
+        /// <summary>
+        /// Control Img_FileUpload.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Img_FileUpload;
+        
+        /// <summary>
         /// Control Img_Persona.
         /// </summary>
         /// <remarks>
@@ -22,67 +40,85 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         protected global::System.Web.UI.WebControls.Image Img_Persona;
         
         /// <summary>
-        /// Control Nombre.
+        /// Control TB_Nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Nombre;
+        protected global::System.Web.UI.WebControls.TextBox TB_Nombre;
         
         /// <summary>
-        /// Control Cedula.
+        /// Control TB_CEDULA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Cedula;
+        protected global::System.Web.UI.WebControls.TextBox TB_CEDULA;
         
         /// <summary>
-        /// Control Celular.
+        /// Control TB_Telefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Celular;
+        protected global::System.Web.UI.WebControls.TextBox TB_Telefono;
         
         /// <summary>
-        /// Control Direc.
+        /// Control TB_Direccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Direc;
+        protected global::System.Web.UI.WebControls.TextBox TB_Direccion;
         
         /// <summary>
-        /// Control FincaNom.
+        /// Control TB_Finca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FincaNom;
+        protected global::System.Web.UI.WebControls.TextBox TB_Finca;
         
         /// <summary>
-        /// Control Cant_En.
+        /// Control Tb_Cant_leche.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Cant_En;
+        protected global::System.Web.UI.WebControls.TextBox Tb_Cant_leche;
         
         /// <summary>
-        /// Control Fecha.
+        /// Control TB_Fecha_En.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Fecha;
+        protected global::System.Web.UI.WebControls.TextBox TB_Fecha_En;
+        
+        /// <summary>
+        /// Control Drop_Estado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Drop_Estado;
+        
+        /// <summary>
+        /// Control TB_Descri.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_Descri;
         
         /// <summary>
         /// Control Estado.
