@@ -103,13 +103,22 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         protected global::System.Web.UI.WebControls.TextBox TB_Finca;
         
         /// <summary>
-        /// Control Tb_Cant_leche.
+        /// Control ubicacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Tb_Cant_leche;
+        protected global::System.Web.UI.WebControls.TextBox ubicacion;
+        
+        /// <summary>
+        /// Control dimencion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dimencion;
         
         /// <summary>
         /// Control TB_Fecha_En.
@@ -119,6 +128,15 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Fecha_En;
+        
+        /// <summary>
+        /// Control Tb_Cant_leche.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Tb_Cant_leche;
         
         /// <summary>
         /// Control Drop_Estado.

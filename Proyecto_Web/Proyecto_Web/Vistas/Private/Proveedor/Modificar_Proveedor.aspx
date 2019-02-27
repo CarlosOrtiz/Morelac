@@ -36,50 +36,50 @@
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Nombre 1</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Nombre" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
-                                    placeholder="Ingrese su 1 nombre..."></asp:TextBox>
+                                <asp:TextBox ID="TB_Nombre" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'20');"  autocomplete="off" CssClass="form-control" required MaxLength="20"
+                                    placeholder="Ingrese su primer nombre..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Nombre 2</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Nombre2" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
-                                    placeholder="Ingrese su 2 nombre..."></asp:TextBox>
+                                <asp:TextBox ID="TB_Nombre2" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'20');" autocomplete="off" CssClass="form-control" MaxLength="20"
+                                    placeholder="Ingrese su segundo nombre..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Apellido 1</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Apellido1" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
-                                    placeholder="Ingrese su apellido..."></asp:TextBox>
+                                <asp:TextBox ID="TB_Apellido1" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'20');" autocomplete="off" CssClass="form-control" required MaxLength="20"
+                                    placeholder="Ingrese su primer apellido..."></asp:TextBox>
                             </div>
                         </div>
               <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Apellido 2</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Apellido2" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
-                                    placeholder="Ingrese su 2 apellido..."></asp:TextBox>
+                                <asp:TextBox ID="TB_Apellido2" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'20');" autocomplete="off" CssClass="form-control" MaxLength="20"
+                                    placeholder="Ingrese su segundo apellido..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Cédula</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_CEDULA" runat="server" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
+                                <asp:TextBox ID="TB_CEDULA" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
                                     placeholder="Ingrese su cédula..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-2 control-label text-bold no-padding">No Teléfonico</span>
+                            <span class="col-md-2 control-label text-bold no-padding">Numero teléfonico</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Telefono" runat="server" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
+                                <asp:TextBox ID="TB_Telefono" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
                                     placeholder="Ingrese su número teléfonico..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Dirección</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Direccion" runat="server" CssClass="form-control" autocomplete="off" required MaxLength="45"
-                                    placeholder="Ingrese la dirección..."></asp:TextBox>
+                                <asp:TextBox ID="TB_Direccion" runat="server" onkeyDown="checkTextAreaMaxLength(this,event,'50');" CssClass="form-control" autocomplete="off"  MaxLength="50"
+                                    placeholder="Ingrese su dirección..."></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -95,27 +95,42 @@
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">Nombre de la finca</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="TB_Finca" runat="server" CssClass="form-control" autocomplete="off" required MaxLength="45"
+                                <asp:TextBox ID="TB_Finca" runat="server" CssClass="form-control" onkeyDown="checkTextAreaMaxLength(this,event,'45');"  autocomplete="off" required MaxLength="45"
                                     placeholder="Ingrese el nombre de su finca..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-4 control-label text-bold no-padding">Cantidad de leche que ingreso a la empresa</span>
+                            <span class="col-md-4 control-label text-bold no-padding">¿Donde se ubica la finca?</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="Tb_Cant_leche" TextMode="Number" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"
-                                    placeholder="Ingrese la dirección..."></asp:TextBox>
+                                <asp:TextBox ID="ubicacion" runat="server" CssClass="form-control" onkeyDown="checkTextAreaMaxLength(this,event,'45');" autocomplete="off" required MaxLength="45"
+                                    placeholder="Ingrese el nombre de su finca..."></asp:TextBox>
+                            </div>
+                        </div>
+                         <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-4 control-label text-bold no-padding">¿Cuantas hectareas tiene su finca?</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="dimencion" runat="server" CssClass="form-control" autocomplete="off" onkeyDown="checkTextAreaMaxLength(this,event,'45');" MaxLength="45"
+                                    placeholder="Ingrese el nombre de su finca..."></asp:TextBox>
+                            </div>
+                        </div>
+                 <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-4 control-label text-bold no-padding">Fecha donde le surtio leche a empresa</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="TB_Fecha_En" TextMode="DateTime" runat="server" autocomplete="off" CssClass="form-control" required ></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-4 control-label text-bold no-padding">Fecha que entrego la leche a la empresa</span>
+                            <span class="col-md-4 control-label text-bold no-padding">¿Cantidad de leche que ingreso a la empresa?</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="TB_Fecha_En" TextMode="Date" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"></asp:TextBox>
+                                <asp:TextBox ID="Tb_Cant_leche" TextMode="Number" runat="server" autocomplete="off"  CssClass="form-control" required 
+                                    placeholder="Ingrese la cantidad en kilogramos (Kg)..."></asp:TextBox>
                             </div>
                         </div>
+
                         <div class="form-group col-md-12 no-padding">
                             <label class="col-md-4 control-label text-bold no-padding">Estado</label>
                             <div class="col-lg-8 no-padding">
-                                <asp:DropDownList ID="Drop_Estado" CssClass="form-control select2" AppendDataBoundItems="true" runat="server" BackColor="White"  AutoPostBack="true">
+                                <asp:DropDownList ID="Drop_Estado" CssClass="form-control select2" AppendDataBoundItems="true" runat="server" BackColor="White" >
                                     <asp:ListItem Value="ACTIVO" Text="Activo"></asp:ListItem>
                                     <asp:ListItem Value="INACTIVO" Text="Inactivo"></asp:ListItem>
                                 </asp:DropDownList>
@@ -124,19 +139,19 @@
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">Correo Electronico</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="correo" TextMode="Date" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"></asp:TextBox>
+                                <asp:TextBox ID="correo" Enabled="false" TextMode="Email" runat="server" autocomplete="off" CssClass="form-control" MaxLength="45"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">Contraseña</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="contra" TextMode="Date" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"></asp:TextBox>
+                                <asp:TextBox ID="contra"  runat="server" autocomplete="off" CssClass="form-control" onkeyDown="checkTextAreaMaxLength(this,event,'50');" required MaxLength="50"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">Descripción</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="TB_Descri" TextMode="MultiLine" Rows="5" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="225"></asp:TextBox>
+                                <asp:TextBox ID="TB_Descri" TextMode="MultiLine" Rows="5" onkeyDown="checkTextAreaMaxLength(this,event,'255');" runat="server" autocomplete="off" CssClass="form-control"  MaxLength="225"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -149,6 +164,31 @@
 
     </section>
     <div class="clearfix"></div>
+     <div class="modal <%=modal_tipo%> fade" id="modal-modi_proveedor" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><%=modal_titulo%></h4>
+                </div>
+                <div class="modal-body">
+                    <p><%=modal_mensaje%></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="redirect(<%= modal_link %>)">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
+      <script>    
+        function darEstiloGVParticipantes() {
+            $("#ContentPlaceHolder1_GV_Participantes tbody tr td a").text("");
+            $("#ContentPlaceHolder1_GV_Participantes tbody tr td a").prepend("<i class='fa fa-remove'></i>");
+            $("#ContentPlaceHolder1_GV_Participantes tbody tr td a").addClass("btn btn-danger");
+            jQuery.moveColumn("#ContentPlaceHolder1_GV_Participantes", 1, 0);
+            jQuery.moveColumn("#ContentPlaceHolder1_GV_Participantes", 2, 1);
+        }
+
+    </script>
 </asp:Content>
