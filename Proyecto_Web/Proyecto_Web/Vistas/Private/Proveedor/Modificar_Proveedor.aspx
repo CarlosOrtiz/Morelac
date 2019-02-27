@@ -35,16 +35,7 @@
                                 <asp:Image ID="Img_Persona" runat="server" Width="35%" CssClass="img-thumbnail rounded" />
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 no-padding">
-                <div class="box no-border no-shadow">
-                    <div class="box-header">
-                    </div>
-                    <div class="box-header">
-                        <div class="form-group col-md-12 no-padding">
+                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Nombre</span>
                             <div class="col-lg-10 no-padding">
                                 <asp:TextBox ID="TB_Nombre" runat="server" CssClass="form-control" required MaxLength="100"
@@ -72,6 +63,16 @@
                                     placeholder="Ingrese la dirección..."></asp:TextBox>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 no-padding">
+                <div class="box no-border no-shadow">
+                    <div class="box-header">
+                    </div>
+                    <div class="box-header">
+                       
                            <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Nombre de la finca</span>
                             <div class="col-lg-10 no-padding">
