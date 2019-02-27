@@ -1,9 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Ingresar_supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Ingresar_supervisor" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="ingresar_gerente.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Gerente.ingresar_gerente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--<form runat="server">--%>
     <div class="content">
         <div class="container-fluid">
             <div class="form-row">
@@ -11,7 +9,7 @@
                     <div class="contact-form">
                         <div class="card-header">
                             <br />
-                            <h4 class="card-title">CREAR UN NUEVO SUPERVISOR</h4>
+                            <h4 class="card-title">CREAR UN NUEVO GERENTE</h4>
                         </div>
                         <div class="card-body">
                             <%--<form>--%>
@@ -98,7 +96,7 @@
                             <div class="row" runat="server">
                                 <div class="col-sm-offset-2 col-sm-10 text-right">
                                     <asp:LinkButton ID="Btn_Guardar" runat="server" CssClass="btn btn-primary" OnClick="Btn_Guardar_Click"><i class="fa fa-save"></i>&nbsp Guardar datos</asp:LinkButton>
-                                    <a href="Supervisor.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
+                                    <a href="gerente.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
@@ -108,7 +106,6 @@
             </div>
         </div>
     </div>
-    <%--  <br />
-        <br />
-    </form>--%>
 </asp:Content>
+<%--<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
+</asp:Content>--%>

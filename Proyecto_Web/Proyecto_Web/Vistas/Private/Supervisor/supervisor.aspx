@@ -7,7 +7,7 @@
         <div class="col-xs-6">
             <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>SUPERVISORES</h3>
         </div>
-        <div class="col-xs-6 text-right"><a href="ingresar_supervisor.aspx" class="btn btn-success">Registrar nuevo</a></div>
+        <div class="col-xs-6 text-right"><a href="Ingresar_supervisor.aspx" class="btn btn-success">Registrar nuevo</a></div>
     </section>
     <section class="content">
         <div class="row">
@@ -37,7 +37,7 @@
                                     <td><%#Eval("IDT")%></td>
                                     <td><%#Eval("ESTADO")%></td>
                                     <td>
-                                        <a href="Modificar_Supervisor.aspx?Valor=<%#Eval("IDT")%>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                        <a style="text-align:center;border-radius:50%;" href="Previsualizacion_Supervisor.aspx?Valor=<%#Eval("IDT")%>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                     </td>
                                 </tr>
                             </ItemTemplate>

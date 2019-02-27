@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Proyecto_Web.Vistas.Private.Supervisor {
+namespace Proyecto_Web.Vistas.Private.Cliente {
     
     
-    public partial class Modificar_Supervisor {
+    public partial class Modificar_Cliente {
         
         /// <summary>
         /// Control FU_Imagen.

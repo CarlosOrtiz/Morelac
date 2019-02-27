@@ -13,12 +13,12 @@ namespace Proyecto_Web.Vistas.Private.Cliente {
     public partial class Clientes {
         
         /// <summary>
-        /// Control Rep_Clientes.
+        /// Control Rep_Cliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Rep_Clientes;
+        protected global::System.Web.UI.WebControls.Repeater Rep_Cliente;
     }
 }
