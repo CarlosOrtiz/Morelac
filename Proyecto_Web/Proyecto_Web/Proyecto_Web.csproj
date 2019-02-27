@@ -2002,7 +2002,10 @@
     <Content Include="Plantilla\Publico\img\Icon2\WhatsApp.png" />
     <Content Include="Vistas\Private\Cliente\abono_clientes.aspx" />
     <Content Include="Vistas\Private\Cliente\Clientes.aspx" />
+    <Content Include="Vistas\Private\Gerente\gerente.aspx" />
     <Content Include="Vistas\Private\Proveedor\abono_proveedores.aspx" />
+    <Content Include="Vistas\Private\Proveedor\Modificar_Proveedor.aspx" />
+    <Content Include="Vistas\Private\Proveedor\Previsualizacion_Proveedor.aspx" />
     <Content Include="Vistas\Private\Proveedor\Proveedores.aspx" />
     <Content Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx" />
     <Content Include="Vistas\Private\Supervisor\Supervisor.aspx" />
@@ -3679,6 +3682,13 @@
     <Compile Include="Vistas\Private\Cliente\Clientes.aspx.designer.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Private\Gerente\gerente.aspx.cs">
+      <DependentUpon>gerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\gerente.aspx.designer.cs">
+      <DependentUpon>gerente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Private\Proveedor\abono_proveedores.aspx.cs">
       <DependentUpon>abono_proveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3692,6 +3702,20 @@
     </Compile>
     <Compile Include="Vistas\Private\Home\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Proveedor\Modificar_Proveedor.aspx.cs">
+      <DependentUpon>Modificar_Proveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Proveedor\Modificar_Proveedor.aspx.designer.cs">
+      <DependentUpon>Modificar_Proveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Proveedor\Previsualizacion_Proveedor.aspx.cs">
+      <DependentUpon>Previsualizacion_Proveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Proveedor\Previsualizacion_Proveedor.aspx.designer.cs">
+      <DependentUpon>Previsualizacion_Proveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Proveedor\Proveedores.aspx.cs">
       <DependentUpon>Proveedores.aspx</DependentUpon>
