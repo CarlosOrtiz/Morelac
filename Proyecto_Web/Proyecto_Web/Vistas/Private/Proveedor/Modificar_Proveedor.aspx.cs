@@ -74,8 +74,8 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
             {
                 try
                 {
-                    mod_prov.ActualizarProveedor(Convert.ToString(Request.QueryString["Valor"]), TB_CEDULA.Text, TB_Nombre.Text,TB_Nombre2.Text,TB_Apellido1.Text,TB_Apellido2.Text,TB_Telefono.Text,
-                        TB_Direccion.Text,TB_Descri,'M',contra.Text, Convert.ToChar(Drop_Estado.SelectedValue));
+                    //mod_prov.ActualizarProveedor(Convert.ToString(Request.QueryString["Valor"]), TB_CEDULA.Text, TB_Nombre.Text,TB_Nombre2.Text,TB_Apellido1.Text,TB_Apellido2.Text,TB_Telefono.Text,
+                    //    TB_Direccion.Text,TB_Descri,'M',contra.Text, Convert.ToChar(Drop_Estado.SelectedValue));
                 }
                 catch
                 {
