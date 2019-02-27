@@ -17,13 +17,13 @@ namespace Proyecto_Web.Vistas.Private.Gerente
         {
             DT_Gerente = mod_gerente.ConsultarGerente_ID(Convert.ToString(Request.QueryString["Valor"]));
 
-            Nombre.Text = DT_Gerente.Rows[0]["NOMBRE"].ToString();
-            Cedula.Text = DT_Gerente.Rows[0]["CEDULA"].ToString();
-            Celular.Text = DT_Gerente.Rows[0]["CELULAR"].ToString();
-            Direc.Text = DT_Gerente.Rows[0]["DIRECCION"].ToString();
+            Nombre.Text = DT_Gerente.Rows[0]["PER_NOMBRE1"].ToString() + " " + DT_Gerente.Rows[0]["PER_NOMBRE2"].ToString() + " " + DT_Gerente.Rows[0]["PER_APELLIDO1"].ToString() + " " + DT_Gerente.Rows[0]["PER_APELLIDO2"].ToString();
+            Cedula.Text = DT_Gerente.Rows[0]["PER_CEDULA"].ToString();
+            Celular.Text = DT_Gerente.Rows[0]["PER_CELULAR"].ToString();
+            Direc.Text = DT_Gerente.Rows[0]["PER_DIRECCION"].ToString();
             Estado.Text = DT_Gerente.Rows[0]["ESTADO"].ToString();
-            Descripcion.Text = DT_Gerente.Rows[0]["DETALLE"].ToString();
-            Img_Persona.ImageUrl = DT_Gerente.Rows[0]["FOTO"].ToString();
+            Descripcion.Text = DT_Gerente.Rows[0]["PER_DETALLES"].ToString();
+            Img_Persona.ImageUrl = DT_Gerente.Rows[0]["PER_FOTO"].ToString();
         }
     }
 }
