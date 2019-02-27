@@ -36,28 +36,28 @@
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Nombre</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Nombre" runat="server" CssClass="form-control" required MaxLength="100"
+                                <asp:TextBox ID="TB_Nombre" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
                                     placeholder="Ingrese su nombre..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Cédula</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_CEDULA" runat="server" CssClass="form-control" TextMode="Number" required MaxLength="10"
+                                <asp:TextBox ID="TB_CEDULA" runat="server" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
                                     placeholder="Ingrese su cédula..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">No Teléfonico</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Telefono" runat="server" CssClass="form-control" TextMode="Number" required MaxLength="10"
+                                <asp:TextBox ID="TB_Telefono" runat="server" CssClass="form-control" autocomplete="off" TextMode="Number" required MaxLength="10"
                                     placeholder="Ingrese su número teléfonico..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Dirección</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Direccion" runat="server" CssClass="form-control" required MaxLength="45"
+                                <asp:TextBox ID="TB_Direccion" runat="server" CssClass="form-control" autocomplete="off" required MaxLength="45"
                                     placeholder="Ingrese la dirección..."></asp:TextBox>
                             </div>
                         </div>
@@ -72,38 +72,38 @@
                     <div class="box-header">
 
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-3 control-label text-bold no-padding">Nombre de la finca</span>
-                            <div class="col-lg-9 no-padding">
-                                <asp:TextBox ID="TB_Finca" runat="server" CssClass="form-control" required MaxLength="45"
+                            <span class="col-md-4 control-label text-bold no-padding">Nombre de la finca</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="TB_Finca" runat="server" CssClass="form-control" autocomplete="off" required MaxLength="45"
                                     placeholder="Ingrese el nombre de su finca..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-3 control-label text-bold no-padding">Cantidad de leche que ingreso a la empresa</span>
-                            <div class="col-lg-9 no-padding">
-                                <asp:TextBox ID="Tb_Cant_leche" TextMode="Number" runat="server" CssClass="form-control" required MaxLength="45"
+                            <span class="col-md-4 control-label text-bold no-padding">Cantidad de leche que ingreso a la empresa</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="Tb_Cant_leche" TextMode="Number" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"
                                     placeholder="Ingrese la dirección..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-3 control-label text-bold no-padding">Fecha que entrego la leche a la empresa</span>
-                            <div class="col-lg-9 no-padding">
-                                <asp:TextBox ID="TB_Fecha_En" TextMode="Date" runat="server" CssClass="form-control" required MaxLength="45"></asp:TextBox>
+                            <span class="col-md-4 control-label text-bold no-padding">Fecha que entrego la leche a la empresa</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="TB_Fecha_En" TextMode="Date" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <label class="col-md-3 control-label text-bold no-padding">Estado</label>
-                            <div class="col-lg-9">
-                                <asp:DropDownList ID="Drop_Estado" CssClass="form-control select2" AppendDataBoundItems="true" runat="server" BackColor="White">
+                            <label class="col-md-4 control-label text-bold no-padding">Estado</label>
+                            <div class="col-lg-8 no-padding">
+                                <asp:DropDownList ID="Drop_Estado" CssClass="form-control select2" AppendDataBoundItems="true" runat="server" BackColor="White"  AutoPostBack="true">
                                     <asp:ListItem Value="ACTIVO" Text="Activo"></asp:ListItem>
                                     <asp:ListItem Value="INACTIVO" Text="Inactivo"></asp:ListItem>
                                 </asp:DropDownList>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-3 control-label text-bold no-padding">Descripción</span>
-                            <div class="col-lg-9 no-padding">
-                                <asp:TextBox ID="TB_Descri" TextMode="DateTime" runat="server" CssClass="form-control" required MaxLength="225"></asp:TextBox>
+                            <span class="col-md-4 control-label text-bold no-padding">Descripción</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="TB_Descri" TextMode="MultiLine" Rows="5" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="225"></asp:TextBox>
                             </div>
                         </div>
                     </div>
