@@ -14,13 +14,22 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
         PROVEEDOR mod_prov = new PROVEEDOR();
         PERSONA mod_per = new PERSONA();
         DataTable DT_M_PROVEEDOR;
+
+        public string modal_mensaje;
+        public string modal_titulo;
+        public string modal_tipo;
+        public string modal_link;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             DT_M_PROVEEDOR = mod_prov.ConsultarProvedores_ID(Convert.ToString(Request.QueryString["Valor"]));
             if (!IsPostBack)
             {
 
-                TB_Nombre.Text = DT_M_PROVEEDOR.Rows[0]["NOMBRE"].ToString();
+                TB_Nombre.Text = DT_M_PROVEEDOR.Rows[0]["PER_NOMBRE1"].ToString();
+                TB_Nombre2.Text = DT_M_PROVEEDOR.Rows[0]["PER_NOMBRE2"].ToString();
+                TB_Apellido1.Text = DT_M_PROVEEDOR.Rows[0]["PER_APELLIDO1"].ToString();
+                TB_Apellido2.Text = DT_M_PROVEEDOR.Rows[0]["PER_APELLIDO2"].ToString();
                 TB_CEDULA.Text = DT_M_PROVEEDOR.Rows[0]["CEDULA"].ToString();
                 TB_Telefono.Text = DT_M_PROVEEDOR.Rows[0]["CELULAR"].ToString();
                 TB_Direccion.Text = DT_M_PROVEEDOR.Rows[0]["DIRECCION"].ToString();
@@ -49,15 +58,55 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
                 }
                 else
                 {
-                    if (ViewState["Ruta"].ToString() != DT_M_PROVEEDOR.Rows[0]["URL"].ToString())
+                    if (ViewState["Ruta"].ToString() != DT_M_PROVEEDOR.Rows[0]["FOTO"].ToString())
                         Img_FileUpload.ImageUrl = ViewState["Ruta"].ToString();
                     else
                     {
-                        ViewState["Ruta"] = DT_M_PROVEEDOR.Rows[0]["URL"].ToString();
+                        ViewState["Ruta"] = DT_M_PROVEEDOR.Rows[0]["FOTO"].ToString();
                         Img_FileUpload.ImageUrl = ViewState["Ruta"].ToString();
                     }
                 }
             }
+        }
+        protected void Btn_Modificar_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                try
+                {
+                    mod_prov.ActualizarProveedor(Convert.ToString(Request.QueryString["Valor"]), TB_CEDULA.Text, TB_Nombre.Text,TB_Nombre2.Text,TB_Apellido1.Text,TB_Apellido2.Text,TB_Telefono.Text,
+                        TB_Direccion.Text,TB_Descri,'M',contra.Text, Convert.ToChar(Drop_Estado.SelectedValue));
+                }
+                catch
+                {
+                    mostrarModal("Ocurrió un error en la modificación de los datos.", "Error", "modal-danger");
+                }
+            }
+        }
+        protected void mostrarModal(string mensaje, string titulo, string tipo, string link = null)
+        {
+            modal_mensaje = mensaje;
+            modal_titulo = titulo;
+            modal_tipo = tipo;
+            modal_link = link;
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script1", "MostrarModal('modal-detalle-proyecto');", true);
+        }
+
+        protected bool ValidarDatos()
+        {
+            bool estaBien = false;
+            if (TB_Nombre.Text.Length < 3)
+                mostrarModal("Ingrese el nombre correctamente.", "Error", "modal-danger");
+            else if (TB_Descri.Text.Length < 10)
+                mostrarModal("Ingrese la descripción correctamente.", "Error", "modal-danger");
+            else if (Drop_Estado.SelectedIndex.Equals(0))
+                mostrarModal("Seleccione un estado.", "Error", "modal-danger");
+            else if (Drop_Estado.SelectedIndex.Equals(2))
+                mostrarModal("Ingrese la fecha en la que finalizó el proyecto.", "Error", "modal-danger");
+            else
+                estaBien = true;
+
+            return estaBien;
         }
     }
 }

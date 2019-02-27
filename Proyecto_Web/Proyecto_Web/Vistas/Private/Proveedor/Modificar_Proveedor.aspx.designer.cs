@@ -40,6 +40,33 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         protected global::System.Web.UI.WebControls.TextBox TB_Nombre;
         
         /// <summary>
+        /// Control TB_Nombre2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_Nombre2;
+        
+        /// <summary>
+        /// Control TB_Apellido1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_Apellido1;
+        
+        /// <summary>
+        /// Control TB_Apellido2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_Apellido2;
+        
+        /// <summary>
         /// Control TB_CEDULA.
         /// </summary>
         /// <remarks>
@@ -103,6 +130,24 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         protected global::System.Web.UI.WebControls.DropDownList Drop_Estado;
         
         /// <summary>
+        /// Control correo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox correo;
+        
+        /// <summary>
+        /// Control contra.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox contra;
+        
+        /// <summary>
         /// Control TB_Descri.
         /// </summary>
         /// <remarks>
@@ -110,5 +155,14 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Descri;
+        
+        /// <summary>
+        /// Control Btn_Modificar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_Modificar;
     }
 }

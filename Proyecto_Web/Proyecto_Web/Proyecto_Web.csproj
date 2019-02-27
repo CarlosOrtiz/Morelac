@@ -2002,12 +2002,18 @@
     <Content Include="Plantilla\Publico\img\Icon2\WhatsApp.png" />
     <Content Include="Vistas\Private\Cliente\abono_clientes.aspx" />
     <Content Include="Vistas\Private\Cliente\Clientes.aspx" />
+    <Content Include="Vistas\Private\Cliente\Modificar_Cliente.aspx" />
+    <Content Include="Vistas\Private\Cliente\Previsualizacion_Cliente.aspx" />
     <Content Include="Vistas\Private\Gerente\gerente.aspx" />
+    <Content Include="Vistas\Private\Gerente\ingresar_gerente.aspx" />
+    <Content Include="Vistas\Private\Gerente\Modificar_Gerente.aspx" />
+    <Content Include="Vistas\Private\Gerente\Previsualizacion_Gerente.aspx" />
     <Content Include="Vistas\Private\Proveedor\abono_proveedores.aspx" />
     <Content Include="Vistas\Private\Proveedor\Modificar_Proveedor.aspx" />
     <Content Include="Vistas\Private\Proveedor\Previsualizacion_Proveedor.aspx" />
     <Content Include="Vistas\Private\Proveedor\Proveedores.aspx" />
     <Content Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx" />
+    <Content Include="Vistas\Private\Supervisor\Previsualizacion_Supervisor.aspx" />
     <Content Include="Vistas\Private\Supervisor\Supervisor.aspx" />
     <Content Include="Vistas\Private\Cliente\gestionar_cliente.aspx" />
     <Content Include="Vistas\Private\Proveedor\gestionar_proveedor.aspx" />
@@ -3648,6 +3654,7 @@
     <Compile Include="Modelos\estructura.cs" />
     <Compile Include="Modelos\FACTURA.cs" />
     <Compile Include="Modelos\FINCA.cs" />
+    <Compile Include="Modelos\GERENTE.cs" />
     <Compile Include="Modelos\MENU.cs" />
     <Compile Include="Modelos\PERSONA.cs" />
     <Compile Include="Modelos\PRODUCTOS.cs" />
@@ -3682,12 +3689,47 @@
     <Compile Include="Vistas\Private\Cliente\Clientes.aspx.designer.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Private\Cliente\Modificar_Cliente.aspx.cs">
+      <DependentUpon>Modificar_Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Cliente\Modificar_Cliente.aspx.designer.cs">
+      <DependentUpon>Modificar_Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Cliente\Previsualizacion_Cliente.aspx.cs">
+      <DependentUpon>Previsualizacion_Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Cliente\Previsualizacion_Cliente.aspx.designer.cs">
+      <DependentUpon>Previsualizacion_Cliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Private\Gerente\gerente.aspx.cs">
       <DependentUpon>gerente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Vistas\Private\Gerente\gerente.aspx.designer.cs">
       <DependentUpon>gerente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\ingresar_gerente.aspx.cs">
+      <DependentUpon>ingresar_gerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\ingresar_gerente.aspx.designer.cs">
+      <DependentUpon>ingresar_gerente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\Modificar_Gerente.aspx.cs">
+      <DependentUpon>Modificar_Gerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\Modificar_Gerente.aspx.designer.cs">
+      <DependentUpon>Modificar_Gerente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\Previsualizacion_Gerente.aspx.cs">
+      <DependentUpon>Previsualizacion_Gerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Gerente\Previsualizacion_Gerente.aspx.designer.cs">
+      <DependentUpon>Previsualizacion_Gerente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Proveedor\abono_proveedores.aspx.cs">
       <DependentUpon>abono_proveedores.aspx</DependentUpon>
@@ -3730,6 +3772,13 @@
     </Compile>
     <Compile Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx.designer.cs">
       <DependentUpon>Modificar_Supervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\Previsualizacion_Supervisor.aspx.cs">
+      <DependentUpon>Previsualizacion_Supervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\Previsualizacion_Supervisor.aspx.designer.cs">
+      <DependentUpon>Previsualizacion_Supervisor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Supervisor\Supervisor.aspx.cs">
       <DependentUpon>Supervisor.aspx</DependentUpon>

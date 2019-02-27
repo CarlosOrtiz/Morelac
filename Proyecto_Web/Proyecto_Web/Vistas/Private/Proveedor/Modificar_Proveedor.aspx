@@ -34,10 +34,31 @@
                         </div>
                          <div class="col-md-3"></div>
                         <div class="form-group col-md-12 no-padding">
-                            <span class="col-md-2 control-label text-bold no-padding">Nombre</span>
+                            <span class="col-md-2 control-label text-bold no-padding">Nombre 1</span>
                             <div class="col-lg-10 no-padding">
                                 <asp:TextBox ID="TB_Nombre" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
-                                    placeholder="Ingrese su nombre..."></asp:TextBox>
+                                    placeholder="Ingrese su 1 nombre..."></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-2 control-label text-bold no-padding">Nombre 2</span>
+                            <div class="col-lg-10 no-padding">
+                                <asp:TextBox ID="TB_Nombre2" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
+                                    placeholder="Ingrese su 2 nombre..."></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-2 control-label text-bold no-padding">Apellido 1</span>
+                            <div class="col-lg-10 no-padding">
+                                <asp:TextBox ID="TB_Apellido1" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
+                                    placeholder="Ingrese su apellido..."></asp:TextBox>
+                            </div>
+                        </div>
+              <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-2 control-label text-bold no-padding">Apellido 2</span>
+                            <div class="col-lg-10 no-padding">
+                                <asp:TextBox ID="TB_Apellido2" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="100"
+                                    placeholder="Ingrese su 2 apellido..."></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
@@ -101,6 +122,18 @@
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-4 control-label text-bold no-padding">Correo Electronico</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="correo" TextMode="Date" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 no-padding">
+                            <span class="col-md-4 control-label text-bold no-padding">Contraseña</span>
+                            <div class="col-lg-8 no-padding">
+                                <asp:TextBox ID="contra" TextMode="Date" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="45"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">Descripción</span>
                             <div class="col-lg-8 no-padding">
                                 <asp:TextBox ID="TB_Descri" TextMode="MultiLine" Rows="5" runat="server" autocomplete="off" CssClass="form-control" required MaxLength="225"></asp:TextBox>
@@ -109,9 +142,9 @@
                     </div>
                 </div>
             </div>
-            <div class="box-footer text-right">
-                <a href="Modificar_Proveedor.aspx?Valor=<%=Convert.ToString(Request.QueryString["Valor"])%>" class="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp Modificar</a>
-            </div>
+            <div class="box-footer text-center">
+            <asp:Button ID="Btn_Modificar" runat="server" Text="Modificar" CssClass="btn btn-primary" OnClick="Btn_Modificar_Click"/>
+        </div>
         </div>
 
     </section>

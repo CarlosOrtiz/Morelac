@@ -13,16 +13,16 @@ namespace Proyecto_Web.Modelos
     {
         private IDatos dat = new Datos();
         string NOM_PROVEEDOR;
-        public PROVEEDOR()
-        {
+
+        public PROVEEDOR(){
             NOM_PROVEEDOR = null;
         }
-        public PROVEEDOR(string n)
-        {
+
+        public PROVEEDOR(string n){
             NOM_PROVEEDOR = n;
         }
-        public DataTable ConsultarProvedoresAll()
-        {
+
+        public DataTable ConsultarProvedoresAll(){
             try
             {
                 return dat.ConsultarDatos("CALL CONS_TODOS_PROVEEDORES ();");
@@ -33,8 +33,8 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
-        public DataTable ConsultarProvedores_ID(string id)
-        {
+
+        public DataTable ConsultarProvedores_ID(string id){
             try
             {
                 return dat.ConsultarDatos("CALL CONS_PROVEEDOR_ID ('" + id + "');");
@@ -45,8 +45,8 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
-        public DataTable ConsultarProvedoresAll2()
-        {
+
+        public DataTable ConsultarProvedoresAll2(){
             try
             {
                 return dat.ConsultarDatos("CALL CONS_PROVEEDOR_ALL ();");
@@ -56,6 +56,20 @@ namespace Proyecto_Web.Modelos
                 estructura err = new estructura();
                 return err.GetError(io.Message);
             }
+        }
+
+        public DataTable ActualizarProveedor(int id, string cedula, string nom1, string nom2, string ape1, string ape2, string celular, string direccion, string detalle, char genero,string contra, string estado, string nom_finca,string ubicacion,string dimencion,string cant_leche,string fecha_entrega)
+        {
+            try
+            {
+                return dat.OperarProcedimiento("CALL UPDA_PROVEEDOR ('" + id + "', '" + cedula + "', '" + nom1 + "', '" + nom2 + "', '" + ape1 + "', '" + ape2 + "', '" + celular + "', '" + direccion + "','" + detalle + "','" + genero + "', '" + contra + "', '" + estado + "', '" + nom_finca + "', '" + ubicacion + "','" + dimencion + "','" + cant_leche + "','" + fecha_entrega + "');");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+
         }
     }
 }
