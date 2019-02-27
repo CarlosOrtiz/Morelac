@@ -1,114 +1,78 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="gerente.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Gerente.gerente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <div class="content">
-        <div class="container-fluid">
-            <div class="form-row">
-                <div class="col-md-10">
-                    <div class="contact-form">
-                        <div class="card-header">
-                            <br />
-                            <h4 class="card-title">CREAR UN NUEVO GERENTE</h4>
-                        </div>
-                        <div class="card-body">
-                            <%--<form>--%>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">NOMBRE 1 </asp:Label>
-                                        <asp:TextBox runat="server" ID="nom1" aria-describedby="addon-right addon-left" type="text" class="form-control" placeholder="JUAN" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server"> NOMBRE 2 </asp:Label>
-                                        <asp:TextBox ID="nom2" runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="JOSE" class="form-control" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server"> APELLIDO 1 </asp:Label>
-                                        <asp:TextBox ID="ape1" required runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="PEREZ" class="form-control" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server"> APELLIDO 2 </asp:Label>
-                                        <asp:TextBox ID="ape2" runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="PEREZ" class="form-control" pattern="[A-Za-z]+"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server"> CÉDULA </asp:Label>
-                                        <asp:TextBox ID="ced" required runat="server" aria-describedby="addon-right addon-left" TextMode="Number" type="number" placeholder="1117552597" class="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">DIRECCIÓN</asp:Label>
-                                        <asp:TextBox ID="Direc" runat="server" aria-describedby="addon-right addon-left" type="text" placeholder="CAQUETA-FLORENCIA-ATALAYA" class="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">CELULAR</asp:Label>
-                                        <asp:TextBox ID="Celular" required runat="server" aria-describedby="addon-right addon-left" TextMode="Number" placeholder="3144703595" class="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">FECHA NACIMIENTO </asp:Label>
-                                        <asp:TextBox ID="FechaN" runat="server" aria-describedby="addon-right addon-left" TextMode="Date" Text="dd-mm-aaaa" class="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">CORREO</asp:Label>
-                                        <asp:TextBox ID="correo" required runat="server" aria-describedby="addon-right addon-left" TextMode="email" placeholder="@" class="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">CONTRASEÑA</asp:Label>
-                                        <asp:TextBox ID="contrasena" required runat="server" aria-describedby="addon-right addon-left" TextMode="password" placeholder="*****" class="form-control"></asp:TextBox>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">SEXO </asp:Label>
-
-                                        <asp:DropDownList ID="DDL_Sexo" CssClass="form-control" runat="server" BackColor="White">
-                                            <asp:ListItem Value="M" Text="Masculino"></asp:ListItem>
-                                            <asp:ListItem Value="F" Text="Femenino"></asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12" runat="server">
-                                    <div class="form-group">
-                                        <asp:Label runat="server">DETALLES</asp:Label>
-                                        <asp:TextBox ID="Detalle" runat="server" Rows="5" placeholder="Aqui puedes escribir una breve descripció" class="form-control border-input" TextMode="MultiLine"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row" runat="server">
-                                <div class="col-sm-offset-2 col-sm-10 text-right">
-                                    <asp:LinkButton ID="Btn_Guardar" runat="server" CssClass="btn btn-primary" OnClick="Btn_Guardar_Click"><i class="fa fa-save"></i>&nbsp Guardar datos</asp:LinkButton>
-                                    <a href="Ingresar_supervisor.aspx" class="btn btn-danger" id="Btn_Cancelar"><i class="fa fa-remove"></i>&nbsp Cancelar</a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+     <section class="content-header">
+        <div class="col-xs-6">
+            <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>GERENTES</h3>
+        </div>
+        <div class="col-xs-6 text-right"><a href="ingresar_gerente.aspx" class="btn btn-success">Registrar nuevo</a></div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Visualización de los Gerentes del sistema</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive">
+                        <asp:Repeater ID="Rep_Gerente" runat="server">
+                            <HeaderTemplate>
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>NOMBRE</th>
+                                            <th>IDENTIFICACIÓN</th>
+                                            <th>ESTADO</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <tr>
+                                    <td><%#Eval("NOMBRE")%></td>
+                                    <td><%#Eval("ID")%></td>
+                                    <td><%#Eval("ESTADO")%></td>
+                                    <td style="text-align:center;">
+                                           <a style="text-align:center;border-radius:50%;" href="Previsualizacion_Gerente.aspx?Valor=<%#Eval("ID")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                       </td>
+                                </tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>NOMBRE</th>
+                                        <th>IDENTIFICACÓN</th>
+                                        <th>ESTADO</th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
+                                </table>
+                            </FooterTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
+    </section>
 
 </asp:Content>
-<%--<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
-</asp:Content>--%>
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+            $('#example2').DataTable({
+                'paging': true,
+                'lengthChange': true,
+                'searching': true,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+    </script>
+</asp:Content>

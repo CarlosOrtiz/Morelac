@@ -8,9 +8,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Proyecto_Web.Vistas.Private
+namespace Proyecto_Web.Vistas.Private.Gerente
 {
-    public partial class ingresar_cliente : System.Web.UI.Page
+    public partial class ingresar_gerente : System.Web.UI.Page
     {
         private IDatos da = new Datos();
         PERSONA mod_persona = new PERSONA();
@@ -35,15 +35,13 @@ namespace Proyecto_Web.Vistas.Private
             {
 
             }
-
         }
-
         protected void Btn_Guardar_Click(object sender, EventArgs e)
         {
             if (ValidarDatos())
             {
-                mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, FechaN.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "4");
-                Response.Redirect("~/Vistas/Private/Cliente/Cliente.aspx");
+                mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, FechaN.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "2");
+                Response.Redirect("~/Vistas/Private/Gerente/Gerente.aspx");
             }
         }
 
