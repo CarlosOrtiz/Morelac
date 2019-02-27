@@ -31,15 +31,6 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         protected global::System.Web.UI.WebControls.Image Img_FileUpload;
         
         /// <summary>
-        /// Control Img_Persona.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Img_Persona;
-        
-        /// <summary>
         /// Control TB_Nombre.
         /// </summary>
         /// <remarks>
@@ -119,23 +110,5 @@ namespace Proyecto_Web.Vistas.Private.Proveedor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Descri;
-        
-        /// <summary>
-        /// Control Estado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Estado;
-        
-        /// <summary>
-        /// Control Descripcion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Descripcion;
     }
 }
