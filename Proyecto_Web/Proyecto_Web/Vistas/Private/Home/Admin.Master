@@ -26,14 +26,14 @@
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/_all-skins.min.css">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    
-    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css"/>
+
+    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-     <script type="text/javascript">
-        
+    <script type="text/javascript">
+
         function sololetras(e) {
             key = e.keyCode || e.which;
             teclado = String.fromCharCode(key).toLocaleLowerCase();
@@ -79,9 +79,10 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="wrapper">
+
             <header class="main-header aside-fijo" style="top: 0; right: 0; left: 0;">
                 <!-- Logo -->
-                <a href="index_admin.aspx" class="logo">
+                <a href="/Vistas/Private/Home/index_admin.aspx" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini">
                         <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="50" /></span>
@@ -153,30 +154,30 @@
                 <div class="pull-right hidden-xs">
                     <b>Version</b> 1.0
                 </div>
-                2019 | <strong>Morelac</strong>. - Morelia - Caquetá. Todos los derechos reservados CARLOS ORTIZ & JOHANT VARGAS &copy; 
+                2019 | <strong>Morelac</strong> Morelia - Caquetá. Todos los derechos reservados CARLOS ORTIZ & JOHANT VARGAS &copy; 
             </footer>
-              </div>
-  <!-- jQuery 3 -->
-    <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
-    <script src="../../../Plantilla/Privado/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- DataTables -->
-    <script src="../../../Plantilla/Privado/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../../../Plantilla/Privado/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
-    <!-- Select2 -->
-    <script src="../../../Plantilla/Privado/bower_components/select2/dist/js/select2.full.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../../Views/PrivateViews/dist/js/adminlte.min.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../../../Plantilla/Privado/dist/js/pages/dashboard.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
-    <!-- page script -->
-    <script src="../../../Plantilla/Privado/dist/js/OwnScript.js"></script>
- 
-      
+        </div>
+        <!-- jQuery 3 -->
+        <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="../../../Plantilla/Privado/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../../../Plantilla/Privado/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../../../Plantilla/Privado/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- Select2 -->
+        <script src="../../../Plantilla/Privado/bower_components/select2/dist/js/select2.full.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../../Views/PrivateViews/dist/js/adminlte.min.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="../../../Plantilla/Privado/dist/js/pages/dashboard.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
+        <!-- page script -->
+        <script src="../../../Plantilla/Privado/dist/js/OwnScript.js"></script>
+
+
         <asp:ContentPlaceHolder ID="ScriptsEndPage" runat="server">
         </asp:ContentPlaceHolder>
 

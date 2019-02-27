@@ -13,10 +13,12 @@ namespace Proyecto_Web.Vistas.Private
         EMPRESA mod_empresa = new EMPRESA();
         public string id_empresa;
         public string Static_Nombre, Static_Mision, Static_Vision, Static_Direccion, Static_Correo, Static_Numero, Static_Dueño;
+
         public string modal_mensaje;
         public string modal_titulo;
         public string modal_tipo;
         public string modal_link;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -61,23 +63,23 @@ namespace Proyecto_Web.Vistas.Private
         }
         protected void Btn_Actualizar_Click(object sender, EventArgs e)
         {
-
+            if (ValidarDatos()) { 
             try
             {
                 DataTable DT_Mensaje;
-                    DT_Mensaje = mod_empresa.ActualizarEmpresa(NIT.Text, NOMBRE.Text, DIRECCIÓN.Text, CORREO.Text, NUMERO.Text, DUEÑO.Text, MISION.Text, VISION.Text);
+                DT_Mensaje = mod_empresa.ActualizarEmpresa(NIT.Text, NOMBRE.Text, DIRECCIÓN.Text, CORREO.Text, NUMERO.Text, DUEÑO.Text, MISION.Text, VISION.Text);
 
-            if (DT_Mensaje.Rows[0]["TIPO"].ToString().Equals("3"))
-                mostrarModal(DT_Mensaje.Rows[0]["MENSAJE"].ToString(), "Registro completo", "modal-success", "'Perfil.aspx'");
-            else
-                mostrarModal(DT_Mensaje.Rows[0]["MENSAJE"].ToString(), "Error", "modal-danger");
+                if (DT_Mensaje.Rows[0]["TIPO"].ToString().Equals("3"))
+                    mostrarModal(DT_Mensaje.Rows[0]["MENSAJE"].ToString(), "Registro completo", "modal-success", "'Modi_empresa.aspx'");
+                else
+                    mostrarModal(DT_Mensaje.Rows[0]["MENSAJE"].ToString(), "Error", "modal-danger");
+            }
+            catch
+            {
+                mostrarModal("Ocurrió un error en el registro de los datos.", "Error", "modal-danger");
+            }
+            }
         }
-                catch
-                {
-                    mostrarModal("Ocurrió un error en el registro de los datos.", "Error", "modal-danger");
-    }
-
-}
         protected void mostrarModal(string mensaje, string titulo, string tipo, string link = null)
         {
             modal_mensaje = mensaje;
@@ -93,6 +95,10 @@ namespace Proyecto_Web.Vistas.Private
                 mostrarModal("Ingrese su documento de dentidad correctamente!", "Error", "modal-danger");
             else if (NOMBRE.Text.Length < 3)
                 mostrarModal("Ingrese su nombre correctamente!", "Error", "modal-danger");
+            else if (NOMBRE.Text.Length ==0 )
+                mostrarModal("Campo vacio por favor ingrese el nobre de su empresa!", "Error", "modal-danger");
+            else if (NOMBRE.Text.Length > 50)
+                mostrarModal("Excedio el maximo de caracteres para el campo de nombre recuerde que son 50 caracteres!", "Error", "modal-danger");
             else if (DUEÑO.Text.Length < 3)
                 mostrarModal("Ingrese su nombre correctamente!", "Error", "modal-danger");
             else if (DIRECCIÓN.Text.Length < 3)
