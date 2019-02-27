@@ -15,9 +15,20 @@ namespace Proyecto_Web.Vistas.Private.Cliente
         CLIENTES mod_cliente = new CLIENTES();
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["CORREO_ELECTRONICO"].ToString().Equals(null))
+                {
+                    Response.Redirect("~/Vistas/Public/Index.aspx");
+                }
+            }
+            catch (Exception)
+            {
+                Response.Redirect("~/Vistas/Public/Index.aspx");
+            }
             Tabla_Cliente = mod_cliente.ConsultarClienteAll();
-            Rep_Clientes.DataSource = Tabla_Cliente;
-            Rep_Clientes.DataBind();
+            Rep_Cliente.DataSource = Tabla_Cliente;
+            Rep_Cliente.DataBind();
         }
     }
 }

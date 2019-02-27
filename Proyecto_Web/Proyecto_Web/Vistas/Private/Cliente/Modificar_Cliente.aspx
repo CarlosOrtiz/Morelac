@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Modificar_Supervisor.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Supervisor.Modificar_Supervisor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="Modificar_Cliente.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.Cliente.Modificar_Cliente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="content-header height-title">
-        <h3 class="margin-top-5"><i class="fa fa-folder-open"></i>&nbsp Información de Supervisor</h3>
+        <h3 class="margin-top-5"><i class="fa fa-folder-open"></i>&nbsp Información de Cliente</h3>
     </section>
     <section class="content">
         <div class="row box box-primary no-margin">
@@ -69,7 +69,7 @@
                     <div class="box-header">
                     </div>
                     <div class="box-header">
-                   
+                        
                         <div class="form-group col-md-12 no-padding">
                             <label class="col-md-3 control-label text-bold no-padding">Estado</label>
                             <div class="col-lg-9">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="box-footer text-right">
-                <a href="Modificar_Supervisor.aspx?Valor=<%=Convert.ToString(Request.QueryString["Valor"])%>" class="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp Modificar</a>
+                <a href="Modificar_Cliente.aspx?Valor=<%=Convert.ToString(Request.QueryString["Valor"])%>" class="btn btn-primary"><i class="fa fa-pencil"></i>&nbsp Modificar</a>
             </div>
         </div>
 

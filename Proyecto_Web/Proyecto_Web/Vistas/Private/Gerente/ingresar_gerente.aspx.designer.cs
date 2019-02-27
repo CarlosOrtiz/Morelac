@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Proyecto_Web.Vistas.Private {
+namespace Proyecto_Web.Vistas.Private.Gerente {
     
     
-    public partial class ingresar_cliente {
+    public partial class ingresar_gerente {
         
         /// <summary>
         /// Control nom1.

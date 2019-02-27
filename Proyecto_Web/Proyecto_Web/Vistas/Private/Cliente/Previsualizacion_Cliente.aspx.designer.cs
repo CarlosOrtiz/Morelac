@@ -7,81 +7,72 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Proyecto_Web.Vistas.Private.Supervisor {
+namespace Proyecto_Web.Vistas.Private.Cliente {
     
     
-    public partial class Modificar_Supervisor {
+    public partial class Previsualizacion_Cliente {
         
         /// <summary>
-        /// Control FU_Imagen.
+        /// Control Img_Persona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FU_Imagen;
+        protected global::System.Web.UI.WebControls.Image Img_Persona;
         
         /// <summary>
-        /// Control Img_FileUpload.
+        /// Control Nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Img_FileUpload;
+        protected global::System.Web.UI.WebControls.Label Nombre;
         
         /// <summary>
-        /// Control TB_Nombre.
+        /// Control Cedula.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Nombre;
+        protected global::System.Web.UI.WebControls.Label Cedula;
         
         /// <summary>
-        /// Control TB_CEDULA.
+        /// Control Celular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_CEDULA;
+        protected global::System.Web.UI.WebControls.Label Celular;
         
         /// <summary>
-        /// Control TB_Telefono.
+        /// Control Direc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Telefono;
+        protected global::System.Web.UI.WebControls.Label Direc;
         
         /// <summary>
-        /// Control TB_Direccion.
+        /// Control Estado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Direccion;
+        protected global::System.Web.UI.WebControls.Label Estado;
         
         /// <summary>
-        /// Control Drop_Estado.
+        /// Control Descripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Drop_Estado;
-        
-        /// <summary>
-        /// Control TB_Descri.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Descri;
+        protected global::System.Web.UI.WebControls.Label Descripcion;
     }
 }
