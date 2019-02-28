@@ -19,7 +19,7 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
         public string modal_titulo;
         public string modal_tipo;
         public string modal_link;
-
+        public int IDPAGE;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -36,8 +36,7 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
             DT_M_PROVEEDOR = mod_prov.ConsultarProvedores_ID(Convert.ToString(Request.QueryString["Valor"]));
             if (!IsPostBack)
             {
-                try
-                {
+                IDPAGE = Convert.ToInt32(Request.QueryString["Valor"]);
                     TB_Nombre.Text = DT_M_PROVEEDOR.Rows[0]["PER_NOMBRE1"].ToString();
                     TB_Nombre2.Text = DT_M_PROVEEDOR.Rows[0]["PER_NOMBRE2"].ToString();
                     TB_Apellido1.Text = DT_M_PROVEEDOR.Rows[0]["PER_APELLIDO1"].ToString();
@@ -56,11 +55,7 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
                     ViewState["VS_Participantes"] = DT_M_PROVEEDOR;
                     ViewState["Ruta"] = DT_M_PROVEEDOR.Rows[0]["FOTO"].ToString();
                     Img_FileUpload.ImageUrl = ViewState["Ruta"].ToString();
-                }
-                catch (Exception)
-                {
-
-                }
+               
                 }
             else
             {
@@ -91,55 +86,102 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
         protected void Btn_Modificar_Click(object sender, EventArgs e)
         {
             if (TB_Nombre.Text.Length == 0)
+            {
                 mostrarModal("Campo vacio, por favor ingrese su primer nombre en el campo nombre 1", "Error", "modal-danger");
-            else if(TB_Nombre.Text.Length < 3)
+            }
+            else if (TB_Nombre.Text.Length < 3)
+            {
                 mostrarModal("Por favor ingrese su primer nombre correctamente", "Error", "modal-danger");
-            else if(TB_Nombre.Text.Length>20)
+            }
+            else if (TB_Nombre.Text.Length > 20)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el sistema", "Error", "modal-danger");
+            }
             else if (TB_Nombre2.Text.Length > 20)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el sistema", "Error", "modal-danger");
+            }
             else if (TB_Apellido1.Text.Length > 20)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo apellido 1 ", "Error", "modal-danger");
+            }
             else if (TB_Apellido1.Text.Length < 3)
+            {
                 mostrarModal("Por favor ingrese su primer apellido correctamente", "Error", "modal-danger");
+            }
             else if (TB_Apellido1.Text.Length == 0)
+            {
                 mostrarModal("Oh! Campo vacio, por favor ingrese su primer apellido en el campo Apellido 1", "Error", "modal-danger");
+            }
             else if (TB_Apellido2.Text.Length > 20)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo apellido 2", "Error", "modal-danger");
+            }
             else if (TB_CEDULA.Text.Length > 10)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo cédula", "Error", "modal-danger");
-            else if (TB_CEDULA.Text.Length < 3 || TB_CEDULA.Text.Length==0)
+            }
+            else if (TB_CEDULA.Text.Length < 3 || TB_CEDULA.Text.Length == 0)
+            {
                 mostrarModal("Oh! Por favor ingresa tu numero de cedula correctamente ", "Error", "modal-danger");
+            }
             else if (TB_Telefono.Text.Length > 10)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo Teléfono", "Error", "modal-danger");
+            }
             else if (TB_Telefono.Text.Length < 3 || TB_Telefono.Text.Length == 0)
+            {
                 mostrarModal("Oh! Por favor ingresa tu numero telefonico correctamente Recuerda solo son 10 numeros", "Error", "modal-danger");
+            }
             else if (TB_Direccion.Text.Length > 50)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo de la Dirección", "Error", "modal-danger");
+            }
             else if (TB_Finca.Text.Length > 45)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo NOMBRE DE LA FINCA", "Error", "modal-danger");
+            }
             else if (TB_Finca.Text.Length < 3 || TB_Finca.Text.Length == 0)
+            {
                 mostrarModal("Oh! Por favor ingresa un nombre para tu finca correctamente", "Error", "modal-danger");
+            }
             else if (ubicacion.Text.Length > 50)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo de la ubicacion donde tiene la finca", "Error", "modal-danger");
+            }
             else if (dimencion.Text.Length > 45)
+            {
                 mostrarModal("Oh! Acaba de exceder el limite de caracteres permitidos por el campo dimención", "Error", "modal-danger");
-            else if (Tb_Cant_leche.Text.Length ==0)
+            }
+            else if (Tb_Cant_leche.Text.Length == 0)
+            {
                 mostrarModal("Oh!Campo vacio por favor ingresa el la cantidad de leche que le has surtido a la empresa recuerda son en kg/L", "Error", "modal-danger");
+            }
             else if (contra.Text.Length > 50)
+            {
                 mostrarModal("Oh! Acabas de exceder el limite permitido por este campo ", "Error", "modal-danger");
+            }
             else if (contra.Text.Length == 50)
+            {
                 mostrarModal("Oh!Este campo no puede estar en vacio, debido a que debes proteger tu contraseña ", "Error", "modal-danger");
+            }
             else if (contra.Text.Length < 5)
+            {
                 mostrarModal("Oh! Contraseña muy corta", "Error", "modal-danger");
-            else if(TB_Descri.Text.Length>255)
+            }
+            else if (TB_Descri.Text.Length > 255)
+            {
                 mostrarModal("Oh! Excedio el limite permitodo para el campo de descripcion del proveedor", "Error", "modal-danger");
+            }
+            else
+            {
 
-            mod_prov.ActualizarProveedor(Convert.ToInt32(Request.QueryString["Valor"]), TB_CEDULA.Text, TB_Nombre.Text, TB_Nombre2.Text, TB_Apellido1.Text, TB_Apellido2.Text, TB_Telefono.Text,TB_Direccion.Text, TB_Descri.Text, 'M', contra.Text, Convert.ToString(Drop_Estado.SelectedValue), TB_Finca.Text, ubicacion.Text,dimencion.Text ,Tb_Cant_leche.Text, TB_Fecha_En.Text);
-            mostrarModal("Datos Guardados", "Bien", "modal-success");
-            Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+                mod_prov.ActualizarProveedor(Convert.ToInt32(Request.QueryString["Valor"]), TB_CEDULA.Text, TB_Nombre.Text, TB_Nombre2.Text, TB_Apellido1.Text, TB_Apellido2.Text, TB_Telefono.Text, TB_Direccion.Text, TB_Descri.Text, 'M', contra.Text, Convert.ToString(Drop_Estado.SelectedValue), TB_Finca.Text, ubicacion.Text, dimencion.Text, Tb_Cant_leche.Text, TB_Fecha_En.Text);
+                //mostrarModal("Datos Guardados", "Bien", "modal-success");
+                Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+            }
 
-        }
+            }
         protected void mostrarModal(string mensaje, string titulo, string tipo, string link = null)
         {
 
