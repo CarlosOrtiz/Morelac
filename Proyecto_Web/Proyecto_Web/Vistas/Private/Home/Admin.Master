@@ -8,23 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <title>Morelac Admin</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/font-awesome/css/font-awesome.min.css" />
     <!-- DataTables -->
-    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" />
     <!-- Select2 -->
-    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/select2/dist/css/select2.min.css"/>
+    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/select2/dist/css/select2.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/AdminLTE.min.css"/>
+    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/AdminLTE.min.css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/_all-skins.min.css"/>
+      <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/skin-yellow-light.min.css">
+    <!-- bootstrap wysihtml5 - text editor --> 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
 
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/OwnCss.css" />
 
@@ -36,83 +39,51 @@
             var key = window.Event ? e.which : e.keyCode
             return (key >= 48 && key <= 57)
         }
-       
-        function filterFloat(evt, input) {
-            // Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
-            var key = window.Event ? evt.which : evt.keyCode;
-            var chark = String.fromCharCode(key);
-            var tempValue = input.value + chark;
-            if (key >= 48 && key <= 57) {
-                if (filter(tempValue) === false) {
-                    return false;
-                } else {
-                    return true;
+
+        function sololetras(e) {
+            key = e.keyCode || e.which;
+            teclado = String.fromCharCode(key).toLocaleLowerCase();
+            letras = " abcdefghijfklmnñopqrstuvwxyz"
+            especiales = "8-37-38-46-164"
+            teclado_especial = false;
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    teclado_especial = true;
+                    break;
                 }
-            } else {
-                if (key == 8 || key == 13 || key == 0) {
-                    return true;
-                } else if (key == 46) {
-                    if (filter(tempValue) === false) {
-                        return false;
-                    } else {
-                        return true;
-                    }
-                } else {
-                    return false;
+            }
+            if (letras.indexOf(teclado) == -1 && !teclado_especial) {
+                return false;
+            }
+        }
+
+        //Validacion MaxLength TextBox Multiline
+        function checkTextAreaMaxLength(textBox, e, length) {
+            var mLen = textBox["MaxLength"];
+            if (null == mLen)
+                mLen = length;
+
+            var maxLength = parseInt(mLen);
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    if (window.event)//IE
+                        e.returnValue = false;
+                    else//Firefox
+                        e.preventDefault();
                 }
             }
         }
-        function filter(__val__) {
-            var preg = /^([0-9]+\.?[0-9]{0,2})$/;
-            if (preg.test(__val__) === true) {
-                return true;
-            } else {
+        function checkSpecialKeys(e) {
+            if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
                 return false;
-            }
-            function sololetras(e) {
-                key = e.keyCode || e.which;
-                teclado = String.fromCharCode(key).toLocaleLowerCase();
-                letras = " abcdefghijfklmnñopqrstuvwxyz"
-                especiales = "8-37-38-46-164"
-                teclado_especial = false;
-                for (var i in especiales) {
-                    if (key == especiales[i]) {
-                        teclado_especial = true;
-                        break;
-                    }
-                }
-                if (letras.indexOf(teclado) == -1 && !teclado_especial) {
-                    return false;
-                }
-            }
-
-            //Validacion MaxLength TextBox Multiline
-            function checkTextAreaMaxLength(textBox, e, length) {
-                var mLen = textBox["MaxLength"];
-                if (null == mLen)
-                    mLen = length;
-
-                var maxLength = parseInt(mLen);
-                if (!checkSpecialKeys(e)) {
-                    if (textBox.value.length > maxLength - 1) {
-                        if (window.event)//IE
-                            e.returnValue = false;
-                        else//Firefox
-                            e.preventDefault();
-                    }
-                }
-            }
-            function checkSpecialKeys(e) {
-                if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
-                    return false;
-                else
-                    return true;
-            }
+            else
+                return true;
+        }
     </script>
 </head>
-<body class="hold-transition skin-yellow-light sidebar-mini fixed">
+<body class="hold-transition skin-yellow-light sidebar-mini fixed ">
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"> </asp:ScriptManager>
         <div class="wrapper">
 
             <header class="main-header aside-fijo" style="top: 0; right: 0; left: 0;">
@@ -122,23 +93,23 @@
                     <span class="logo-mini">
                         <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="50" /></span>
                     <!-- logo for regular state and mobile devices -->
-                    <%-- <span class="logo-lg"><b>MORE</b>LAC</span>--%>
                     <span class="logo-lg">
                         <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="85" /></span>
                 </a>
-                <!-- Header Navbar: style can be found in header.less -->
-                <nav class="navbar navbar-static-top">
-                    <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                        <span class="sr-only">Toggle navigation</span>
-                    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+ 
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
 
-                    <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav">
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <asp:LinkButton ID="Btn_Cerrar_Sesion" runat="server" CssClass="hidden-xs" OnClick="Btn_cerrar_Click"><i class="fa fa-sign-out"></i> Cerrar sesión</asp:LinkButton>
-                            </li>
+                         </li>
                         </ul>
                     </div>
                 </nav>
@@ -177,34 +148,45 @@
                     </ul>
                 </section>
             </aside>
-
             <div class="content-wrapper">
+                <section class="content container-fluid">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
+                    </section>
             </div>
-            <!--Modal -->
-
-            <!--Fin de modal -->
+            <div class="clearfix"></div>
             <footer class="main-footer">
                 <div class="pull-right hidden-xs">
                     <b>Version</b> 1.0
                 </div>
                 2019 | <strong>Morelac</strong> Morelia - Caquetá. Todos los derechos reservados CARLOS ORTIZ & JOHANT VARGAS &copy; 
             </footer>
-        </div>
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+        
         <!-- jQuery 3 -->
         <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="../../../Plantilla/Privado/bower_components/jquery-ui/jquery-ui.min.js"></script>
         <!-- Bootstrap 3.3.7 -->
         <script src="../../../Plantilla/Privado/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- DataTables -->
         <script src="../../../Plantilla/Privado/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="../../../Plantilla/Privado/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="../../../Plantilla/Privado/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- Slimscroll -->
+        <script src="../../../Plantilla/Privado/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <!-- FastClick -->
         <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
         <!-- Select2 -->
         <script src="../../../Plantilla/Privado/bower_components/select2/dist/js/select2.full.min.js"></script>
         <!-- AdminLTE App -->
-        <script src="../../Views/PrivateViews/dist/js/adminlte.min.js"></script>
+        <script src="../../../Plantilla/Privado/dist/js/adminlte.min.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="../../../Plantilla/Privado/dist/js/pages/dashboard.js"></script>
         <!-- AdminLTE for demo purposes -->
