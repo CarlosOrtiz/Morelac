@@ -3669,12 +3669,6 @@
       <DependentUpon>Lis_proveedores.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reportes\prueba.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>prueba.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Vistas\Private\Cliente\abono_clientes.aspx.cs">
       <DependentUpon>abono_clientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4453,10 +4447,6 @@
     <EmbeddedResource Include="Reportes\Lis_proveedores.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Lis_proveedores.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\prueba.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>prueba.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
