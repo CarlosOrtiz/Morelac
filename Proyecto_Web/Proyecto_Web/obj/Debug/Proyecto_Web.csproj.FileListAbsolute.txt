@@ -1099,9 +1099,6 @@ D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDe
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.Web.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\log4net.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\log4net.xml
-D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csprojAssemblyReference.cache
-D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csproj.CoreCompileInputs.cache
-D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csproj.CopyComplete
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\CrystalDecisions.Windows.Forms.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\FlashControlV71.dll
 D:\USUARIO\Documents\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\ShockwaveFlashObjects.dll
@@ -1114,3 +1111,4 @@ D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\ShockwaveFlashOb
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\bin\stdole.dll
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.Reportes.Lis_proveedores.resources
 D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csproj.GenerateResource.cache
+D:\Documentos\GitHub\Proyecto_Web\Proyecto_Web\Proyecto_Web\obj\Debug\Proyecto_Web.csprojResolveAssemblyReference.cache
