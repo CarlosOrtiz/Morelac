@@ -13,13 +13,31 @@ namespace Proyecto_Web.Vistas.Private {
     public partial class ingresar_proveedor {
         
         /// <summary>
-        /// Control IMG_EMPRESAS.
+        /// Control IMG_Persona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image IMG_EMPRESAS;
+        protected global::System.Web.UI.WebControls.Image IMG_Persona;
+        
+        /// <summary>
+        /// Control Btn_Save1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Save1;
+        
+        /// <summary>
+        /// Control Btn_Cerrar1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Cerrar1;
         
         /// <summary>
         /// Control nom1.
@@ -31,15 +49,6 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox nom1;
         
         /// <summary>
-        /// Control nom2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nom2;
-        
-        /// <summary>
         /// Control ape1.
         /// </summary>
         /// <remarks>
@@ -47,15 +56,6 @@ namespace Proyecto_Web.Vistas.Private {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ape1;
-        
-        /// <summary>
-        /// Control ape2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ape2;
         
         /// <summary>
         /// Control ced.
@@ -67,15 +67,6 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox ced;
         
         /// <summary>
-        /// Control Direc.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Direc;
-        
-        /// <summary>
         /// Control Celular.
         /// </summary>
         /// <remarks>
@@ -83,15 +74,6 @@ namespace Proyecto_Web.Vistas.Private {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Celular;
-        
-        /// <summary>
-        /// Control datepicker.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datepicker;
         
         /// <summary>
         /// Control correo.
@@ -121,6 +103,42 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.DropDownList DDL_Sexo;
         
         /// <summary>
+        /// Control nom2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nom2;
+        
+        /// <summary>
+        /// Control ape2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ape2;
+        
+        /// <summary>
+        /// Control Direc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Direc;
+        
+        /// <summary>
+        /// Control datepicker.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox datepicker;
+        
+        /// <summary>
         /// Control Detalle.
         /// </summary>
         /// <remarks>
@@ -128,24 +146,6 @@ namespace Proyecto_Web.Vistas.Private {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Detalle;
-        
-        /// <summary>
-        /// Control Btn_Save1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Btn_Save1;
-        
-        /// <summary>
-        /// Control Btn_Cerrar1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Btn_Cerrar1;
         
         /// <summary>
         /// Control nom_finca.
@@ -193,24 +193,6 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.DropDownList Asig_Persona;
         
         /// <summary>
-        /// Control Save_Finca.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Save_Finca;
-        
-        /// <summary>
-        /// Control Remove_Finca.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Remove_Finca;
-        
-        /// <summary>
         /// Control cant_leche.
         /// </summary>
         /// <remarks>
@@ -236,23 +218,5 @@ namespace Proyecto_Web.Vistas.Private {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Drop_Finca;
-        
-        /// <summary>
-        /// Control btn_Leche.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_Leche;
-        
-        /// <summary>
-        /// Control btn_Leche_cerrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btn_Leche_cerrar;
     }
 }

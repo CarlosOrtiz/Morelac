@@ -10,8 +10,8 @@
     <title>Morelac Admin</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-     <link href="../../Plantilla/Privado/img/icon/vaca.png" rel="icon" />
-    <link href="../../Plantilla/Privado/img/icon/vaca.png" rel="apple-touch-icon" />
+    <link href="../../../Plantilla/Privado/Img/icon/vaca.png" rel="icon" />
+    <link href="../../../Plantilla/Privado/Img/icon/vaca.png" rel="apple-touch-icon" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <!-- Bootstrap 3.3.7 -->
@@ -29,6 +29,8 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/skin-yellow-light.min.css">
     <!-- bootstrap wysihtml5 - text editor -->
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="../../../Plantilla/Privado/plugins/iCheck/all.css">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
 
@@ -111,7 +113,7 @@
                         <ul class="nav navbar-nav">
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
-                                <asp:LinkButton ID="Btn_Cerrar_Sesion" runat="server" CssClass="hidden-xs" OnClick="Btn_cerrar_Click"><i class="fa fa-sign-out"></i> Cerrar sesión</asp:LinkButton>
+                                <asp:LinkButton ID="Btn_Cerrar_Sesion" runat="server" CssClass="hidden-xs" OnClick="Btn_cerrar_Click"><i class="fa fa-sign-out"></i>Cerrar sesión</asp:LinkButton>
                             </li>
                         </ul>
                     </div>
@@ -202,8 +204,16 @@
         <script src="../../../Plantilla/Privado/dist/js/demo.js"></script>
         <!-- page script -->
         <script src="../../../Plantilla/Privado/dist/js/OwnScript.js"></script>
-
-
+        <!-- iCheck 1.0.1 -->
+        <script src="../../../Plantilla/Privado/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_flat',
+                    radioClass: 'iradio_flat'
+                });
+            });
+        </script>
         <asp:ContentPlaceHolder ID="ScriptsEndPage" runat="server">
         </asp:ContentPlaceHolder>
 

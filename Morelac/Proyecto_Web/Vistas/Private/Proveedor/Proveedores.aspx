@@ -4,11 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="content-header">
-        <div class="col-xs-6">
-            <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>PROVEEDORES</h3>
-        </div>
-        <div class="col-xs-6 text-right"><a href="ingresar_proveedor.aspx" class="btn btn-success">Registrar nuevo</a></div>
+        <h1><i class="fa fa-hand-o-right"></i><b> PROVEEDORES</b></h1>
+        <small>De morelac</small>
+        <ol class="breadcrumb">
+            <li><a href="/Vistas/Private/Home/index_admin.aspx"><i class="fa fa-dashboard"></i>Inicio</a></li>
+            <li class="active"><a href="Proveedores.aspx"><i class="fa fa-street-view"></i><b>Proveedores</b></a></li>
+        </ol>
     </section>
+    <div class="col-xs-12">
+        <div style="padding-bottom: 7px;" class="col-xs-12 text-right"><a href="ingresar_proveedor.aspx" class="btn btn-success">Registrar nuevo</a></div>
+    </div>
+
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -38,9 +44,12 @@
                                     <td><%#Eval("ID")%></td>
                                     <td><%#Eval("FIN_NOMBRE")%></td>
                                     <td><%#Eval("ESTADO")%></td>
-                                    <td style="text-align:center;">
-                                           <a style="text-align:center;border-radius:50%;" href="Previsualizacion_Proveedor.aspx?Valor=<%#Eval("ID")%>"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
-                                       </td>
+                                    <td style="text-align: center;">
+                                        <div class="form-group">
+                                            <a style="text-align: center; border-radius: 100%; background-color: transparent;" href="Previsualizacion_Proveedor.aspx?Valor=<%#Eval("ID")%>" class="btn btn-success btn-sm" title="MODIFICAR"><i style="color: green;" class="fa fa-eye"></i></a>
+                                            <a style="text-align: center; border-radius: 50%; background-color: transparent;" href="Previsualizacion_Proveedor.aspx?Valor=<%#Eval("ID")%>" class="btn btn-success btn-sm" title="CAMBIAR ESTADO"><i style="color: green;" class="fa fa-circle-o-notch"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             </ItemTemplate>
                             <FooterTemplate>
@@ -64,6 +73,7 @@
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
+
     <script>
         $(function () {
             $('#example1').DataTable()
@@ -77,4 +87,5 @@
             })
         })
     </script>
+
 </asp:Content>

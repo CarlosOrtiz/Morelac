@@ -30,7 +30,27 @@
             $('#myModal').modal('show');
             return true;
         };
+          function checkTextAreaMaxLength(textBox, e, length) {
+            var mLen = textBox["MaxLength"];
+            if (null == mLen)
+                mLen = length;
 
+            var maxLength = parseInt(mLen);
+            if (!checkSpecialKeys(e)) {
+                if (textBox.value.length > maxLength - 1) {
+                    if (window.event)//IE
+                        e.returnValue = false;
+                    else//Firefox
+                        e.preventDefault();
+                }
+            }
+        }
+        function checkSpecialKeys(e) {
+            if (e.keyCode != 8 && e.keyCode != 46 && e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40)
+                return false;
+            else
+                return true;
+        }
     </script>
 </head>
 <body >
@@ -45,13 +65,13 @@
                 <form class="login100-form validate-form" runat="server">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Correo electrónico</span>
-                        <asp:TextBox runat="server" CssClass="input100" ID="correo_login" TextMode="Email" placeholder="Ejemplo2019@gmail.com" MaxLength="50" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" ></asp:TextBox>
+                        <asp:TextBox runat="server" CssClass="input100" ID="correo_login" onkeyDown="checkTextAreaMaxLength(this,event,'50');" TextMode="Email" placeholder="Ejemplo2019@gmail.com" MaxLength="50" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" ></asp:TextBox>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
                         <span class="label-input100">Contraseña</span>
-                        <asp:TextBox runat="server" TextMode="Password" CssClass="input100" ID="contra_login" placeholder="••••••••••••" MaxLength="50" ></asp:TextBox>
+                        <asp:TextBox runat="server" TextMode="Password" CssClass="input100" onkeyDown="checkTextAreaMaxLength(this,event,'50');" ID="contra_login" placeholder="••••••••••••" MaxLength="50" ></asp:TextBox>
                         <span class="focus-input100"></span>
                     </div>
 

@@ -48,7 +48,7 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3><%=cant_user %></h3>
 
                         <p>Usuarios Activos
                         </p>
@@ -80,4 +80,5 @@
         <!-- Main row -->
 
     </section>
+
 </asp:Content>

@@ -50,6 +50,7 @@ namespace Proyecto_Web.Vistas.Private
                 Drop_Finca.DataTextField = "FIN_NOMBRE";
                 Drop_Finca.DataSource = DT_FINCA;
                 Drop_Finca.DataBind();
+
             }
 
         }

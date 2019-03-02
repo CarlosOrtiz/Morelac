@@ -71,7 +71,7 @@
                         <div class="form-group col-md-12 no-padding">
                             <span class="col-md-2 control-label text-bold no-padding">Numero teléfonico</span>
                             <div class="col-lg-10 no-padding">
-                                <asp:TextBox ID="TB_Telefono" runat="server"  onKeyPress="return  soloNumeros(e)(event)" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off"  required MaxLength="10"
+                                <asp:TextBox ID="TB_Telefono" runat="server" onKeyPress="return  soloNumeros(event)" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control" autocomplete="off"  required MaxLength="10"
                                     placeholder="Ingrese su número teléfonico..."></asp:TextBox>
                             </div>
                         </div>

@@ -49,6 +49,19 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
+        public DataTable ConsultarCant_Usuarios()
+        {
+            try
+            {
+                return dat.ConsultarDatos("CALL COUNT_USER ()");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+        }
+
         public bool Actualizar(string id,string contra,string estado,int rol)
         {
             try
