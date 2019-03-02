@@ -33,11 +33,11 @@
 
     </script>
 </head>
-<body>
+<body >
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <div class="login100-form-title" style="background-image: url('../../Plantilla/Privado/dist/img/empresa/equipo_trabajo.JPG');">
+                <div class="login100-form-title" style="background-image: url('../../Plantilla/Privado/Img/Empresa/equipo_trabajo.JPG');">
                     <span class="login100-form-title-1">INICIAR SESIÓN
                     </span>
                 </div>

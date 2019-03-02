@@ -9,6 +9,9 @@
     <meta name="description" content="" />
     <title>Morelac Admin</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+     <link href="../../Plantilla/Privado/img/icon/vaca.png" rel="icon" />
+    <link href="../../Plantilla/Privado/img/icon/vaca.png" rel="apple-touch-icon" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
     <!-- Bootstrap 3.3.7 -->
@@ -24,8 +27,8 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/AdminLTE.min.css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-      <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/skin-yellow-light.min.css">
-    <!-- bootstrap wysihtml5 - text editor --> 
+    <link rel="stylesheet" href="../../../Plantilla/Privado/dist/css/skins/skin-yellow-light.min.css">
+    <!-- bootstrap wysihtml5 - text editor -->
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
 
@@ -83,7 +86,7 @@
 </head>
 <body class="hold-transition skin-yellow-light sidebar-mini fixed ">
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"> </asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="wrapper">
 
             <header class="main-header aside-fijo" style="top: 0; right: 0; left: 0;">
@@ -96,20 +99,20 @@
                     <span class="logo-lg">
                         <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="85" /></span>
                 </a>
-    <!-- Header Navbar: style can be found in header.less -->
- 
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
+                <!-- Header Navbar: style can be found in header.less -->
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
                                 <asp:LinkButton ID="Btn_Cerrar_Sesion" runat="server" CssClass="hidden-xs" OnClick="Btn_cerrar_Click"><i class="fa fa-sign-out"></i> Cerrar sesión</asp:LinkButton>
-                         </li>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -134,6 +137,12 @@
                     </div>
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu" data-widget="tree">
+                        <li>
+                            <a href="/Vistas/Private/Home/index_admin.aspx">
+                                <i class="fa fa-home"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
                         <li class="header">CONTENIDO</li>
                         <asp:Repeater ID="Rep_Menu_Dim" runat="server">
                             <ItemTemplate>
@@ -150,9 +159,9 @@
             </aside>
             <div class="content-wrapper">
                 <section class="content container-fluid">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-                    </section>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
             </div>
             <div class="clearfix"></div>
             <footer class="main-footer">
@@ -162,12 +171,12 @@
                 2019 | <strong>Morelac</strong> Morelia - Caquetá. Todos los derechos reservados CARLOS ORTIZ & JOHANT VARGAS &copy; 
             </footer>
 
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
+            <!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-        
+            <div class="control-sidebar-bg"></div>
+        </div>
+
         <!-- jQuery 3 -->
         <script src="../../../Plantilla/Privado/bower_components/jquery/dist/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->

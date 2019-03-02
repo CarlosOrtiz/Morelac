@@ -3955,73 +3955,31 @@
     <Content Include="Plantilla\Privado\dist\css\skins\skin-yellow.min.css" />
     <Content Include="Plantilla\Privado\dist\css\skins\_all-skins.css" />
     <Content Include="Plantilla\Privado\dist\css\skins\_all-skins.min.css" />
-    <Content Include="Plantilla\Privado\dist\img\404.png" />
-    <Content Include="Plantilla\Privado\dist\img\avatar.png" />
-    <Content Include="Plantilla\Privado\dist\img\avatar04.png" />
-    <Content Include="Plantilla\Privado\dist\img\avatar2.png" />
-    <Content Include="Plantilla\Privado\dist\img\avatar3.png" />
-    <Content Include="Plantilla\Privado\dist\img\avatar5.png" />
-    <Content Include="Plantilla\Privado\dist\img\boxed-bg.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\boxed-bg.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\american-express.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\cirrus.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\mastercard.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\mestro.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\paypal.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\paypal2.png" />
-    <Content Include="Plantilla\Privado\dist\img\credit\visa.png" />
-    <Content Include="Plantilla\Privado\dist\img\default-50x50.gif" />
-    <Content Include="Plantilla\Privado\dist\img\empresa\Carlos Ortiz.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\empresa\equipo_trabajo.JPG" />
-    <Content Include="Plantilla\Privado\dist\img\empresa\gerente.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\empresa\gerente.png" />
-    <Content Include="Plantilla\Privado\dist\img\empresa\usuaria.png" />
-    <Content Include="Plantilla\Privado\dist\img\empresa\usuario.png" />
-    <Content Include="Plantilla\Privado\dist\img\icons.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\cattle.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\lacteo.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\leche 2.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\lechoso.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\productos-lacteos.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\vaca.png" />
-    <Content Include="Plantilla\Privado\dist\img\icon\vaca0.png" />
-    <Content Include="Plantilla\Privado\dist\img\photo1.png" />
-    <Content Include="Plantilla\Privado\dist\img\photo2.png" />
-    <Content Include="Plantilla\Privado\dist\img\photo3.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\photo4.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user1-128x128.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user2-160x160.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user3-128x128.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user4-128x128.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user5-128x128.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user6-128x128.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user7-128x128.jpg" />
-    <Content Include="Plantilla\Privado\dist\img\user8-128x128.jpg" />
     <Content Include="Plantilla\Privado\dist\js\adminlte.js" />
     <Content Include="Plantilla\Privado\dist\js\adminlte.min.js" />
     <Content Include="Plantilla\Privado\dist\js\demo.js" />
     <Content Include="Plantilla\Privado\dist\js\OwnScript.js" />
     <Content Include="Plantilla\Privado\dist\js\pages\dashboard.js" />
     <Content Include="Plantilla\Privado\dist\js\pages\dashboard2.js" />
-    <Content Include="Plantilla\Privado\Images\credit\american-express.png" />
-    <Content Include="Plantilla\Privado\Images\credit\cirrus.png" />
-    <Content Include="Plantilla\Privado\Images\credit\mastercard.png" />
-    <Content Include="Plantilla\Privado\Images\credit\mestro.png" />
-    <Content Include="Plantilla\Privado\Images\credit\paypal.png" />
-    <Content Include="Plantilla\Privado\Images\credit\paypal2.png" />
-    <Content Include="Plantilla\Privado\Images\credit\visa.png" />
-    <Content Include="Plantilla\Privado\Images\Empresa\Carlos Ortiz.jpg" />
-    <Content Include="Plantilla\Privado\Images\Empresa\equipo_trabajo.JPG" />
-    <Content Include="Plantilla\Privado\Images\icon\404.png" />
-    <Content Include="Plantilla\Privado\Images\icon\500.png" />
-    <Content Include="Plantilla\Privado\Images\icon\cattle.png" />
-    <Content Include="Plantilla\Privado\Images\icon\lacteo.png" />
-    <Content Include="Plantilla\Privado\Images\icon\leche 2.png" />
-    <Content Include="Plantilla\Privado\Images\icon\lechoso.png" />
-    <Content Include="Plantilla\Privado\Images\icon\productos-lacteos.png" />
-    <Content Include="Plantilla\Privado\Images\icon\vaca.png" />
-    <Content Include="Plantilla\Privado\Images\icon\vaca0.png" />
-    <Content Include="Plantilla\Privado\Images\User\Gerente.png" />
+    <Content Include="Plantilla\Privado\Img\credit\american-express.png" />
+    <Content Include="Plantilla\Privado\Img\credit\cirrus.png" />
+    <Content Include="Plantilla\Privado\Img\credit\mastercard.png" />
+    <Content Include="Plantilla\Privado\Img\credit\mestro.png" />
+    <Content Include="Plantilla\Privado\Img\credit\paypal.png" />
+    <Content Include="Plantilla\Privado\Img\credit\paypal2.png" />
+    <Content Include="Plantilla\Privado\Img\credit\visa.png" />
+    <Content Include="Plantilla\Privado\Img\Empresa\Carlos Ortiz.jpg" />
+    <Content Include="Plantilla\Privado\Img\Empresa\equipo_trabajo.JPG" />
+    <Content Include="Plantilla\Privado\Img\icon\404.png" />
+    <Content Include="Plantilla\Privado\Img\icon\500.png" />
+    <Content Include="Plantilla\Privado\Img\icon\cattle.png" />
+    <Content Include="Plantilla\Privado\Img\icon\lacteo.png" />
+    <Content Include="Plantilla\Privado\Img\icon\leche 2.png" />
+    <Content Include="Plantilla\Privado\Img\icon\lechoso.png" />
+    <Content Include="Plantilla\Privado\Img\icon\productos-lacteos.png" />
+    <Content Include="Plantilla\Privado\Img\icon\vaca.png" />
+    <Content Include="Plantilla\Privado\Img\icon\vaca0.png" />
+    <Content Include="Plantilla\Privado\Img\User\Gerente.png" />
     <Content Include="Plantilla\Privado\pages\calendar.html" />
     <Content Include="Plantilla\Privado\pages\charts\chartjs.html" />
     <Content Include="Plantilla\Privado\pages\charts\flot.html" />
@@ -6102,13 +6060,6 @@
     <Compile Include="Vistas\Public\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Public\master1.Master.cs">
-      <DependentUpon>master1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Public\master1.Master.designer.cs">
-      <DependentUpon>master1.Master</DependentUpon>
-    </Compile>
     <Compile Include="Vistas\Public\Olvidar.aspx.cs">
       <DependentUpon>Olvidar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6181,7 +6132,6 @@
       <DependentUpon>Ventas_clientes.xsd</DependentUpon>
     </Content>
     <None Include="packages.config" />
-    <Content Include="Vistas\Public\master1.Master" />
     <Content Include="Vistas\Private\Home\Admin.Master" />
     <Content Include="Plantilla\Publico\scss\creative.scss" />
     <Content Include="Plantilla\Publico\scss\_bootstrap-overrides.scss" />

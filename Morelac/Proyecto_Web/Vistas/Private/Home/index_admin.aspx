@@ -4,12 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="content-header">
-        <h1>Dashboard
-        <small>Control panel</small>
-        </h1>
+        <h1><b>Bienvenido</b></h1>
+        <small>Al panel principal</small>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i><b>Inicio</b></a></li>
+            <li class="active">Principal</li>
         </ol>
     </section>
     <section class="content">
@@ -21,12 +20,12 @@
                     <div class="inner">
                         <h3>150</h3>
 
-                        <p>New Orders</p>
+                        <p>Productos</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">Visualizar <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -34,14 +33,14 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <h3>53<sup style="font-size: 20px"></sup></h3>
 
-                        <p>Bounce Rate</p>
+                        <p>Resultados de pruebas</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">Mirar historial <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -51,12 +50,13 @@
                     <div class="inner">
                         <h3>44</h3>
 
-                        <p>User Registrations</p>
+                        <p>Usuarios Activos
+                        </p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">Crear nuevo usuario <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -66,12 +66,12 @@
                     <div class="inner">
                         <h3>65</h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Modificar menú </p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">Oprímeme <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->

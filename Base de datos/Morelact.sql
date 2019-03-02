@@ -198,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
 -- Volcando datos para la tabla bd_morelac.empresa: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `empresa` DISABLE KEYS */;
 INSERT INTO `empresa` (`ID_EMPRESA`, `EMP_NOMBRE`, `EMP_DIRECCION`, `EMP_CORREO`, `EMP_TELEFONO`, `EMP_DUENO`, `EMP_MISION`, `EMP_VISION`, `EMP_FOTO`) VALUES
-	(12345, 'MORELAC', 'MORELIA - CAQUETÁ', 'morelac2019@gmail.es', '3202042401', 'SOFIA ANDREA ORTIZ SANDOVAL', 'Elaborar y comercializar productos lácteos de la más alta calidad que contribuyan al crecimiento y nutrición de una población saludable.', 'Ser la empresa de industrias lácteas líder en el mercado centroamericano al satisfacer las necesidades alimenticias de la población ofreciéndoles siempre productos de primera calidad, manteniendo un enfoque en el apoyo a la sociedad.', '~/Multimedia/Imagenes/Logo sin fondo.png');
+	(12345, 'MORELACtfghjk', 'MORELIA - CAQUETÁ', 'morelac2019@gmail.es', '3202042401', 'SOFIA ANDREA ORTIZ SANDOVAL', 'Elaborar y comercializar productos lácteos de la más alta calidad que contribuyan al crecimiento y nutrición de una población saludable.', 'Ser la empresa de industrias lácteas líder en el mercado centroamericano al satisfacer las necesidades alimenticias de la población ofreciéndoles siempre productos de primera calidad, manteniendo un enfoque en el apoyo a la sociedad.', '~/Multimedia/Imagenes/Logo sin fondo.png');
 /*!40000 ALTER TABLE `empresa` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.factura
@@ -247,37 +247,40 @@ CREATE TABLE IF NOT EXISTS `finca` (
   PRIMARY KEY (`ID_FINCA`),
   KEY `fk_FINCA_PERSONA1_idx` (`PERSONA_ID_PERSONA`),
   CONSTRAINT `fk_FINCA_PERSONA1` FOREIGN KEY (`PERSONA_ID_PERSONA`) REFERENCES `persona` (`ID_PERSONA`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.finca: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.finca: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `finca` DISABLE KEYS */;
 INSERT INTO `finca` (`ID_FINCA`, `FIN_NOMBRE`, `FIN_UBICACION`, `FIN_DIMENSION`, `PERSONA_ID_PERSONA`) VALUES
 	(1, 'Hebron', 'Montañita', '20 hectarias', 17683560),
 	(2, 'CAMPANA', 'SAN VICENTE', '30 HECTARIAS', 40683530),
-	(3, 'AAAAAAAA', 'AAAAAAAAAAAAA', 'AAAAAAAAA', 1117553557),
-	(4, 'MESSI VACA', 'ESPAÑA', '4000', 1117553558),
-	(6, 'prueba de todo 2', 'Florencia tu papa', '666', 1117553559);
+	(3, 'FIN_HOY', 'HOY', '300', 1117553557),
+	(4, 'LAS 3 VACAS', 'SAN VICENTE', '100', 1117553558),
+	(6, 'prueba de todo 2', 'Florencia tu papa', '666', 1117553559),
+	(7, 'XD', 'FLORENCIA ITALIA', '800', 4),
+	(8, 'LAS 3 LECHES', '10', 'Solano', 1117553561);
 /*!40000 ALTER TABLE `finca` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.leche
 CREATE TABLE IF NOT EXISTS `leche` (
   `ID_LECHE` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `CANT_LECHE` float DEFAULT '0',
-  `LEC_FECHA` date DEFAULT NULL,
+  `CANT_LECHE` float NOT NULL DEFAULT '0',
+  `LEC_FECHA` date NOT NULL,
   `ID_FINCA_ID_LECHE` int(11) unsigned NOT NULL,
   PRIMARY KEY (`ID_LECHE`),
   KEY `FK_leche_finca` (`ID_FINCA_ID_LECHE`),
   CONSTRAINT `FK_leche_finca` FOREIGN KEY (`ID_FINCA_ID_LECHE`) REFERENCES `finca` (`ID_FINCA`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.leche: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.leche: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `leche` DISABLE KEYS */;
 INSERT INTO `leche` (`ID_LECHE`, `CANT_LECHE`, `LEC_FECHA`, `ID_FINCA_ID_LECHE`) VALUES
 	(1, 15.92, '2019-02-24', 3),
 	(2, 23.5, '2019-02-23', 2),
-	(3, 23.43, '2019-02-22', 1),
-	(4, 999999, '2019-02-28', 4),
-	(5, 3, '2019-02-26', 6);
+	(3, 200, '2019-02-28', 1),
+	(4, 35, '2019-02-27', 4),
+	(5, 3, '2019-02-26', 6),
+	(6, 500, '2019-02-27', 2);
 /*!40000 ALTER TABLE `leche` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.menu
@@ -291,21 +294,23 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`ID_MENU`),
   KEY `fk_MENU_PERMISO1_idx` (`PERMISO_ID_PERMISO`),
   CONSTRAINT `fk_MENU_PERMISO1` FOREIGN KEY (`PERMISO_ID_PERMISO`) REFERENCES `permiso` (`ID_PERMISO`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.menu: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.menu: ~12 rows (aproximadamente)
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
 INSERT INTO `menu` (`ID_MENU`, `MENU_NOMBRE`, `MENU_ICON`, `MENU_ORDEN`, `MENU_URL`, `PERMISO_ID_PERMISO`) VALUES
 	(1, 'Empresa', 'fa-briefcase', 1, '../Gerente/Modi_empresa.aspx', 1),
 	(2, 'Supervisor', 'fa-dashboard', 2, '../Supervisor/supervisor.aspx', 1),
 	(3, 'Clientes', 'fa-users', 3, '../Cliente/Clientes.aspx', 1),
 	(4, 'Proveedores', 'fa-street-view', 4, '../Proveedor/Proveedores.aspx', 1),
-	(5, 'Finanzas', 'fa-bar-chart', 5, '5', 1),
+	(5, 'Finanzas', 'fa-bar-chart', 5, '', 1),
 	(6, 'Pedidos', 'fa-tags', 8, '../Cliente/pedidos_clientes.aspx', 1),
-	(7, 'Reportes', 'fa-book', 7, '../Reportes/REPORTEEE.aspx', 1),
+	(7, 'Reporte Proveedores', 'fa-book', 7, '../Reportes/REPORTEEE.aspx', 1),
 	(8, 'Surtir Leche', 'fa-balance-scale', 6, '../Supervisor/surtirleche.aspx', 1),
 	(9, 'Proveedores', 'fa-street-view', 1, '../Supervisor/supervisor.aspx', 3),
-	(10, 'Gerente', 'fa-briefcase', 1, '../Gerente/gerente.aspx', 1);
+	(10, 'Gerente', 'fa-briefcase', 0, '../Gerente/gerente.aspx', 1),
+	(11, 'Reporte Clientes', 'fa-book', 7, '../Reportes/Reporte_clientes.aspx', 1),
+	(12, 'Reporte Productos', 'fa-book', 7, '../Reportes/Reporte_productos.aspx', 1);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.permiso
@@ -331,22 +336,22 @@ INSERT INTO `permiso` (`ID_PERMISO`, `PERMISO_ROL`, `ROL_ID_ROL`) VALUES
 -- Volcando estructura para tabla bd_morelac.persona
 CREATE TABLE IF NOT EXISTS `persona` (
   `ID_PERSONA` int(20) NOT NULL AUTO_INCREMENT,
-  `PER_CEDULA` varchar(20) NOT NULL,
+  `PER_CEDULA` varchar(10) NOT NULL,
   `PER_NOMBRE1` varchar(20) NOT NULL,
   `PER_NOMBRE2` varchar(20) DEFAULT NULL,
   `PER_APELLIDO1` varchar(20) NOT NULL,
   `PER_APELLIDO2` varchar(20) DEFAULT NULL,
   `PER_CELULAR` varchar(10) NOT NULL DEFAULT '0',
   `PER_NACIMIENTO` date DEFAULT NULL,
-  `PER_DIRECCION` varchar(45) DEFAULT NULL,
+  `PER_DIRECCION` varchar(50) DEFAULT NULL,
   `PER_DETALLES` varchar(255) DEFAULT NULL,
   `PER_SEXO` enum('M','F') NOT NULL,
   `PER_FOTO` varchar(200) DEFAULT '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg',
   PRIMARY KEY (`ID_PERSONA`),
   UNIQUE KEY `PER_CEDULA` (`PER_CEDULA`)
-) ENGINE=InnoDB AUTO_INCREMENT=1117553561 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1117553562 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla bd_morelac.persona: ~20 rows (aproximadamente)
+-- Volcando datos para la tabla bd_morelac.persona: ~21 rows (aproximadamente)
 /*!40000 ALTER TABLE `persona` DISABLE KEYS */;
 INSERT INTO `persona` (`ID_PERSONA`, `PER_CEDULA`, `PER_NOMBRE1`, `PER_NOMBRE2`, `PER_APELLIDO1`, `PER_APELLIDO2`, `PER_CELULAR`, `PER_NACIMIENTO`, `PER_DIRECCION`, `PER_DETALLES`, `PER_SEXO`, `PER_FOTO`) VALUES
 	(1, '1111', 'cardasd ', NULL, '3213 12das', NULL, '0123123', NULL, NULL, NULL, 'M', 'img/empresa/gerente.png'),
@@ -365,10 +370,11 @@ INSERT INTO `persona` (`ID_PERSONA`, `PER_CEDULA`, `PER_NOMBRE1`, `PER_NOMBRE2`,
 	(1117553554, '1124', 'aaaaaaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaa', '1111111111', '2019-02-04', 'aaaaaaaaa', 'asd', 'F', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
 	(1117553555, '1125', 'ERNESTO', '', 'PINZON', 'ARBOLEDA', '312039123', '1988-02-05', 'MONTAÑITA', 'De puerto leguizamo putumayo', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
 	(1117553556, '1126', 'PR', 'PR', 'PR', 'PR', '123', '2000-02-20', 'SAD', 'SAD', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
-	(1117553557, '1127', 'PEREZ', 'PEREZ', 'PEREZ', 'PEREZ', '1233123', '1996-11-22', 'PEREZ', 'PEREZ  PEREZP ER EZPE REZP ER EZPEREZ', 'F', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
-	(1117553558, '777777', 'MESSI', 'MESSI', 'MESSI', 'MESSI', '333333', '2010-10-10', 'MESSI', 'MESSI', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
+	(1117553557, '12', 'HOY', 'HOY', 'HOY', 'HOY', '312', '1996-11-22', 'HOY', 'HOY', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
+	(1117553558, '2222222', 'CARLOS', 'NADAL', 'NADAL', 'NADAL', '444444', '2010-10-10', 'NADAL', 'NADAL', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
 	(1117553559, '99999', 'DANILO2', 'SE CAMBIO', 'HOLA', 'QUE TAL', '310482363', '2000-10-17', 'UNIVERSIDAD', 'HOLA SOY YO DE PRUEBA', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
-	(1117553560, '1111755253', 'CRISTIANO', '', 'RONALDO ', 'DOS SANTOS', '1234567899', '1985-02-12', 'ITALIA', 'THE BEST PLAYER OF WORD', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg');
+	(1117553560, '1111755253', 'CRISTIANO', '', 'RONALDO ', 'DOS SANTOS', '1234567899', '1985-02-12', 'ITALIA', 'THE BEST PLAYER OF WORD', 'M', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg'),
+	(1117553561, '93289383', 'KAREN', 'DAYANA', 'TEQUIA', 'OSOARIO', '323123123', '2019-01-28', 'FLORENCIA', 'Hola ', 'F', '../../../Plantilla/Privado/dist/img/empresa/gerente.jpg');
 /*!40000 ALTER TABLE `persona` ENABLE KEYS */;
 
 -- Volcando estructura para tabla bd_morelac.productos
@@ -458,7 +464,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   KEY `fk_TIPO_USUARIO_ROL1_idx` (`ROL_ID_ROL`),
   CONSTRAINT `fk_TIPO_USUARIO_PERSONA1` FOREIGN KEY (`PERSONA_ID_PERSONA`) REFERENCES `persona` (`ID_PERSONA`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_TIPO_USUARIO_ROL1` FOREIGN KEY (`ROL_ID_ROL`) REFERENCES `rol` (`ID_ROL`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- Volcando datos para la tabla bd_morelac.usuario: ~15 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
@@ -466,18 +472,18 @@ INSERT INTO `usuario` (`ID_USUARIO`, `USU_CORREO_ELECTRONICO`, `USU_CONTRASENA`,
 	(1, 'j@j.j', 'j', 'ACTIVO', 1117553549, 1),
 	(3, 'c@c.co', 'caol', 'ACTIVO', 1117552597, 3),
 	(4, 'luis@gmail.com', 'luis', 'ACTIVO', 17683560, 2),
-	(5, 'Sofia2000@gmail.com', 'sofia', 'INACTIVO', 40683530, 5),
-	(6, 'juan@gmail.com', '1234', 'INACTIVO', 9901, 4),
+	(6, 'juan@gmail.com', '1234', 'ACTIVO', 9901, 4),
 	(7, 'Luna@gmail.com', 'luna', 'ACTIVO', 4, 5),
 	(8, 'Pruea@fs.com', '1234', 'INACTIVO', 3, 3),
-	(9, 'cadd1@gm.com', '123', 'INACTIVO', 1, 2),
+	(9, 'cadd1@gm.com', '123', 'INACTIVO', 1, 4),
 	(10, 'karen@gmail.comcom', '1234', 'INACTIVO', 1117553554, 3),
 	(11, 'ernesto2019@gmail.com', 'ernesto', 'INACTIVO', 1117553555, 2),
 	(12, 'M@M.M', 'M', 'INACTIVO', 1117553556, 5),
-	(13, 'PEREZ@p.p', 'PEREZ', 'INACTIVO', 1117553557, 5),
-	(14, 'a@a.com', 'MESSI', 'ACTIVO', 1117553558, 5),
+	(13, 'PEREZ@p.p', 'HOY', 'ACTIVO', 1117553557, 5),
+	(14, 'a@a.com', 'NADAL', 'ACTIVO', 1117553558, 5),
 	(15, 'da@da.da', 'caol9901', 'ACTIVO', 1117553559, 5),
-	(16, 'cr7@cr7@.com', 'cr7', 'INACTIVO', 1117553560, 3);
+	(16, 'cr7@cr7@.com', 'cr7', 'INACTIVO', 1117553560, 3),
+	(17, 'kd@g.com', 'k', 'INACTIVO', 1117553561, 5);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 -- Volcando estructura para procedimiento bd_morelac.CONST_GERENTES
@@ -506,12 +512,28 @@ DELIMITER ;
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_CLIENTE_ID`(
 	IN `IDCLI` INT
+
+
+
+
 )
 BEGIN
-SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+SELECT ID_PERSONA AS ID, PER_CEDULA, PER_NOMBRE1,PER_NOMBRE2,PER_APELLIDO1, PER_APELLIDO2,PER_CELULAR,
+PER_DIRECCION,PER_DETALLES,USU_ESTADO AS ESTADO,PER_FOTO FROM persona
 INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
 INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
 WHERE rol.ID_ROL='4' AND ID_PERSONA = IDCLI;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.CONS_CLIENTE_REPORTE
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_CLIENTE_REPORTE`()
+BEGIN
+SELECT ID_PERSONA,PER_NOMBRE1,PER_NOMBRE2,PER_APELLIDO1,PER_APELLIDO2,PER_DIRECCION, USU_ESTADO AS ESTADO FROM persona
+INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
+INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
+WHERE rol.ID_ROL=4 AND usuario.USU_ESTADO='ACTIVO' ;
 END//
 DELIMITER ;
 
@@ -547,9 +569,11 @@ DELIMITER ;
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_GERENTE_ID`(
 	IN `IDGER` INT
+
 )
 BEGIN
-SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+SELECT ID_PERSONA AS ID, PER_CEDULA, PER_NOMBRE1,PER_NOMBRE2,PER_APELLIDO1, PER_APELLIDO2,PER_CELULAR,
+PER_DIRECCION,PER_DETALLES,USU_ESTADO AS ESTADO,PER_FOTO FROM persona
 INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
 INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
 WHERE rol.ID_ROL='2' AND ID_PERSONA = IDGER;
@@ -611,9 +635,14 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_PROVEEDOR_ID`(
 
 
 
+
+
+
 )
 BEGIN
-SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,FIN_NOMBRE,CANT_LECHE,LEC_FECHA,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, PER_NOMBRE1,PER_NOMBRE2,PER_APELLIDO1, PER_APELLIDO2,PER_CELULAR AS CELULAR,
+PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,FIN_NOMBRE,FIN_UBICACION ,FIN_DIMENSION,CANT_LECHE,LEC_FECHA,USU_ESTADO AS ESTADO,USU_CORREO_ELECTRONICO AS CORREO,
+USU_CONTRASENA AS CONTRASENA,PER_FOTO AS FOTO FROM persona
 INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
 INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
 INNER JOIN finca ON (persona.ID_PERSONA=finca.PERSONA_ID_PERSONA)
@@ -681,9 +710,11 @@ DELIMITER ;
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `CONS_SUPERVISOR_ID`(
 	IN `IDSUP` INT
+
 )
 BEGIN
-SELECT ID_PERSONA AS ID, PER_CEDULA AS CEDULA, CONCAT (PER_NOMBRE1," ", PER_APELLIDO1) AS NOMBRE,PER_CELULAR AS CELULAR,PER_DIRECCION AS DIRECCION,PER_DETALLES AS DETALLE,USU_ESTADO AS ESTADO,PER_FOTO AS FOTO FROM persona
+SELECT ID_PERSONA AS ID, PER_CEDULA, PER_NOMBRE1,PER_NOMBRE2,PER_APELLIDO1, PER_APELLIDO2,PER_CELULAR,
+PER_DIRECCION,PER_DETALLES,USU_ESTADO AS ESTADO,PER_FOTO FROM persona
 INNER JOIN usuario ON (persona.ID_PERSONA = usuario.PERSONA_ID_PERSONA)
 INNER JOIN rol ON (usuario.ROL_ID_ROL= rol.ID_ROL)
 WHERE rol.ID_ROL='3' AND ID_PERSONA = IDSUP;
@@ -756,6 +787,14 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Volcando estructura para procedimiento bd_morelac.COUNT_USER
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `COUNT_USER`()
+BEGIN
+SELECT  COUNT(usuario.USU_CORREO_ELECTRONICO) FROM usuario WHERE usuario.USU_ESTADO='ACTIVO';
+END//
+DELIMITER ;
+
 -- Volcando estructura para procedimiento bd_morelac.INSE_EMPRESA
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `INSE_EMPRESA`(
@@ -800,25 +839,28 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `INSE_FINCA`(
 
 
 
+
+
 )
 BEGIN
 
 	DECLARE ID_FIN INT;
 	
-	IF ((SELECT COUNT(finca.ID_FINCA) FROM finca)=0) THEN
-
-	INSERT INTO finca (ID_FINCA, FIN_NOMBRE,FIN_UBICACION, FIN_DIMENSION,PERSONA_ID_PERSONA)
-   VALUES (1,F_NOMBRE,F_UBICACION,F_DIMENSION,IDPERSONA);
-
-  ELSE
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en el registro de los datos!');
 	
-	SET ID_FIN = (SELECT MAX(finca.ID_FINCA ) FROM finca)+1;
+ 	START TRANSACTION;
+		IF ((SELECT COUNT(finca.ID_FINCA) FROM finca)=0) THEN
+			SET ID_FIN = 1;
+		ELSE
+			SET ID_FIN = (SELECT MAX(finca.ID_FINCA ) FROM finca)+1;
+		END IF;
+	
+		INSERT INTO finca (ID_FINCA, FIN_NOMBRE,FIN_UBICACION, FIN_DIMENSION,PERSONA_ID_PERSONA)
+   	VALUES (ID_FIN,F_NOMBRE,F_UBICACION,F_DIMENSION,IDPERSONA);
    
-	INSERT INTO finca (ID_FINCA, FIN_NOMBRE,FIN_UBICACION, FIN_DIMENSION,PERSONA_ID_PERSONA)
-   VALUES (ID_FIN, F_NOMBRE,F_UBICACION,F_DIMENSION,IDPERSONA);
- 
- END IF;
-
+   	CALL SHOW_MENSAJE('3', 'Datos ingresados correctamente!');	
+	COMMIT;
 END//
 DELIMITER ;
 
@@ -826,24 +868,32 @@ DELIMITER ;
 DELIMITER //
 CREATE DEFINER=`user_morelac`@`%` PROCEDURE `INSE_LECHE`(
 	IN `CANT` INT,
-	IN `FECHA` DATETIME,
+	IN `FECHA` DATE,
 	IN `IDFINCA` INT
+
+
+
 )
 BEGIN
 	DECLARE ID_LEC INT;
+
+	
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en el registro de los datos!');
+   START TRANSACTION;
 	
 	IF ((SELECT COUNT(leche.ID_LECHE) FROM leche)=0) THEN
 
 	INSERT INTO leche (ID_LECHE, CANT_LECHE,LEC_FECHA, ID_FINCA_ID_LECHE)
    VALUES (1,CANT,FECHA,IDFINCA);
-
+	CALL SHOW_MENSAJE('3', 'Datos ingresados correctamente. CASO 1');	
   ELSE
 	
 	SET ID_LEC = (SELECT MAX(leche.ID_LECHE ) FROM leche)+1;
    
 	INSERT INTO leche (ID_LECHE, CANT_LECHE,LEC_FECHA, ID_FINCA_ID_LECHE)
    VALUES (ID_LEC, CANT,FECHA,IDFINCA);
- 
+	CALL SHOW_MENSAJE('3', 'Datos ingresados correctamente. CASO 2');	
  END IF;
 END//
 DELIMITER ;
@@ -921,6 +971,62 @@ DECLARE ID_PRO INT;
    VALUES (ID_PRO,NOMBRE,CANTIDAD,PRECIO);
 	
 	END IF;
+END//
+DELIMITER ;
+
+-- Volcando estructura para procedimiento bd_morelac.INSE_PROVEEDOR
+DELIMITER //
+CREATE DEFINER=`user_morelac`@`%` PROCEDURE `INSE_PROVEEDOR`(
+	IN `CEDULA` INT(10),
+	IN `NOM1` VARCHAR(50),
+	IN `NOM2` VARCHAR(50),
+	IN `APE1` VARCHAR(50),
+	IN `APE2` VARCHAR(50),
+	IN `CELU` INT(10),
+	IN `FECHAN` DATE,
+	IN `DIRE` VARCHAR(50),
+	IN `DETALLES` VARCHAR(50),
+	IN `SEXO` ENUM('M','F'),
+	IN `CORREO` VARCHAR(50),
+	IN `CONTRASENA` VARCHAR(50),
+	IN `ROLL` INT,
+	IN `F_NOMBRE` VARCHAR(50),
+	IN `F_UBICACION` VARCHAR(50),
+	IN `F_DIMENCION` VARCHAR(50),
+	IN `CANT` FLOAT,
+	IN `FECHA` DATE
+)
+BEGIN
+	DECLARE ID_PR INT;
+   DECLARE ID_FINCA_BUSCADA INT;
+	
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+	CALL SHOW_MENSAJE('1', '¡Ha ocurrido un error en el registro de los datos!');
+ 	
+	DECLARE EXIT HANDLER FOR 1062
+	CALL SHOW_MENSAJE('1', '¡Error! El proveedor ya se encuentra registrado.');
+		
+ 	START TRANSACTION;
+ 	
+		IF  ((SELECT COUNT(persona.ID_PERSONA) FROM persona) = 0) THEN
+			SET ID_PR = 1;
+		ELSE		
+			SET ID_PR = (SELECT MAX(persona.ID_PERSONA) FROM persona)+1;
+		END IF;
+		
+		IF ((SELECT COUNT(ID_USUARIO) FROM usuario WHERE usuario.USU_CORREO_ELECTRONICO = CORREO)=0) THEN
+			INSERT INTO persona (ID_PERSONA,PER_CEDULA, PER_NOMBRE1, PER_NOMBRE2, PER_APELLIDO1, PER_APELLIDO2, PER_CELULAR, PER_NACIMIENTO, PER_DIRECCION,PER_DETALLES, PER_SEXO)
+			VALUES (ID_PR,CEDULA,NOM1,NOM2,APE1,APE2,CELU,FECHAN,DIRE,DETALLE,SEXO );
+			CALL INSE_USUARIO(CORREO, CONTRASENA, ID_PR,ROLL);
+			CALL INSE_FINCA(F_NOMBRE, F_UBICACION, F_DIMENSION, ID_PR);
+			SET ID_FINCA_BUSCADA = (SELECT ID_FINCA FROM finca WHERE finca.FIN_NOMBRE=F_NOMBRE); 
+			CALL INSE_LECHE(CANT, FECHA, ID_FINCA_BUSCADA);
+		ELSE
+			CALL SHOW_MENSAJE('1', '¡Error! El correo digitado ya se encuentra registrado.');
+		END IF;
+		
+		CALL SHOW_MENSAJE('3', 'Datos ingresados correctamente.');	
+	COMMIT;
 END//
 DELIMITER ;
 
@@ -1131,7 +1237,6 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_LECHE`(
 	IN `ID` INT,
 	IN `CANT` FLOAT,
 	IN `FECHA` DATE
-
 )
 BEGIN
 	DECLARE ID_FIN_LECHE INT;
@@ -1212,19 +1317,18 @@ CREATE DEFINER=`user_morelac`@`%` PROCEDURE `UPDA_PROVEEDOR`(
 	IN `APE1` VARCHAR(50),
 	IN `APE2` VARCHAR(50),
 	IN `CELU` INT,
-	IN `F_NACIMIENTO` DATE,
 	IN `DIREC` VARCHAR(50),
 	IN `DETA` VARCHAR(50),
 	IN `SEXO1` ENUM('M','F')
 ,
 	IN `CONTRA` VARCHAR(50),
 	IN `ESTADO` ENUM('ACTIVO','INACTIVO'),
-	IN `ROLL` INT,
 	IN `NOMBRE_FINCA` VARCHAR(50),
 	IN `UBICACION` VARCHAR(50),
 	IN `DIME` VARCHAR(50),
 	IN `CANT` INT,
 	IN `FECHA` DATE
+
 
 
 )
@@ -1242,7 +1346,6 @@ BEGIN
 	PER_APELLIDO1 = APE1,
 	PER_APELLIDO2 = APE2,
 	PER_CELULAR=CELU,
-	PER_NACIMIENTO = F_NACIMIENTO,
 	PER_DIRECCION = DIREC,
 	PER_DETALLES = DETA,
 	PER_SEXO = SEXO1
@@ -1251,7 +1354,7 @@ BEGIN
    CALL SHOW_MENSAJE('3','¡Sus datos fueron modificados corectamente PRO!');
 	COMMIT;
 	
-	CALL UPDA_USUARIO(ID, CONTRA, ESTADO, ROLL);
+	CALL UPDA_USUARIO(ID, CONTRA, ESTADO, '5');
 	CALL UPDA_FINCA(ID, NOMBRE_FINCA, UBICACION, DIME);
 	CALL UPDA_LECHE(ID, CANT, FECHA);
 	
