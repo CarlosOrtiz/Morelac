@@ -5764,7 +5764,6 @@
     <Content Include="Plantilla\Publico\vendor\scrollreveal\scrollreveal.es.js" />
     <Content Include="Plantilla\Publico\vendor\scrollreveal\scrollreveal.js" />
     <Content Include="Plantilla\Publico\vendor\scrollreveal\scrollreveal.min.js" />
-    <Content Include="Vistas\Public\loginModal.css" />
     <Content Include="Vistas\Public\Olvidar.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
