@@ -57,14 +57,14 @@ namespace Proyecto_Web.Vistas.Private
 
         protected void Btn_Save1_Click(object sender, EventArgs e)
         {
-            mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, datepicker.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "5");
+            mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, Fecha_Nacimiento.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "5");
             Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
 
         }
 
         protected void Btn_Cerrar1_Click(object sender, EventArgs e)
         {
-            ced.Text = null; nom1.Text = null; nom2.Text = null; ape1.Text = null; ape2.Text = null; Celular.Text = null; datepicker.Text = null;
+            ced.Text = null; nom1.Text = null; nom2.Text = null; ape1.Text = null; ape2.Text = null; Celular.Text = null; Fecha_Nacimiento.Text = null;
             Direc.Text = null; Detalle.Text = null; correo.Text = null; contrasena.Text = null;
         }
         protected void Save_Finca_Click(object sender, EventArgs e)
