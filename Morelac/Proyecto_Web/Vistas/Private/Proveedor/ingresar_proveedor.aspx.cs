@@ -22,7 +22,7 @@ namespace Proyecto_Web.Vistas.Private
         public string modal_titulo;
         public string modal_tipo;
         public string modal_link;
-        DataTable ListNom, DT_FINCA, DT_LECHE;
+        DataTable ListNom, DT_FINCA;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -50,46 +50,54 @@ namespace Proyecto_Web.Vistas.Private
                 Drop_Finca.DataTextField = "FIN_NOMBRE";
                 Drop_Finca.DataSource = DT_FINCA;
                 Drop_Finca.DataBind();
-
             }
 
         }
 
         protected void Btn_Save1_Click(object sender, EventArgs e)
         {
-            string rol = 5+"";
-            da.OperarDatos("INSERT INTO persona ('"+ced.Text+ "','" + nom1.Text + "','" + nom2.Text + "','" + ape1.Text + "','" + ape2.Text + "','" + Celular.Text + "','" + Fecha_Nacimiento.Text + "','" + Direc.Text + "','" + Detalle.Text + "','" + Convert.ToChar(DDL_Sexo.SelectedValue) + "') " +
-                "INSERT INTO usuario ('"+correo.Text+"' ,'"+ contrasena.Text+"','"+ ced.Text+"','"+ rol + "');");
-            //mod_proveedor.RegistrarProveedor(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, Fecha_Nacimiento.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text);
-            //mostrarModal("Datos guardados correctamente!", "Muy bien", "modal-success");
+            if (ValidarDatos())
+            {
+            mod_persona.RegistrarPersona(ced.Text, nom1.Text,  ape1.Text,  Celular.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text,"5");
             Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+            }
+        }
+        protected void Save_Finca_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatosFinca()) { 
+            mod_finca.RegistrarFinca(nom_finca.Text, ubi_finca.Text, hectarias.Text, Convert.ToString(Asig_Persona.SelectedValue));
+            Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+            }
+        }
+        protected void btn_Leche_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatosLeche())
+            {
+                mod_finca.RegistrarFincaLenche(cant_leche.Text, FechaEn.Text, Convert.ToString(Drop_Finca.SelectedValue));
+                Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+            }
         }
 
         protected void Btn_Cerrar1_Click(object sender, EventArgs e)
         {
-            ced.Text = null; nom1.Text = null; nom2.Text = null; ape1.Text = null; ape2.Text = null; Celular.Text = null; Fecha_Nacimiento.Text = null;
-            Direc.Text = null; Detalle.Text = null; correo.Text = null; contrasena.Text = null;
+            ced.Text = null;
+            nom1.Text = null;
+            //nom2.Text = null;
+            ape1.Text = null;
+            //ape2.Text = null;
+            Celular.Text = null;
+            //Fecha_Nacimiento.Text = null;
+            //Direc.Text = null;
+            //Detalle.Text = null;
+            correo.Text = null;
+            contrasena.Text = null;
         }
-        protected void Save_Finca_Click(object sender, EventArgs e)
-        {
-            mod_finca.RegistrarFinca(nom_finca.Text, ubi_finca.Text, hectarias.Text, Convert.ToString(Asig_Persona.SelectedValue));
-            //Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
-
-            //}
-        }
-        protected void btn_Leche_Click(object sender, EventArgs e)
-        {
-            mod_finca.RegistrarFincaLenche(cant_leche.Text, FechaEn.Text, Convert.ToString(Drop_Finca.SelectedValue));
-            //Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
-        }
-
         protected void btn_Leche_cerrar_Click(object sender, EventArgs e)
         {
             cant_leche.Text = null;
             FechaEn.Text = null;
             Drop_Finca.ClearSelection();
         }
-
         protected void Remove_Finca_Click(object sender, EventArgs e)
         {
             nom_finca.Text = null;
@@ -136,20 +144,32 @@ namespace Proyecto_Web.Vistas.Private
                 mostrarModal("Señor usuario acaba de exceder el limite perimitido por el campo de numero teléfonico: son 10 numeros", "Error", "modal-danger");
             else if (correo.Text.Length < 3 || correo.Text.Length == 0 || correo.Text.Length > 50)
                 mostrarModal("Ingrese un correo electronico corectamente!", "Error", "modal-danger");
+            else if (contrasena.Text.Length < 6 || contrasena.Text.Length == 0 || contrasena.Text.Length > 50)
+                mostrarModal("Ingrese un una contraseña mayor a 6 caracteres!", "Error", "modal-danger");
             else
                 good = true;
             return good;
         }
-
         public bool ValidarDatosFinca()
         {
             bool good = false;
             if (nom_finca.Text.Length == 0 || nom_finca.Text.Length < 3 || nom_finca.Text.Length > 45)
-                mostrarModal("Ingrese su documento de identidad correctamente!", "Error", "modal-danger");
+                mostrarModal("Ingrese el nombre de su finca correctamente!", "Error", "modal-danger");
             else if (ubi_finca.Text.Length == 0 || ubi_finca.Text.Length > 45 || ubi_finca.Text.Length < 3)
-                mostrarModal("Ingrese su documento de identidad correctamente!", "Error", "modal-danger");
-            else if (cap_leche.Text.Length == 0 || cap_leche.Text.Length > 45 || cap_leche.Text.Length < 3)
-                mostrarModal("Ingrese su documento de identidad correctamente!", "Error", "modal-danger");
+                mostrarModal("Ingrese una ubicacion correctamente!", "Error", "modal-danger");
+            else if (hectarias.Text.Length == 0 || hectarias.Text.Length > 45 || hectarias.Text.Length < 3)
+                mostrarModal("Ingrese la cantidad de hectarias que cuenta su finca!", "Error", "modal-danger");
+            else
+                good = true;
+            return good;
+        }
+        public bool ValidarDatosLeche()
+        {
+            bool good = false;
+            if (cant_leche.Text.Length == 0 || cant_leche.Text.Length < 3 || cant_leche.Text.Length > 45)
+                mostrarModal("Ingrese el nombre de su finca correctamente!", "Error", "modal-danger");
+            else if (FechaEn.Text.Length == 0 || FechaEn.Text.Length > 45 || FechaEn.Text.Length < 3)
+                mostrarModal("Ingrese una ubicacion correctamente!", "Error", "modal-danger");
             else
                 good = true;
             return good;

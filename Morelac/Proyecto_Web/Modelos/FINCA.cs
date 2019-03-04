@@ -34,7 +34,7 @@ namespace Proyecto_Web.Modelos
         {
             try
             {
-                return dat.OperarDatos("CALL INSE_FINCA ('" +NOM  + "', '" + UBI + "', '" + DIM + "', '" + ID_PERSONA + "');");
+                return dat.OperarDatos("CALL INSE_FINCA ('" + NOM  + "', '" + UBI + "', '" + DIM + "', '" + ID_PERSONA + "');");
             }
             catch (Exception)
             {

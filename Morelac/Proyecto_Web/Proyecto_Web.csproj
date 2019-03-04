@@ -4207,6 +4207,7 @@
     <Content Include="Plantilla\Publico\img\portfolio\thumbnails\4.jpg" />
     <Content Include="Plantilla\Publico\img\portfolio\thumbnails\5.jpg" />
     <Content Include="Plantilla\Publico\img\portfolio\thumbnails\6.jpg" />
+    <Content Include="Vistas\Private\Usuarios\DimanicoMenu.aspx" />
     <Content Include="Vistas\Public\Index.aspx" />
     <Content Include="Plantilla\Publico\js\creative.js" />
     <Content Include="Plantilla\Publico\js\creative.min.js" />
@@ -6088,6 +6089,13 @@
     <Compile Include="Vistas\Private\Supervisor\surtirleche.aspx.designer.cs">
       <DependentUpon>surtirleche.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Private\Usuarios\DimanicoMenu.aspx.cs">
+      <DependentUpon>DimanicoMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Usuarios\DimanicoMenu.aspx.designer.cs">
+      <DependentUpon>DimanicoMenu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Public\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6622,7 +6630,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Vistas\Private\ImgUser\" />
-    <Folder Include="Vistas\Private\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Plantilla\Privado\bower_components\moment\moment.d.ts" />

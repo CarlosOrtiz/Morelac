@@ -44,7 +44,7 @@ namespace Proyecto_Web.Vistas.Private
         {
             if (ValidarDatos())
             {
-            mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, FechaN.Text, Direc.Text, Detalle.Text,Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "3");
+            mod_persona.RegistrarPersona(ced.Text, nom1.Text,ape1.Text, Celular.Text,Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "3");
             Response.Redirect("~/Vistas/Private/Supervisor/Supervisor.aspx");
             }
         }

@@ -42,7 +42,7 @@
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#Modificar" data-toggle="tab">Registrar Información</a></li>
-                        <li><a href="#Modificar2" data-toggle="tab">Opcional</a></li>
+                    <%--    <li><a href="#Modificar2" data-toggle="tab">Opcional</a></li>--%>
                         <li><a href="#Act_Logo" data-toggle="tab">Registrar Finca</a></li>
                         <li><a href="#Leche" data-toggle="tab">Registrar Leche</a></li>
                     </ul>
@@ -77,7 +77,7 @@
                                         <div class="input-group-addon">
                                             <i class="fa fa-phone"></i>
                                         </div>
-                                        <asp:TextBox ID="Celular" required CssClass="form-control style-form" runat="server" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="" onKeyPress="return soloNumeros(event)" oncopy="return false" onpaste="return false" oncut="return false"></asp:TextBox>
+                                        <asp:TextBox ID="Celular" required CssClass="form-control style-form" runat="server" onKeyPress="return soloNumeros(event)" onkeyDown="checkTextAreaMaxLength(this,event,'10');" oncopy="return false" onpaste="return false" oncut="return false"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -103,11 +103,16 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
-
+                                <div style="text-align: right;" class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10 text-right">
+                                        <asp:LinkButton ID="Btn_Save1" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save "></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <asp:LinkButton ID="Btn_Cerrar1" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="tab-pane" id="Modificar2">
+                        <%--<div class="tab-pane" id="Modificar2">
                             <div class="form-horizontal">
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">SEGUNDO NOMBRE</label>
@@ -150,8 +155,7 @@
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
+                        </div>--%>
 
                         <div class="tab-pane" id="Act_Logo">
                             <div class="form-horizontal">
@@ -196,8 +200,8 @@
                                     </div>
                                     <div style="text-align: right;" class="form-group">
                                         <div class="col-sm-offset-2 col-sm-10 text-right">
-                                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
-                                            <asp:LinkButton ID="LinkButton4" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                            <asp:LinkButton ID="Btn_Finca" runat="server" CssClass="btn btn-success" OnClick="Save_Finca_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                            <asp:LinkButton ID="Remove_Finca" runat="server" CssClass="btn btn-danger" OnClick="Remove_Finca_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
                                         </div>
                                     </div>
                                 </div>

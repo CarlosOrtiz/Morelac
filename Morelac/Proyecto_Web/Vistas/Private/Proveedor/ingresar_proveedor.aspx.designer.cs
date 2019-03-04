@@ -85,51 +85,6 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.DropDownList DDL_Sexo;
         
         /// <summary>
-        /// Control nom2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nom2;
-        
-        /// <summary>
-        /// Control ape2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ape2;
-        
-        /// <summary>
-        /// Control Direc.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Direc;
-        
-        /// <summary>
-        /// Control Fecha_Nacimiento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Fecha_Nacimiento;
-        
-        /// <summary>
-        /// Control Detalle.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Detalle;
-        
-        /// <summary>
         /// Control Btn_Save1.
         /// </summary>
         /// <remarks>
@@ -193,22 +148,22 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.DropDownList Asig_Persona;
         
         /// <summary>
-        /// Control LinkButton3.
+        /// Control Btn_Finca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Finca;
         
         /// <summary>
-        /// Control LinkButton4.
+        /// Control Remove_Finca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
+        protected global::System.Web.UI.WebControls.LinkButton Remove_Finca;
         
         /// <summary>
         /// Control cant_leche.
