@@ -22,6 +22,17 @@ namespace Proyecto_Web.Modelos
             NOM_PROVEEDOR = n;
         }
 
+        public bool RegistrarProveedor(string cedula, string NOM1, string NOM2, string APE1, string APE2, string CELULAR, string NACIMIENTO, string DIRECCION, string DETALLES, char SEXO, string correo, string contrasena)
+        {
+            try
+            {
+                return dat.OperarDatos("CALL INSE_PERSONA ('" + cedula + "', '" + NOM1 + "', '" + NOM2 + "', '" + APE1 + "', '" + APE2 + "', '" + CELULAR + "', '" + NACIMIENTO + "', '" + DIRECCION + "', '" + DETALLES + "', '" + SEXO + "', '" + correo + "', '" + contrasena + "', '" + "5" + "');");
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         public DataTable ConsultarProvedoresAll(){
             try
             {
