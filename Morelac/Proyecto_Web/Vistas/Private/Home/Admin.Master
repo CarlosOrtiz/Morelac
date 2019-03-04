@@ -21,7 +21,7 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" />
     <!-- Select2 -->
- 
+
     <!-- Ionicons -->
     <link rel="stylesheet" href="../../../Plantilla/Privado/bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
@@ -146,14 +146,68 @@
                             </a>
                         </li>
                         <li class="header">CONTENIDO</li>
-                        <asp:Repeater ID="Rep_Menu_Dim" runat="server">
+                        <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
                             <ItemTemplate>
-                                <li>
+                           <li>
                                     <a href="<%#Eval("MENU_URL") %>">
                                         <i class="fa <%#Eval("MENU_ICON") %>"></i>
                                         <span><%#Eval("MENU_NOMBRE") %></span>
                                     </a>
                                 </li>
+                                <asp:Repeater ID="InnerRepeater" runat="server">
+                                    <ItemTemplate>
+                                       <li class="treeview">
+                                            <a href="<%#Eval("MENU_URL") %>">
+                                                <i class="fa <%#Eval("MENU_ICON") %>"></i><span><%#Eval("MENU_NOMBRE") %></span>
+                                                <span class="pull-right-container">
+                                                    <i class="fa fa-angle-left pull-right"></i>
+                                                </span>
+                                            </a>
+                                            <ul class="treeview-menu" style="display: none;">
+                                                <li><a href="#"><i class="fa fa-circle-o"></i><%#Eval("SUB_NOMBRE") %></a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ItemTemplate>
+                        </asp:Repeater>
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Examples</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: none;">
+            <li><a href="examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+          </ul>
+        </li>
+                        <asp:Repeater ID="Rep_Menu_Dim" runat="server" OnItemDataBound="Rep_Menu_Dim_ItemDataBound">
+                            <ItemTemplate>
+                              <%--  <li class="treeview menu-open">
+                                    <a href="<%#Eval("MENU_URL") %>">
+                                        <i class="fa <%#Eval("MENU_ICON") %>"></i><span><%#Eval("MENU_NOMBRE") %></span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>--%>
+
+                                    <asp:Repeater ID="Rep_Sub_Menu" runat="server">
+                                        <ItemTemplate>
+                                           <%-- <ul class="treeview-menu" style="display: block;">
+                                                <li><a href="#"><i class="fa fa-circle-o"></i><%#Eval("SUB_NOMBRE") %></a></li>
+                                            </ul>--%>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+
+                                </li>
+                                <%--<li>
+                                    <a href="<%#Eval("MENU_URL") %>">
+                                        <i class="fa <%#Eval("MENU_ICON") %>"></i>
+                                        <span><%#Eval("MENU_NOMBRE") %></span>
+                                    </a>
+                                </li>--%>
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>
@@ -194,7 +248,7 @@
         <script src="../../../Plantilla/Privado/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <!-- FastClick -->
         <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
-      
+
         <!-- AdminLTE App -->
         <script src="../../../Plantilla/Privado/dist/js/adminlte.min.js"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->

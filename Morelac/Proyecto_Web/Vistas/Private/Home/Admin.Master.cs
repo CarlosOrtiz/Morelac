@@ -15,7 +15,10 @@ namespace Proyecto_Web.Vistas.Private
         MENU mod_menu = new MENU();
         ROL mod_rol = new ROL();
         public string foto, Nombre,n1,n2,ape1,ape2,IDn;
-        DataTable MenuDin = new DataTable();
+
+      
+
+        DataTable MenuDin,SubMenu = new DataTable();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,9 +39,30 @@ namespace Proyecto_Web.Vistas.Private
             NombreUser.Text = n1 + " " + ape1;
             RolUser.Text = mod_rol.Consultarrol(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["ROL_NOMBRE"].ToString();
             MenuDin = mod_menu.ConsultarMenu(Session["CORREO_ELECTRONICO"].ToString());
-            Rep_Menu_Dim.DataSource = MenuDin;
-            Rep_Menu_Dim.DataBind();
-
+            //Rep_Menu_Dim.DataSource = MenuDin;
+            //Rep_Menu_Dim.DataBind();
+            Repeater1.DataSource = MenuDin;
+            Repeater1.DataBind();
+            SubMenu = mod_menu.ConsultarSub_Menu(MenuDin.Rows[0]["ID_MENU"].ToString());
+            
+        }
+        protected void Rep_Menu_Dim_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var Rep_Sub_Menu = (Repeater)e.Item.FindControl("Rep_Sub_Menu");
+                Rep_Sub_Menu.DataSource = SubMenu;
+                Rep_Sub_Menu.DataBind();
+            }
+        }
+        protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            Repeater r = e.Item.FindControl("InnerRepeater") as Repeater;
+            if (r != null)
+            {
+                r.DataSource = SubMenu;
+                r.DataBind();
+            }
         }
         protected void Btn_cerrar_Click(object sender, EventArgs e)
         {
