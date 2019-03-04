@@ -24,7 +24,7 @@ namespace Proyecto_Web.Datos_Reporte {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class Datos_clientes : global::System.Data.DataSet {
         
-        private personaDataTable tablepersona;
+        private clientesDataTable tableclientes;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Proyecto_Web.Datos_Reporte {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["persona"] != null)) {
-                    base.Tables.Add(new personaDataTable(ds.Tables["persona"]));
+                if ((ds.Tables["clientes"] != null)) {
+                    base.Tables.Add(new clientesDataTable(ds.Tables["clientes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Proyecto_Web.Datos_Reporte {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public personaDataTable persona {
+        public clientesDataTable clientes {
             get {
-                return this.tablepersona;
+                return this.tableclientes;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Proyecto_Web.Datos_Reporte {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["persona"] != null)) {
-                    base.Tables.Add(new personaDataTable(ds.Tables["persona"]));
+                if ((ds.Tables["clientes"] != null)) {
+                    base.Tables.Add(new clientesDataTable(ds.Tables["clientes"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Proyecto_Web.Datos_Reporte {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablepersona = ((personaDataTable)(base.Tables["persona"]));
+            this.tableclientes = ((clientesDataTable)(base.Tables["clientes"]));
             if ((initTable == true)) {
-                if ((this.tablepersona != null)) {
-                    this.tablepersona.InitVars();
+                if ((this.tableclientes != null)) {
+                    this.tableclientes.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Proyecto_Web.Datos_Reporte {
             this.Namespace = "http://tempuri.org/Datos_clientes.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablepersona = new personaDataTable();
-            base.Tables.Add(this.tablepersona);
+            this.tableclientes = new clientesDataTable();
+            base.Tables.Add(this.tableclientes);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializepersona() {
+        private bool ShouldSerializeclientes() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace Proyecto_Web.Datos_Reporte {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void personaRowChangeEventHandler(object sender, personaRowChangeEvent e);
+        public delegate void clientesRowChangeEventHandler(object sender, clientesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class personaDataTable : global::System.Data.TypedTableBase<personaRow> {
+        public partial class clientesDataTable : global::System.Data.TypedTableBase<clientesRow> {
             
             private global::System.Data.DataColumn columnID_PERSONA;
             
@@ -293,8 +293,8 @@ namespace Proyecto_Web.Datos_Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public personaDataTable() {
-                this.TableName = "persona";
+            public clientesDataTable() {
+                this.TableName = "clientes";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace Proyecto_Web.Datos_Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal personaDataTable(global::System.Data.DataTable table) {
+            internal clientesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,7 +319,7 @@ namespace Proyecto_Web.Datos_Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected personaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected clientesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -383,34 +383,34 @@ namespace Proyecto_Web.Datos_Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public personaRow this[int index] {
+            public clientesRow this[int index] {
                 get {
-                    return ((personaRow)(this.Rows[index]));
+                    return ((clientesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event personaRowChangeEventHandler personaRowChanging;
+            public event clientesRowChangeEventHandler clientesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event personaRowChangeEventHandler personaRowChanged;
+            public event clientesRowChangeEventHandler clientesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event personaRowChangeEventHandler personaRowDeleting;
+            public event clientesRowChangeEventHandler clientesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event personaRowChangeEventHandler personaRowDeleted;
+            public event clientesRowChangeEventHandler clientesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddpersonaRow(personaRow row) {
+            public void AddclientesRow(clientesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public personaRow AddpersonaRow(string ID_PERSONA, string PER_NOMBRE1, string PER_NOMBRE2, string PER_APELLIDO1, string PER_APELLIDO2, string PER_DIRECCION) {
-                personaRow rowpersonaRow = ((personaRow)(this.NewRow()));
+            public clientesRow AddclientesRow(string ID_PERSONA, string PER_NOMBRE1, string PER_NOMBRE2, string PER_APELLIDO1, string PER_APELLIDO2, string PER_DIRECCION) {
+                clientesRow rowclientesRow = ((clientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_PERSONA,
                         PER_NOMBRE1,
@@ -418,15 +418,15 @@ namespace Proyecto_Web.Datos_Reporte {
                         PER_APELLIDO1,
                         PER_APELLIDO2,
                         PER_DIRECCION};
-                rowpersonaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowpersonaRow);
-                return rowpersonaRow;
+                rowclientesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowclientesRow);
+                return rowclientesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                personaDataTable cln = ((personaDataTable)(base.Clone()));
+                clientesDataTable cln = ((clientesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -434,7 +434,7 @@ namespace Proyecto_Web.Datos_Reporte {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new personaDataTable();
+                return new clientesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -467,28 +467,28 @@ namespace Proyecto_Web.Datos_Reporte {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public personaRow NewpersonaRow() {
-                return ((personaRow)(this.NewRow()));
+            public clientesRow NewclientesRow() {
+                return ((clientesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new personaRow(builder);
+                return new clientesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(personaRow);
+                return typeof(clientesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.personaRowChanged != null)) {
-                    this.personaRowChanged(this, new personaRowChangeEvent(((personaRow)(e.Row)), e.Action));
+                if ((this.clientesRowChanged != null)) {
+                    this.clientesRowChanged(this, new clientesRowChangeEvent(((clientesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -496,8 +496,8 @@ namespace Proyecto_Web.Datos_Reporte {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.personaRowChanging != null)) {
-                    this.personaRowChanging(this, new personaRowChangeEvent(((personaRow)(e.Row)), e.Action));
+                if ((this.clientesRowChanging != null)) {
+                    this.clientesRowChanging(this, new clientesRowChangeEvent(((clientesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,8 +505,8 @@ namespace Proyecto_Web.Datos_Reporte {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.personaRowDeleted != null)) {
-                    this.personaRowDeleted(this, new personaRowChangeEvent(((personaRow)(e.Row)), e.Action));
+                if ((this.clientesRowDeleted != null)) {
+                    this.clientesRowDeleted(this, new clientesRowChangeEvent(((clientesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,14 +514,14 @@ namespace Proyecto_Web.Datos_Reporte {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.personaRowDeleting != null)) {
-                    this.personaRowDeleting(this, new personaRowChangeEvent(((personaRow)(e.Row)), e.Action));
+                if ((this.clientesRowDeleting != null)) {
+                    this.clientesRowDeleting(this, new clientesRowChangeEvent(((clientesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovepersonaRow(personaRow row) {
+            public void RemoveclientesRow(clientesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -548,7 +548,7 @@ namespace Proyecto_Web.Datos_Reporte {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "personaDataTable";
+                attribute2.FixedValue = "clientesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -592,15 +592,15 @@ namespace Proyecto_Web.Datos_Reporte {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class personaRow : global::System.Data.DataRow {
+        public partial class clientesRow : global::System.Data.DataRow {
             
-            private personaDataTable tablepersona;
+            private clientesDataTable tableclientes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal personaRow(global::System.Data.DataRowBuilder rb) : 
+            internal clientesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablepersona = ((personaDataTable)(this.Table));
+                this.tableclientes = ((clientesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -608,14 +608,14 @@ namespace Proyecto_Web.Datos_Reporte {
             public string ID_PERSONA {
                 get {
                     try {
-                        return ((string)(this[this.tablepersona.ID_PERSONAColumn]));
+                        return ((string)(this[this.tableclientes.ID_PERSONAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_PERSONA\' de la tabla \'persona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_PERSONA\' de la tabla \'clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepersona.ID_PERSONAColumn] = value;
+                    this[this.tableclientes.ID_PERSONAColumn] = value;
                 }
             }
             
@@ -624,14 +624,14 @@ namespace Proyecto_Web.Datos_Reporte {
             public string PER_NOMBRE1 {
                 get {
                     try {
-                        return ((string)(this[this.tablepersona.PER_NOMBRE1Column]));
+                        return ((string)(this[this.tableclientes.PER_NOMBRE1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_NOMBRE1\' de la tabla \'persona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_NOMBRE1\' de la tabla \'clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepersona.PER_NOMBRE1Column] = value;
+                    this[this.tableclientes.PER_NOMBRE1Column] = value;
                 }
             }
             
@@ -640,14 +640,14 @@ namespace Proyecto_Web.Datos_Reporte {
             public string PER_NOMBRE2 {
                 get {
                     try {
-                        return ((string)(this[this.tablepersona.PER_NOMBRE2Column]));
+                        return ((string)(this[this.tableclientes.PER_NOMBRE2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_NOMBRE2\' de la tabla \'persona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_NOMBRE2\' de la tabla \'clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepersona.PER_NOMBRE2Column] = value;
+                    this[this.tableclientes.PER_NOMBRE2Column] = value;
                 }
             }
             
@@ -656,14 +656,14 @@ namespace Proyecto_Web.Datos_Reporte {
             public string PER_APELLIDO1 {
                 get {
                     try {
-                        return ((string)(this[this.tablepersona.PER_APELLIDO1Column]));
+                        return ((string)(this[this.tableclientes.PER_APELLIDO1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_APELLIDO1\' de la tabla \'persona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_APELLIDO1\' de la tabla \'clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepersona.PER_APELLIDO1Column] = value;
+                    this[this.tableclientes.PER_APELLIDO1Column] = value;
                 }
             }
             
@@ -672,14 +672,14 @@ namespace Proyecto_Web.Datos_Reporte {
             public string PER_APELLIDO2 {
                 get {
                     try {
-                        return ((string)(this[this.tablepersona.PER_APELLIDO2Column]));
+                        return ((string)(this[this.tableclientes.PER_APELLIDO2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_APELLIDO2\' de la tabla \'persona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_APELLIDO2\' de la tabla \'clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepersona.PER_APELLIDO2Column] = value;
+                    this[this.tableclientes.PER_APELLIDO2Column] = value;
                 }
             }
             
@@ -688,87 +688,87 @@ namespace Proyecto_Web.Datos_Reporte {
             public string PER_DIRECCION {
                 get {
                     try {
-                        return ((string)(this[this.tablepersona.PER_DIRECCIONColumn]));
+                        return ((string)(this[this.tableclientes.PER_DIRECCIONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_DIRECCION\' de la tabla \'persona\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PER_DIRECCION\' de la tabla \'clientes\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablepersona.PER_DIRECCIONColumn] = value;
+                    this[this.tableclientes.PER_DIRECCIONColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsID_PERSONANull() {
-                return this.IsNull(this.tablepersona.ID_PERSONAColumn);
+                return this.IsNull(this.tableclientes.ID_PERSONAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetID_PERSONANull() {
-                this[this.tablepersona.ID_PERSONAColumn] = global::System.Convert.DBNull;
+                this[this.tableclientes.ID_PERSONAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPER_NOMBRE1Null() {
-                return this.IsNull(this.tablepersona.PER_NOMBRE1Column);
+                return this.IsNull(this.tableclientes.PER_NOMBRE1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPER_NOMBRE1Null() {
-                this[this.tablepersona.PER_NOMBRE1Column] = global::System.Convert.DBNull;
+                this[this.tableclientes.PER_NOMBRE1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPER_NOMBRE2Null() {
-                return this.IsNull(this.tablepersona.PER_NOMBRE2Column);
+                return this.IsNull(this.tableclientes.PER_NOMBRE2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPER_NOMBRE2Null() {
-                this[this.tablepersona.PER_NOMBRE2Column] = global::System.Convert.DBNull;
+                this[this.tableclientes.PER_NOMBRE2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPER_APELLIDO1Null() {
-                return this.IsNull(this.tablepersona.PER_APELLIDO1Column);
+                return this.IsNull(this.tableclientes.PER_APELLIDO1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPER_APELLIDO1Null() {
-                this[this.tablepersona.PER_APELLIDO1Column] = global::System.Convert.DBNull;
+                this[this.tableclientes.PER_APELLIDO1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPER_APELLIDO2Null() {
-                return this.IsNull(this.tablepersona.PER_APELLIDO2Column);
+                return this.IsNull(this.tableclientes.PER_APELLIDO2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPER_APELLIDO2Null() {
-                this[this.tablepersona.PER_APELLIDO2Column] = global::System.Convert.DBNull;
+                this[this.tableclientes.PER_APELLIDO2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPER_DIRECCIONNull() {
-                return this.IsNull(this.tablepersona.PER_DIRECCIONColumn);
+                return this.IsNull(this.tableclientes.PER_DIRECCIONColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPER_DIRECCIONNull() {
-                this[this.tablepersona.PER_DIRECCIONColumn] = global::System.Convert.DBNull;
+                this[this.tableclientes.PER_DIRECCIONColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -776,22 +776,22 @@ namespace Proyecto_Web.Datos_Reporte {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class personaRowChangeEvent : global::System.EventArgs {
+        public class clientesRowChangeEvent : global::System.EventArgs {
             
-            private personaRow eventRow;
+            private clientesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public personaRowChangeEvent(personaRow row, global::System.Data.DataRowAction action) {
+            public clientesRowChangeEvent(clientesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public personaRow Row {
+            public clientesRow Row {
                 get {
                     return this.eventRow;
                 }
