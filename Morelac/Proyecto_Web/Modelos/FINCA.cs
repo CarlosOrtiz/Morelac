@@ -30,11 +30,11 @@ namespace Proyecto_Web.Modelos
             FIN_UBICACION = ubicacion;
 
         }
-        public bool RegistrarFinca(string NOM, string DIM, string UBI, string ID_PERSONA)
+        public bool RegistrarFinca(string NOM, string UBI, string DIM, string ID_PERSONA)
         {
             try
             {
-                return dat.OperarDatos("CALL INSE_FINCA ('" +NOM  + "', '" + DIM + "', '" + UBI + "', '" + ID_PERSONA + "');");
+                return dat.OperarDatos("CALL INSE_FINCA ('" +NOM  + "', '" + UBI + "', '" + DIM + "', '" + ID_PERSONA + "');");
             }
             catch (Exception)
             {

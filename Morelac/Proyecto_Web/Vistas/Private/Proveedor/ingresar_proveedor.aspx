@@ -31,13 +31,9 @@
                         <hr />
                         <div class="form-group">
                             <div style="text-align: center;" class="col-sm-12 box-header with-border">
-                                <a style="cursor: pointer;"><i style="color: #444;" class="fa fa-edit"></i><strong>MODIFICAR MENÚ DEL PROVEEDOR</strong></a>
+                                <a style="cursor: pointer;"><i style="color: #444;" class="fa fa-edit"></i><strong style="color: #333;">MODIFICAR MENÚ DEL PROVEEDOR</strong></a>
                             </div>
                             <br />
-                            <div class="col-sm-12 box-header with-border" style="text-align: center;">
-                                <asp:LinkButton Style="margin-bottom: 5px;" ID="Btn_Save1" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton><br />
-                                <asp:LinkButton ID="Btn_Cerrar1" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,10 +70,14 @@
                                         <asp:TextBox runat="server" ID="ced" TextMode="Number" MaxLength="10" onKeyPress="return soloNumeros(event)" autocomplete="off" onkeyDown="checkTextAreaMaxLength(this,event,'10');" placeholder="1117552768" oncopy="return false" onpaste="return false" oncut="return false" CssClass="form-control style-form " required></asp:TextBox>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">NUMERO TELÉFONICO</label>
-                                    <div class="col-sm-9">
-                                        <asp:TextBox ID="Celular" runat="server" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="" required onKeyPress="return soloNumeros(event)" autocomplete="off" onkeyDown="checkTextAreaMaxLength(this,event,'10');" placeholder="3144865298" oncopy="return false" onpaste="return false" oncut="return false" CssClass="form-control style-form "></asp:TextBox>
+                                    <div style="padding-left: 2%; padding-right: 3%;" class="input-group col-sm-9">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <asp:TextBox ID="Celular" required CssClass="form-control style-form" runat="server" data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="" onKeyPress="return soloNumeros(event)" oncopy="return false" onpaste="return false" oncut="return false"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -143,7 +143,14 @@
                                         <span class="has-error"><small class="help-block">0 caracteres</small> </span>
                                     </div>
                                 </div>
+                                <div style="text-align: right;" class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10 text-right">
+                                        <asp:LinkButton ID="Btn_Save1" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save "></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <asp:LinkButton ID="Btn_Cerrar1" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
 
                         <div class="tab-pane" id="Act_Logo">
@@ -164,7 +171,7 @@
                                     <div class="form-group">
                                         <div class="box-body">
                                             <label class="col-sm-3 control-label">¿CUANTAS HECTÁREAS CUENTA SU FINCA?</label>
-                                            <div style="padding-left: 10px; padding-right: 5px;" class="input-group col-sm-9">
+                                            <div style="padding-left: 2%; padding-right: 3%;" class="input-group col-sm-9">
                                                 <asp:TextBox runat="server" ID="hectarias" onKeyPress="return soloNumeros(event)" TextMode="Number" onkeyDown="checkTextAreaMaxLength(this,event,'10');" MaxLength="45" CssClass="form-control style-form" placeholder=" 34.5" required></asp:TextBox>
                                                 <span class="input-group-addon">ha</span>
                                             </div>
@@ -173,7 +180,7 @@
                                     <div class="form-group">
                                         <div class="box-body">
                                             <label class="col-sm-3 control-label">¿CUAL ES SU CAPACIDAD POR SEMANA PARA PRODUCCIR LECHE?</label>
-                                            <div style="padding-left: 10px; padding-right: 5px;" class="input-group col-sm-9">
+                                            <div style="padding-left: 2%; padding-right: 3%;" class="input-group col-sm-9">
                                                 <asp:TextBox runat="server" ID="cap_leche" MaxLength="45" onKeyPress="return soloNumeros(event)" TextMode="Number" onkeyDown="checkTextAreaMaxLength(this,event,'10');" CssClass="form-control style-form" placeholder="100" required></asp:TextBox>
                                                 <span class="input-group-addon">Litros</span>
                                             </div>
@@ -187,6 +194,12 @@
                                             </asp:DropDownList>
                                         </div>
                                     </div>
+                                    <div style="text-align: right;" class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10 text-right">
+                                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                            <asp:LinkButton ID="LinkButton4" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +209,7 @@
                                 <div class="form-group">
                                     <div class="box-body">
                                         <label class="col-sm-3 control-label">CANTIDAD DE LECHE DEL PROVEEDOR</label>
-                                        <div style="padding-left: 10px; padding-right: 5px;" class="input-group col-sm-9">
+                                        <div style="padding-left: 2%; padding-right: 3%;" class="input-group col-sm-9">
                                             <asp:TextBox runat="server" MaxLength="10" onKeyPress="return soloNumeros(event)" onkeyDown="checkTextAreaMaxLength(this,event,'10');" ID="cant_leche" CssClass="form-control style-form" TextMode="Number" placeholder="39" required></asp:TextBox>
                                             <span class="input-group-addon">Litros</span>
                                         </div>
@@ -224,6 +237,12 @@
                                         </asp:DropDownList>
                                     </div>
                                 </div>
+                                <div style="text-align: right;" class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10 text-right">
+                                        <asp:LinkButton ID="LinkButton5" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <asp:LinkButton ID="LinkButton6" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -231,6 +250,8 @@
             </div>
         </div>
     </section>
+    <div class="col-md-6">
+    </div>
     <button type="button" class="btn btn-default btn-lrg ajax" title="Ajax Request">
         <i class="fa fa-spin fa-refresh"></i>&nbsp; Get External Content
     </button>
@@ -279,84 +300,84 @@
     <!-- SlimScroll -->
     <script src="../../../Plantilla/Privado/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script type="text/javascript">
-            // To make Pace works on Ajax calls
-            $(document).ajaxStart(function () {
-                Pace.restart()
+        // To make Pace works on Ajax calls
+        $(document).ajaxStart(function () {
+            Pace.restart()
+        })
+        $('.ajax').click(function () {
+            $.ajax({
+                url: '#', success: function (result) {
+                    $('.ajax-content').html('<hr>Ajax Request Completed !')
+                }
             })
-            $('.ajax').click(function () {
-                $.ajax({
-                    url: '#', success: function (result) {
-                        $('.ajax-content').html('<hr>Ajax Request Completed !')
-                    }
-                })
-            })
+        })
     </script>
     <!-- Page script -->
     <script>
-            $(function () {
-                //Initialize Select2 Elements
-                $('.select2').select2()
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
 
-                //Datemask dd/mm/yyyy
-                $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-                //Datemask2 mm/dd/yyyy
-                $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
-                //Money Euro
-                $('[data-mask]').inputmask()
+            //Datemask dd/mm/yyyy
+            $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+            //Datemask2 mm/dd/yyyy
+            $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+            //Money Euro
+            $('[data-mask]').inputmask()
 
-                //Date range picker
-                $('#reservation').daterangepicker()
-                //Date range picker with time picker
-                $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
-                //Date range as a button
-                $('#daterange-btn').daterangepicker(
-                    {
-                        ranges: {
-                            'Today': [moment(), moment()],
-                            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                            'This Month': [moment().startOf('month'), moment().endOf('month')],
-                            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                        },
-                        startDate: moment().subtract(29, 'days'),
-                        endDate: moment()
+            //Date range picker
+            $('#reservation').daterangepicker()
+            //Date range picker with time picker
+            $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
+            //Date range as a button
+            $('#daterange-btn').daterangepicker(
+                {
+                    ranges: {
+                        'Today': [moment(), moment()],
+                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                        'This Month': [moment().startOf('month'), moment().endOf('month')],
+                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
                     },
-                    function (start, end) {
-                        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-                    }
-                )
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment()
+                },
+                function (start, end) {
+                    $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+                }
+            )
 
-                //Date picker
-                $('#datepicker').datepicker({
-                    autoclose: true
-                })
-
-                //iCheck for checkbox and radio inputs
-                $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-                    checkboxClass: 'icheckbox_minimal-blue',
-                    radioClass: 'iradio_minimal-blue'
-                })
-                //Red color scheme for iCheck
-                $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-                    checkboxClass: 'icheckbox_minimal-red',
-                    radioClass: 'iradio_minimal-red'
-                })
-                //Flat red color scheme for iCheck
-                $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-                    checkboxClass: 'icheckbox_flat-green',
-                    radioClass: 'iradio_flat-green'
-                })
-
-                //Colorpicker
-                $('.my-colorpicker1').colorpicker()
-                //color picker with addon
-                $('.my-colorpicker2').colorpicker()
-
-                //Timepicker
-                $('.timepicker').timepicker({
-                    showInputs: false
-                })
+            //Date picker
+            $('#datepicker').datepicker({
+                autoclose: true
             })
+
+            //iCheck for checkbox and radio inputs
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            })
+            //Red color scheme for iCheck
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            })
+            //Flat red color scheme for iCheck
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            })
+
+            //Colorpicker
+            $('.my-colorpicker1').colorpicker()
+            //color picker with addon
+            $('.my-colorpicker2').colorpicker()
+
+            //Timepicker
+            $('.timepicker').timepicker({
+                showInputs: false
+            })
+        })
     </script>
 </asp:Content>

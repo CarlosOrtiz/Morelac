@@ -57,9 +57,12 @@ namespace Proyecto_Web.Vistas.Private
 
         protected void Btn_Save1_Click(object sender, EventArgs e)
         {
-            mod_persona.RegistrarPersona(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, Fecha_Nacimiento.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text, "5");
+            string rol = 5+"";
+            da.OperarDatos("INSERT INTO persona ('"+ced.Text+ "','" + nom1.Text + "','" + nom2.Text + "','" + ape1.Text + "','" + ape2.Text + "','" + Celular.Text + "','" + Fecha_Nacimiento.Text + "','" + Direc.Text + "','" + Detalle.Text + "','" + Convert.ToChar(DDL_Sexo.SelectedValue) + "') " +
+                "INSERT INTO usuario ('"+correo.Text+"' ,'"+ contrasena.Text+"','"+ ced.Text+"','"+ rol + "');");
+            //mod_proveedor.RegistrarProveedor(ced.Text, nom1.Text, nom2.Text, ape1.Text, ape2.Text, Celular.Text, Fecha_Nacimiento.Text, Direc.Text, Detalle.Text, Convert.ToChar(DDL_Sexo.SelectedValue), correo.Text, contrasena.Text);
+            //mostrarModal("Datos guardados correctamente!", "Muy bien", "modal-success");
             Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
-
         }
 
         protected void Btn_Cerrar1_Click(object sender, EventArgs e)
@@ -69,17 +72,15 @@ namespace Proyecto_Web.Vistas.Private
         }
         protected void Save_Finca_Click(object sender, EventArgs e)
         {
-            //if (ValidarDatosFinca())
-            //{
-            mod_finca.RegistrarFinca(nom_finca.Text, hectarias.Text, ubi_finca.Text, Asig_Persona.SelectedValue.ToString());
-            Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+            mod_finca.RegistrarFinca(nom_finca.Text, ubi_finca.Text, hectarias.Text, Convert.ToString(Asig_Persona.SelectedValue));
+            //Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
 
             //}
         }
         protected void btn_Leche_Click(object sender, EventArgs e)
         {
-            mod_finca.RegistrarFincaLenche(cant_leche.Text, FechaEn.Text, Drop_Finca.SelectedValue.ToString());
-            Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
+            mod_finca.RegistrarFincaLenche(cant_leche.Text, FechaEn.Text, Convert.ToString(Drop_Finca.SelectedValue));
+            //Response.Redirect("~/Vistas/Private/Proveedor/ingresar_proveedor.aspx");
         }
 
         protected void btn_Leche_cerrar_Click(object sender, EventArgs e)
