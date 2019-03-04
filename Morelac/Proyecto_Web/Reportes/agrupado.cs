@@ -16,14 +16,14 @@ namespace Proyecto_Web.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Lis_resultado_leche : ReportClass {
+    public class agrupado : ReportClass {
         
-        public Lis_resultado_leche() {
+        public agrupado() {
         }
         
         public override string ResourceName {
             get {
-                return "Lis_resultado_leche.rpt";
+                return "agrupado.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Proyecto_Web.Reportes {
         
         public override string FullResourceName {
             get {
-                return "Proyecto_Web.Reportes.Lis_resultado_leche.rpt";
+                return "Proyecto_Web.Reportes.agrupado.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace Proyecto_Web.Reportes {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace Proyecto_Web.Reportes {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,9 +82,25 @@ namespace Proyecto_Web.Reportes {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[6];
             }
         }
         
@@ -98,9 +114,9 @@ namespace Proyecto_Web.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedLis_resultado_leche : Component, ICachedReport {
+    public class Cachedagrupado : Component, ICachedReport {
         
-        public CachedLis_resultado_leche() {
+        public Cachedagrupado() {
         }
         
         [Browsable(false)]
@@ -137,7 +153,7 @@ namespace Proyecto_Web.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Lis_resultado_leche rpt = new Lis_resultado_leche();
+            agrupado rpt = new agrupado();
             rpt.Site = this.Site;
             return rpt;
         }
