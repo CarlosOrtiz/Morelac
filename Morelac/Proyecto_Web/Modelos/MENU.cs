@@ -43,5 +43,19 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
+
+
+        public DataTable ConsultarSub_Menu(string  id)
+        {
+            try
+            {
+                return dat.ConsultarDatos("CALL CONS_SUBMENU ('" + id + "');");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+        }
     }
 }
