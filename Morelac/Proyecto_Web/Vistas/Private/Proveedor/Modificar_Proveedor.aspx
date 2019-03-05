@@ -116,7 +116,7 @@
                  <div class="form-group col-md-12 no-padding">
                             <span class="col-md-4 control-label text-bold no-padding">Fecha donde le surtio leche a empresa</span>
                             <div class="col-lg-8 no-padding">
-                                <asp:TextBox ID="TB_Fecha_En" TextMode="DateTime" runat="server" autocomplete="off" CssClass="form-control" required ></asp:TextBox>
+                                <asp:TextBox ID="TB_Fecha_En" TextMode="Date" runat="server" CssClass="form-control" required ></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group col-md-12 no-padding">

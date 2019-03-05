@@ -41,17 +41,19 @@ namespace Proyecto_Web.Modelos
                 return false;
             }
         }
-        public bool RegistrarFincaLenche(string NOM, string DIM,  string ID_FINCAA)
+
+        public bool RegistrarFincaLenche(string cantidad_leche, string fehca,  string ID_FINCAA)
         {
             try
             {
-                return dat.OperarDatos("CALL INSE_LECHE('" + NOM + "', '" + DIM + "', '" + ID_FINCAA + "');");
+                return dat.OperarDatos("CALL INSE_LECHE('" + cantidad_leche + "', '" + fehca + "', '" + ID_FINCAA + "');");
             }
             catch (Exception)
             {
                 return false;
             }
         }
+
         public DataTable ConsultarFinca()
         {
             try

@@ -13,6 +13,15 @@ namespace Proyecto_Web.Vistas.Private {
     public partial class ingresarresultados {
         
         /// <summary>
+        /// Control Temperatura.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Temperatura;
+        
+        /// <summary>
         /// Control Btn_Save_Prueba.
         /// </summary>
         /// <remarks>

@@ -227,7 +227,7 @@
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
                                                 </div>
-                                                <asp:TextBox Style="width: 100%;" runat="server" ID="FechaEn" TextMode="Date" CssClass="form-control style-form pull-right"></asp:TextBox>
+                                                <asp:TextBox Style="width: 100%;" runat="server" ID="FechaEn" TextMode="Date" CssClass="form-control style-form" required></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -243,8 +243,8 @@
                                 </div>
                                 <div style="text-align: right;" class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10 text-right">
-                                        <asp:LinkButton ID="LinkButton5" runat="server" CssClass="btn btn-success" OnClick="Btn_Save1_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
-                                        <asp:LinkButton ID="LinkButton6" runat="server" CssClass="btn btn-danger" OnClick="Btn_Cerrar1_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
+                                        <asp:LinkButton ID="btn_Leche" runat="server" CssClass="btn btn-success" OnClick="btn_Leche_Click"><i class="fa fa-save"></i>&nbsp Guardar Datos</asp:LinkButton>
+                                        <asp:LinkButton ID="btn_Leche_cerrar" runat="server" CssClass="btn btn-danger" OnClick="btn_Leche_cerrar_Click"><i class="fa fa-remove"></i>&nbsp Cacelar</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>
@@ -254,13 +254,7 @@
             </div>
         </div>
     </section>
-    <div class="col-md-6">
-    </div>
-    <button type="button" class="btn btn-default btn-lrg ajax" title="Ajax Request">
-        <i class="fa fa-spin fa-refresh"></i>&nbsp; Get External Content
-    </button>
-    <div class="ajax-content">
-    </div>
+
     <div class="modal <%=modal_tipo%> fade" id="modal-perfil" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -303,19 +297,7 @@
     <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
     <!-- SlimScroll -->
     <script src="../../../Plantilla/Privado/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript">
-        // To make Pace works on Ajax calls
-        $(document).ajaxStart(function () {
-            Pace.restart()
-        })
-        $('.ajax').click(function () {
-            $.ajax({
-                url: '#', success: function (result) {
-                    $('.ajax-content').html('<hr>Ajax Request Completed !')
-                }
-            })
-        })
-    </script>
+
     <!-- Page script -->
     <script>
         $(function () {

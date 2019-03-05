@@ -86,12 +86,12 @@
         }
     </script>
 </head>
-<body class="hold-transition skin-yellow-light sidebar-mini fixed ">
+<body class="fixed sidebar-mini sidebar-mini-expand-feature skin-yellow-light">
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="wrapper">
 
-            <header class="main-header aside-fijo" style="top: 0; right: 0; left: 0;">
+            <header class="main-header">
                 <!-- Logo -->
                 <a href="/Vistas/Private/Home/index_admin.aspx" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -119,99 +119,51 @@
                     </div>
                 </nav>
             </header>
+
+         
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar aside-fijo">
+            <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
-                <section class="sidebar">
-                    <!-- Sidebar user panel -->
-                    <div class="user-panel" style="white-space: normal;">
-                        <div class="pull-left image">
-                            <asp:Image runat="server" ID="IMG" CssClass="img-circle" />
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 896px;">
+                      <section class="sidebar" style="overflow: hidden; width: auto; height: 896px;">
+                        <!-- Sidebar user panel -->
+                        <div class="user-panel" <%--style="white-space: normal;"--%>>
+                            <div class="pull-left image">
+                                <asp:Image runat="server" ID="IMG" CssClass="img-circle" />
+                            </div>
+
+                            <div class="pull-left info">
+                                <p>
+                                    <asp:Label runat="server" ID="NombreUser" Text="UserName"></asp:Label><br />
+                                    <a href="#" style="font-size: 10px;"><i class="fa fa-circle text-success"></i>
+                                        <asp:Label Style="color: black;" runat="server" ID="RolUser"></asp:Label></a>
+                                </p>
+                            </div>
                         </div>
-
-                        <div class="pull-left info">
-                            <p>
-                                <asp:Label runat="server" ID="NombreUser" Text="UserName"></asp:Label><br />
-                                <a href="#" style="font-size: 10px;"><i class="fa fa-circle text-success"></i>
-                                    <asp:Label Style="color: black;" runat="server" ID="RolUser"></asp:Label></a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <ul class="sidebar-menu" data-widget="tree">
-                        <li>
-                            <a href="/Vistas/Private/Home/index_admin.aspx">
-                                <i class="fa fa-home"></i>
-                                <span>Inicio</span>
-                            </a>
-                        </li>
-                        <li class="header">CONTENIDO</li>
-                        <asp:Repeater ID="Repeater1" runat="server" OnItemDataBound="Repeater1_ItemDataBound">
-                            <ItemTemplate>
-                           <li>
-                                    <a href="<%#Eval("MENU_URL") %>">
-                                        <i class="fa <%#Eval("MENU_ICON") %>"></i>
-                                        <span><%#Eval("MENU_NOMBRE") %></span>
-                                    </a>
-                                </li>
-                                <asp:Repeater ID="InnerRepeater" runat="server">
-                                    <ItemTemplate>
-                                       <li class="treeview">
-                                            <a href="<%#Eval("MENU_URL") %>">
-                                                <i class="fa <%#Eval("MENU_ICON") %>"></i><span><%#Eval("MENU_NOMBRE") %></span>
-                                                <span class="pull-right-container">
-                                                    <i class="fa fa-angle-left pull-right"></i>
-                                                </span>
-                                            </a>
-                                            <ul class="treeview-menu" style="display: none;">
-                                                <li><a href="#"><i class="fa fa-circle-o"></i><%#Eval("SUB_NOMBRE") %></a></li>
-                                            </ul>
-                                        </li>
-
-                                    </ItemTemplate>
-                                </asp:Repeater>
-                            </ItemTemplate>
-                        </asp:Repeater>
-          <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Examples</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu" style="display: none;">
-            <li><a href="examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-          </ul>
-        </li>
-                        <asp:Repeater ID="Rep_Menu_Dim" runat="server" OnItemDataBound="Rep_Menu_Dim_ItemDataBound">
-                            <ItemTemplate>
-                              <%--  <li class="treeview menu-open">
-                                    <a href="<%#Eval("MENU_URL") %>">
-                                        <i class="fa <%#Eval("MENU_ICON") %>"></i><span><%#Eval("MENU_NOMBRE") %></span>
-                                        <span class="pull-right-container">
-                                            <i class="fa fa-angle-left pull-right"></i>
-                                        </span>
-                                    </a>--%>
-
-                                    <asp:Repeater ID="Rep_Sub_Menu" runat="server">
-                                        <ItemTemplate>
-                                           <%-- <ul class="treeview-menu" style="display: block;">
-                                                <li><a href="#"><i class="fa fa-circle-o"></i><%#Eval("SUB_NOMBRE") %></a></li>
-                                            </ul>--%>
-                                        </ItemTemplate>
-                                    </asp:Repeater>
-
-                                </li>
-                                <%--<li>
-                                    <a href="<%#Eval("MENU_URL") %>">
-                                        <i class="fa <%#Eval("MENU_ICON") %>"></i>
-                                        <span><%#Eval("MENU_NOMBRE") %></span>
-                                    </a>
-                                </li>--%>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </ul>
-                </section>
+                        <!-- sidebar menu: : style can be found in sidebar.less -->
+                       <ul class="sidebar-menu tree" data-widget="tree">
+                            <li>
+                                <a href="/Vistas/Private/Home/index_admin.aspx">
+                                    <i class="fa fa-home"></i>
+                                    <span>Inicio</span>
+                                </a>
+                            </li>
+                            <li class="header">CONTENIDO</li>
+                            <asp:Repeater ID="Rep_Menu_Dim" runat="server">
+                                <ItemTemplate>
+                                    <li>
+                                        <a href="<%#Eval("MENU_URL") %>">
+                                            <i class="fa <%#Eval("MENU_ICON") %>"></i>
+                                            <span><%#Eval("MENU_NOMBRE") %></span>
+                                        </a>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </section>
+                </div>
+                <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.2); width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 814.215px;"></div>
+                    <div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
             </aside>
             <div class="content-wrapper">
                 <section class="content container-fluid">
@@ -248,6 +200,8 @@
         <script src="../../../Plantilla/Privado/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <!-- FastClick -->
         <script src="../../../Plantilla/Privado/bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- SlimScroll -->
+        <script src="../../../Plantilla/Privado/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 
         <!-- AdminLTE App -->
         <script src="../../../Plantilla/Privado/dist/js/adminlte.min.js"></script>

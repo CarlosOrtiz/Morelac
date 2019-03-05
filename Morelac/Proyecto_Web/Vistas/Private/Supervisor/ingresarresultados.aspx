@@ -10,7 +10,7 @@
         <small>De morelac</small>
         <ol class="breadcrumb">
             <li><a href="/Vistas/Private/Home/index_admin.aspx"><i class="fa fa-dashboard"></i>Inicio</a></li>
-            <li class="active"><a href="/Vistas/Private/Proveedor/Proveedores.aspx"><i class="fa fa-street-view"></i>Proveedores</a></li>
+            <li><a href="/Vistas/Private/Proveedor/Proveedores.aspx"><i class="fa fa-street-view"></i>Proveedores</a></li>
             <li class="active"><a href="/Vistas/Private/Supervisor/ingresarresultados.aspx"><i class="fa fa-street-view"></i><b>Registrar pruebss</b></a></li>
         </ol>
     </section>
@@ -21,7 +21,6 @@
             <div class="box box-warning collapsed-box direct-chat direct-chat-warning">
                 <div class="box-header with-border">
                     <h3 class="box-title"><b>TEMPERATURA</b></h3>
-
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
                             <i class="fa fa-plus"></i>
@@ -34,10 +33,9 @@
                         <legend style="text-align: center;" class="legend1">Diligenciar Datos</legend>
 
                         <div class="col-md-12">
-                            Temperatura:
-                    <input class="Tempreratura" name='tempe' type="number" required>
-                            °C
-            <p></p>
+                         <h3 >Temperatura: </h3>
+                            <asp:TextBox  style="width=50%;" runat="server" ID="Temperatura" required CssClass="form-control style-form col-md-4" autocomplete="off" placeholder="5" MaxLength="10" onkeyDown="checkTextAreaMaxLength(this,event,'10');" oncopy="return false" onpaste="return false" oncut="return false" ></asp:TextBox>
+                             °C
                         </div>
                     </fieldset>
                 </div>
@@ -262,14 +260,15 @@
 
     </div>
     <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3"></div>
         <div class="col-md-3">
-            <div class="box box-success collapsed-box">
+            <div class="box box-success">
                 <div class="box-header with-border">
                     <h3 class="box-title"><b>GUARDAR PRUEBA</b></h3>
-
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                            <i class="fa fa-plus"></i>
+                            <i class="fa fa-minus"></i>
                         </button>
                     </div>
                 </div>
@@ -285,5 +284,7 @@
             </div>
             <!-- /.box -->
         </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-1"></div>
     </div>
 </asp:Content>

@@ -193,21 +193,21 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.DropDownList Drop_Finca;
         
         /// <summary>
-        /// Control LinkButton5.
+        /// Control btn_Leche.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton5;
+        protected global::System.Web.UI.WebControls.LinkButton btn_Leche;
         
         /// <summary>
-        /// Control LinkButton6.
+        /// Control btn_Leche_cerrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton6;
+        protected global::System.Web.UI.WebControls.LinkButton btn_Leche_cerrar;
     }
 }

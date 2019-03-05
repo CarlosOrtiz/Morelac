@@ -30,5 +30,17 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
             Rep_Proveedores.DataSource = Tabla_Proveedor;
             Rep_Proveedores.DataBind();
         }
+
+        protected void Modi_Estado_Command(object sender, CommandEventArgs e)
+        {
+                mol_proveedor.ActualizarEstado_Proveedor(e.CommandArgument.ToString(), "ACTIVO");
+                Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+        }
+
+        protected void Esta_Rojo_Command(object sender, CommandEventArgs e)
+        {
+                mol_proveedor.ActualizarEstado_Proveedor(e.CommandArgument.ToString(), "INACTIVO");
+                Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+        }
     }
 }

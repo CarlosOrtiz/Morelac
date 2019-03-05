@@ -68,12 +68,27 @@ namespace Proyecto_Web.Modelos
                 return err.GetError(io.Message);
             }
         }
+       
 
-        public DataTable ActualizarProveedor(int id, string cedula, string nom1, string nom2, string ape1, string ape2, string celular, string direccion, string detalle, char genero,string contra, string estado, string nom_finca,string ubicacion,string dimencion,string cant_leche,string fecha_entrega)
+     public DataTable ActualizarEstado_Proveedor(string id, string ESTADO)
         {
             try
             {
-                return dat.OperarProcedimiento("CALL UPDA_PROVEEDOR ('" + id + "', '" + cedula + "', '" + nom1 + "', '" + nom2 + "', '" + ape1 + "', '" + ape2 + "', '" + celular + "', '" + direccion + "','" + detalle + "','" + genero + "', '" + contra + "', '" + estado + "', '" + nom_finca + "', '" + ubicacion + "','" + dimencion + "','" + cant_leche + "','" + fecha_entrega + "');");
+                return dat.OperarProcedimiento("CALL  UPDA_ESTADO_PROVEEDOR ('"+ id + "','" + ESTADO + "');");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+
+        }
+
+        public DataTable ActualizarProveedor(int id, string cedula, string nom1, string nom2, string ape1, string ape2, string celular, string direccion, string detalle,string contra, string estado, string nom_finca,string ubicacion,string dimencion,string cant_leche,string fecha_entrega)
+        {
+            try
+            {
+                return dat.OperarProcedimiento("CALL UPDA_PROVEEDOR ('" + id + "', '" + cedula + "', '" + nom1 + "', '" + nom2 + "', '" + ape1 + "', '" + ape2 + "', '" + celular + "', '" + direccion + "','" + detalle  + "', '" + contra + "', '" + estado + "', '" + nom_finca + "', '" + ubicacion + "','" + dimencion + "','" + cant_leche + "','" + fecha_entrega + "');");
             }
             catch (Exception io)
             {

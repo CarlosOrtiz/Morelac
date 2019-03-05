@@ -166,10 +166,13 @@ namespace Proyecto_Web.Vistas.Private
         public bool ValidarDatosLeche()
         {
             bool good = false;
-            if (cant_leche.Text.Length == 0 || cant_leche.Text.Length < 3 || cant_leche.Text.Length > 45)
-                mostrarModal("Ingrese el nombre de su finca correctamente!", "Error", "modal-danger");
-            else if (FechaEn.Text.Length == 0 || FechaEn.Text.Length > 45 || FechaEn.Text.Length < 3)
+            if (cant_leche.Text.Length == 0  || cant_leche.Text.Length > 45)
+                mostrarModal("Ingrese la cantidad que le surtio a la empresa correctamente!", "Error", "modal-danger");
+
+            else if (FechaEn.Text.Length == 0 )
                 mostrarModal("Ingrese una ubicacion correctamente!", "Error", "modal-danger");
+            else if(Drop_Finca.SelectedValue.Equals(0))
+                mostrarModal("Seleccione la finca a la cual quiere agregarle el registro de leche!", "Error", "modal-danger");
             else
                 good = true;
             return good;
