@@ -12,12 +12,12 @@ namespace Proyecto_Web.Vistas.Private
 {
     public partial class Ingresar_supervisor : System.Web.UI.Page
     {
-        private IDatos da = new Datos();
         PERSONA mod_persona = new PERSONA();
         public string modal_mensaje;
         public string modal_titulo;
         public string modal_tipo;
         public string modal_link;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -31,14 +31,8 @@ namespace Proyecto_Web.Vistas.Private
             {
                 Response.Redirect("~/Vistas/Public/Index.aspx");
             }
-            if (!IsPostBack)
-            {
-             
-            }
-
-        }
-
-    
+            
+        } //End Page load
 
         protected void Btn_Guardar_Click(object sender, EventArgs e)
         {
@@ -85,10 +79,22 @@ namespace Proyecto_Web.Vistas.Private
                 mostrarModal("Señor usuario acaba de exceder el limite perimitido por el campo de numero teléfonico: son 10 numeros", "Error", "modal-danger");
             else if (correo.Text.Length < 3 || correo.Text.Length == 0 || correo.Text.Length > 50)
                 mostrarModal("Ingrese un correo electronico corectamente!", "Error", "modal-danger");
+            else if (contrasena.Text.Length < 6 || contrasena.Text.Length == 0 || contrasena.Text.Length > 50)
+                mostrarModal("Ingrese una contrasema mayor a 6 digitos!", "Error", "modal-danger");
             else
                 good = true;
             return good;
         }
-        
+
+        protected void Btn_Cerrar1_Click(object sender, EventArgs e)
+        {
+            ced.Text = null;
+            nom1.Text = null;
+            ape1.Text = null;
+            Celular.Text = null;
+            DDL_Sexo.ClearSelection(); 
+            correo.Text = null;
+            contrasena.Text = null;
+        }
     }
 }

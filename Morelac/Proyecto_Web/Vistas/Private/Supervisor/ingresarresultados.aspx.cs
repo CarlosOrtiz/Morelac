@@ -22,6 +22,10 @@ namespace Proyecto_Web.Vistas.Private
             {
                 Response.Redirect("~/Vistas/Public/Index.aspx");
             }
+            if (!IsPostBack)
+            {
+                Fecha_Prueba.Text= DateTime.Now.ToString("dd/MM/yyyy");
+            }
         }
     }
 }

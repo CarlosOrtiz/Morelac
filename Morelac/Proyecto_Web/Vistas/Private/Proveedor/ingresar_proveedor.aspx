@@ -272,8 +272,6 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsEndPage" runat="server">
-
-    <!-- Bootstrap 3.3.7 -->
     <!-- Select2 -->
     <script src="../../../Plantilla/Privado/bower_components/select2/dist/js/select2.full.min.js"></script>
     <!-- InputMask -->

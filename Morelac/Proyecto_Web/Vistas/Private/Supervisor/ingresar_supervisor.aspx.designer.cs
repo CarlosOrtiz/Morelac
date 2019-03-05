@@ -22,15 +22,6 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox nom1;
         
         /// <summary>
-        /// Control nom2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nom2;
-        
-        /// <summary>
         /// Control ape1.
         /// </summary>
         /// <remarks>
@@ -38,15 +29,6 @@ namespace Proyecto_Web.Vistas.Private {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ape1;
-        
-        /// <summary>
-        /// Control ape2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ape2;
         
         /// <summary>
         /// Control ced.
@@ -58,15 +40,6 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.TextBox ced;
         
         /// <summary>
-        /// Control Direc.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Direc;
-        
-        /// <summary>
         /// Control Celular.
         /// </summary>
         /// <remarks>
@@ -74,15 +47,6 @@ namespace Proyecto_Web.Vistas.Private {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Celular;
-        
-        /// <summary>
-        /// Control FechaN.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FechaN;
         
         /// <summary>
         /// Control correo.
@@ -112,21 +76,21 @@ namespace Proyecto_Web.Vistas.Private {
         protected global::System.Web.UI.WebControls.DropDownList DDL_Sexo;
         
         /// <summary>
-        /// Control Detalle.
+        /// Control Btn_Save1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Detalle;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Save1;
         
         /// <summary>
-        /// Control Btn_Guardar.
+        /// Control Btn_Cerrar1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Btn_Guardar;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Cerrar1;
     }
 }
