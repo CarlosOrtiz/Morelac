@@ -12,8 +12,9 @@ namespace Proyecto_Web.Vistas.Private
     public partial class index_admin : System.Web.UI.Page
     {
         USUARIO Mod_Usuario = new USUARIO();
+        PROVEEDOR mo_pro = new PROVEEDOR();
         DataTable DT_CANT_USER;
-        public string cant_user;
+        public string cant_user,cant_prueba;
         protected void Page_Load(object sender, EventArgs e)
         {
            
@@ -36,6 +37,7 @@ namespace Proyecto_Web.Vistas.Private
                 try
                 {
                     cant_user = DT_CANT_USER.Rows[0]["COUNT(usuario.USU_CORREO_ELECTRONICO)"].ToString();
+                    cant_prueba = mo_pro.ConsultarNumero_pruebas().Rows[0]["COUNT(ID_RESULTADOS_PRUEBAS)"].ToString();
                 }
                 catch (Exception)
                 {

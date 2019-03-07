@@ -59,6 +59,31 @@ namespace Proyecto_Web.Modelos
             }
         }
 
+        public DataTable ConsultarTODAS_PRUEBAS()
+        {
+            try
+            {
+                return dat.ConsultarDatos("CALL CONS_RESULDADOS_PRUEBA ();");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+        }
+        public DataTable ConsultarNumero_pruebas()
+        {
+            try
+            {
+                return dat.ConsultarDatos("CALL CANT_PRUEBAS ();");
+            }
+            catch (Exception io)
+            {
+                estructura err = new estructura();
+                return err.GetError(io.Message);
+            }
+        }
+
         public DataTable ConsultarProvedores_ID(string id){
             try
             {

@@ -142,13 +142,13 @@
                         </div>
                         <!-- sidebar menu: : style can be found in sidebar.less -->
                        <ul class="sidebar-menu tree" data-widget="tree">
-                            <li>
+                            <li style="height:30px; text-align:left;">
                                 <a href="/Vistas/Private/Home/index_admin.aspx">
                                     <i class="fa fa-home"></i>
                                     <span>Inicio</span>
                                 </a>
                             </li>
-                            <li class="header">CONTENIDO</li>
+                            <li style="height:25px;" class="header">CONTENIDO</li>
                             <asp:Repeater ID="Rep_Menu_Dim" runat="server">
                                 <ItemTemplate>
                                     <li>

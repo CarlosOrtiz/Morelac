@@ -8190,6 +8190,7 @@
     <Content Include="Vistas\Private\Reportes\Reporte_resultados_leche.aspx" />
     <Content Include="Vistas\Private\Supervisor\Modificar_Supervisor.aspx" />
     <Content Include="Vistas\Private\Supervisor\Previsualizacion_Supervisor.aspx" />
+    <Content Include="Vistas\Private\Supervisor\Proveedores_views_pruebas.aspx" />
     <Content Include="Vistas\Private\Supervisor\Supervisor.aspx" />
     <Content Include="Vistas\Private\Cliente\gestionar_cliente.aspx" />
     <Content Include="Vistas\Private\Proveedor\gestionar_proveedor.aspx" />
@@ -9990,6 +9991,13 @@
     </Compile>
     <Compile Include="Vistas\Private\Supervisor\Previsualizacion_Supervisor.aspx.designer.cs">
       <DependentUpon>Previsualizacion_Supervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\Proveedores_views_pruebas.aspx.cs">
+      <DependentUpon>Proveedores_views_pruebas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Private\Supervisor\Proveedores_views_pruebas.aspx.designer.cs">
+      <DependentUpon>Proveedores_views_pruebas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Private\Supervisor\Supervisor.aspx.cs">
       <DependentUpon>Supervisor.aspx</DependentUpon>
