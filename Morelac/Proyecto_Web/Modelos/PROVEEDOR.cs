@@ -33,6 +33,20 @@ namespace Proyecto_Web.Modelos
                 return false;
             }
         }
+
+
+        public bool RegistrarPruebas(string IP_PRUEBA, string FECHA, string OBSER, string PESO, string COLOR, string OLOR, string SABOR, string TEXTURA, string GRASA, string VITAMINA, string MINERALES, string PH,string LACTICO,string AGUA,string CLORUROS,string SACAROSA, string ANTI)
+        {
+            try
+            {
+                return dat.OperarDatos("CALL INSE_PERSONA ('" + IP_PRUEBA + "', '" + FECHA + "', '" + OBSER + "', '" + PESO + "', '" + COLOR + "', '" + OLOR + "', '" + SABOR + "', '" + TEXTURA + "', '" + GRASA + "', '" + VITAMINA + "', '" + MINERALES + "', '" + PH + "', '" + LACTICO + "', '" + AGUA + "', '" + CLORUROS + "', '" + SACAROSA +  "', '" + ANTI + "');");
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public DataTable ConsultarProvedoresAll(){
             try
             {

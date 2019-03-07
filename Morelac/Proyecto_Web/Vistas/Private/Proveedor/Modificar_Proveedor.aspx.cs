@@ -33,7 +33,13 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
             {
                 Response.Redirect("~/Vistas/Public/Index.aspx");
             }
+            if(Convert.ToInt32(Request.QueryString["Valor"]).Equals(" "))
+            {
+                Response.Redirect("~/Vistas/Private/Proveedor/Proveedores.aspx");
+            }
             DT_M_PROVEEDOR = mod_prov.ConsultarProvedores_ID(Convert.ToString(Request.QueryString["Valor"]));
+
+
             if (!IsPostBack)
             {
                 IDPAGE = Convert.ToInt32(Request.QueryString["Valor"]);
