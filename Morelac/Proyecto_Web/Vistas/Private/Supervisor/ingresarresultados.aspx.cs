@@ -48,7 +48,7 @@ namespace Proyecto_Web.Vistas.Private
             {
                 mo_prove.RegistrarPruebas(Convert.ToString(Request.QueryString["Valor"]), Fecha_Prueba.Text, TB_Observacion.Text, TB_Cantidad.Text, Convert.ToString(Drop_Color.SelectedValue), Convert.ToString(Drop_Olor.SelectedValue), Convert.ToString(Drop_Sabor.SelectedValue), Convert.ToString(Drop_Textura.SelectedValue), TB_Grasa.Text,
                           Convert.ToString(Drop_Vitaminas.SelectedValue), Convert.ToString(Drop_Mineerales.SelectedValue), TB_PH.Text, TB_Lactico.Text, TB_Agua.Text, TB_Cloruros.Text, TB_Sacarosa.Text, TB_ANTI.Text);
-                Response.Redirect("~/Vistas/Private/Proveedor/Previsualizacion_Proveedor.aspx");
+                Response.Redirect("~/Vistas/Private/Supervisor/Proveedores_views_pruebas.aspx");
             }
         }
 

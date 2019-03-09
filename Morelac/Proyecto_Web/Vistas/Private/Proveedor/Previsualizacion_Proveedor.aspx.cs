@@ -27,18 +27,25 @@ namespace Proyecto_Web.Vistas.Private.Proveedor
             {
                 Response.Redirect("~/Vistas/Public/Index.aspx");
             }
+            try
+            {
             DT_Proveedor = mod_proveedor.ConsultarProvedores_ID(Convert.ToString(Request.QueryString["Valor"]));
+                Nombre.Text = DT_Proveedor.Rows[0]["PER_NOMBRE1"].ToString() + " " + DT_Proveedor.Rows[0]["PER_NOMBRE2"].ToString() + " " + DT_Proveedor.Rows[0]["PER_APELLIDO1"].ToString() + " " + DT_Proveedor.Rows[0]["PER_APELLIDO2"].ToString();
+                Cedula.Text = DT_Proveedor.Rows[0]["CEDULA"].ToString();
+                Celular.Text = DT_Proveedor.Rows[0]["CELULAR"].ToString();
+                Direc.Text = DT_Proveedor.Rows[0]["DIRECCION"].ToString();
+                FincaNom.Text = DT_Proveedor.Rows[0]["FIN_NOMBRE"].ToString();
+                Cant_En.Text = DT_Proveedor.Rows[0]["CANT_LECHE"].ToString();
+                Fecha.Text = DT_Proveedor.Rows[0]["LEC_FECHA"].ToString();
+                Estado.Text = DT_Proveedor.Rows[0]["ESTADO"].ToString();
+                Descripcion.Text = DT_Proveedor.Rows[0]["DETALLE"].ToString();
+                Img_Persona.ImageUrl = DT_Proveedor.Rows[0]["FOTO"].ToString();
+            }
+            catch (Exception)
+            {
 
-            Nombre.Text = DT_Proveedor.Rows[0]["PER_NOMBRE1"].ToString() + " " + DT_Proveedor.Rows[0]["PER_NOMBRE2"].ToString() + " " + DT_Proveedor.Rows[0]["PER_APELLIDO1"].ToString() + " " + DT_Proveedor.Rows[0]["PER_APELLIDO2"].ToString();
-            Cedula.Text = DT_Proveedor.Rows[0]["CEDULA"].ToString();
-            Celular.Text = DT_Proveedor.Rows[0]["CELULAR"].ToString();
-            Direc.Text = DT_Proveedor.Rows[0]["DIRECCION"].ToString();
-            FincaNom.Text = DT_Proveedor.Rows[0]["FIN_NOMBRE"].ToString();
-            Cant_En.Text = DT_Proveedor.Rows[0]["CANT_LECHE"].ToString();
-            Fecha.Text = DT_Proveedor.Rows[0]["LEC_FECHA"].ToString();
-            Estado.Text = DT_Proveedor.Rows[0]["ESTADO"].ToString();
-            Descripcion.Text = DT_Proveedor.Rows[0]["DETALLE"].ToString();
-            Img_Persona.ImageUrl = DT_Proveedor.Rows[0]["FOTO"].ToString();
+            }
+     
         }
     }
 }

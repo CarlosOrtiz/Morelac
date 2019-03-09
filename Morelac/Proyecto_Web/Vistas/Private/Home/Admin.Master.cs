@@ -31,6 +31,10 @@ namespace Proyecto_Web.Vistas.Private
             {
                 Response.Redirect("~/Vistas/Public/Index.aspx");
             }
+
+            try
+            {
+
             IMG.ImageUrl = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_FOTO"].ToString();
             n1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_NOMBRE1"].ToString();
             ape1 = MOD_PERSONA.ConsultarPersona(Session["CORREO_ELECTRONICO"].ToString()).Rows[0]["PER_APELLIDO1"].ToString();
@@ -39,8 +43,14 @@ namespace Proyecto_Web.Vistas.Private
             MenuDin = mod_menu.ConsultarMenu(Session["CORREO_ELECTRONICO"].ToString());
             Rep_Menu_Dim.DataSource = MenuDin;
             Rep_Menu_Dim.DataBind();
+                SubMenu = mod_menu.ConsultarSub_Menu(MenuDin.Rows[0]["ID_MENU"].ToString());
+            }
+            catch (Exception)
+            {
+
+            }
             
-            SubMenu = mod_menu.ConsultarSub_Menu(MenuDin.Rows[0]["ID_MENU"].ToString());
+      
             
         }
         

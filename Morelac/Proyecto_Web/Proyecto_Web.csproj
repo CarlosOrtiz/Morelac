@@ -9815,6 +9815,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Datos_proveedores.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos_Reporte\Datos_resultado_pruebas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos_resultado_pruebas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos_Reporte\Pago_proveedores.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -10187,6 +10192,17 @@
     </Content>
     <Content Include="Datos_Reporte\Pago_proveedores.xsc">
       <DependentUpon>Pago_proveedores.xsd</DependentUpon>
+    </Content>
+    <Content Include="Datos_Reporte\Datos_resultado_pruebas.xsc">
+      <DependentUpon>Datos_resultado_pruebas.xsd</DependentUpon>
+    </Content>
+    <None Include="Datos_Reporte\Datos_resultado_pruebas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos_resultado_pruebas.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Datos_Reporte\Datos_resultado_pruebas.xss">
+      <DependentUpon>Datos_resultado_pruebas.xsd</DependentUpon>
     </Content>
     <None Include="Datos_Reporte\Pago_proveedores.xsd">
       <SubType>Designer</SubType>
