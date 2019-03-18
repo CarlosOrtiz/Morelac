@@ -40,6 +40,7 @@
 </head>
 <body id="page-top">
     <form id="form1" runat="server">
+
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
@@ -130,6 +131,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 text-center">
@@ -315,6 +317,7 @@
             </div>
 
         </footer>
+
         <section style="padding-top: 0px; padding-bottom: 0px;">
             <div class="container">
                 <p style="text-align: center; margin-bottom: 0px; font-size: 13px;">
@@ -325,6 +328,7 @@
                 </p>
             </div>
         </section>
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -342,6 +346,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Bootstrap core JavaScript -->
         <script src="../../Plantilla/Publico/vendor/jquery/jquery.min.js"></script>
         <script src="../../Plantilla/Publico/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -353,6 +358,7 @@
 
         <!-- Custom scripts for this template -->
         <script src="../../Plantilla/Publico/js/creative.min.js"></script>
+
     </form>
 </body>
 </html>
