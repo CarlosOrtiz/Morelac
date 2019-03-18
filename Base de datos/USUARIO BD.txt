@@ -1,0 +1,4 @@
+NOMBRE BD: bd_morelac
+USUARIO: user_morelac
+CONTRASEÑA: morelac.123
+IP: 191.102.85.226
