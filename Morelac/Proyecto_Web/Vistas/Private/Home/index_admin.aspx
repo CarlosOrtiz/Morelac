@@ -4,13 +4,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="content-header">
-        <h1><b>Bienvenido</b></h1>
+  
+      <h1><b>Bienvenido</b></h1>
         <small>Al panel principal</small>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i><b>Inicio</b></a></li>
             <li class="active">Principal</li>
         </ol>
     </section>
+
     <section class="content">
         <!-- Small boxes (Stat box) -->
         <div class="row">
