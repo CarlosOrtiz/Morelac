@@ -3,12 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="content-header">
+    
+<section class="content-header">
         <div class="col-xs-6">
             <h3 style="margin-top: 5px"><i class="fa fa-hand-o-right"></i>SUPERVISORES</h3>
         </div>
         <div class="col-xs-6 text-right"><a href="Ingresar_supervisor.aspx" class="btn btn-success">Registrar nuevo</a></div>
     </section>
+
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
