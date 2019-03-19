@@ -1,8 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Private/Home/Admin.Master" AutoEventWireup="true" CodeBehind="modificarresultados.aspx.cs" Inherits="Proyecto_Web.Vistas.Private.modificarresultados" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
     <h3><i class="fa fa-angle-right"></i>MODIFICACIÓN DE RESUTADOS SOBRE LAS PRUEBAS DE CALIDAD DE LA LECHE</h3>
-    <div class="row mt">
+   
+ <div class="row mt">
+
         <div class="col-md-12">
             <div class="content-panel">
                 <h4><i class="fa fa-angle-right"></i>BUSCAR PROVEEDOR:
