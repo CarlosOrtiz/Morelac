@@ -7,9 +7,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <!--   <div class="row mb">
         <!-- page start
-        <div class="content-panel">
+      
+  <div class="content-panel">
+
             <div class="adv-table">
+
                 <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+
                     <thead>
                         <tr>
                             <th >NOMBRE DEL PROVEEDOR</th>
