@@ -101,6 +101,7 @@
                     <span class="logo-lg">
                         <img src="../../../Multimedia/Imagenes/Logo sin fondo.png" width="85" /></span>
                 </a>
+
                 <!-- Header Navbar: style can be found in header.less -->
 
                 <nav class="navbar navbar-static-top">
@@ -180,8 +181,7 @@
             </footer>
 
             <!-- /.control-sidebar -->
-            <!-- Add the sidebar's background. This div must be placed
-  immediately after the control sidebar -->
+            <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
             <div class="control-sidebar-bg"></div>
         </div>
 
