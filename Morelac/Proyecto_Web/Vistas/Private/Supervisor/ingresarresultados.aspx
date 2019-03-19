@@ -22,7 +22,9 @@
             <li class="active"><a href="/Vistas/Private/Supervisor/ingresarresultados.aspx"><i class="fa fa-street-view"></i><b>Registrar pruebss</b></a></li>
         </ol>
     </section>
+
     <br />
+
     <div class="row">
         <div class="col-md-12">
             <!-- DIRECT CHAT WARNING -->
