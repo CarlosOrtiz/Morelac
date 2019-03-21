@@ -7,8 +7,8 @@
         <h1><i class="fa fa-hand-o-right"></i><b> PROVEEDORES</b></h1>
         <small>De morelac</small>
         <ol class="breadcrumb">
-            <li><a href="/Vistas/Private/Home/index_admin.aspx"><i class="fa fa-dashboard"></i>Inicio</a></li>
-            <li class="active"><a href="/Vistas/Private/Proveedor/Proveedores.aspx"><i class="fa fa-street-view"></i><b>Proveedores</b></a></li>
+            <li><a href="('<%= Page.ResolveUrl("~/Views/PrivateViews/index_admin.aspx") %>')"><i class="fa fa-dashboard"></i>Inicio</a></li>
+            <li class="active"><a href="#"><i class="fa fa-street-view"></i><b>Proveedores</b></a></li>
         </ol>
     </section>
     <div style="padding-left: 0px;padding-bottom:10px;" class="col-xs-12">
